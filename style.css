@@ -1,0 +1,30 @@
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin-left: 2%;
+    padding: 5px 10px;
+    width: 36rem;
+}
+
+.damage {
+    color: red;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.damage:hover {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: circle;
+    margin-left: 10px;
+}
