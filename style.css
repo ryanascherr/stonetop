@@ -1,30 +1,35 @@
 header {
     text-align: center;
+    margin-bottom: 2%;
 }
 
-main {
+.hidden {
+    display: none;
+}
+
+#stats-moves-container ul {
     display: flex;
     justify-content: space-evenly;
 }
 
-.card {
-    margin-left: 2%;
-    padding: 5px 10px;
-    width: 36rem;
+#stats-moves-container ul li {
+    border: 3px solid black;
+    border-radius: 10px;
+    /* padding: 15px; */
+    min-width: 100px;
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.damage {
-    color: red;
-    font-weight: bold;
-    border: 1px solid black;
-    padding: 2px;
+#stats-moves-container ul li p {
+    font-size: 200%;
 }
 
-.damage:hover {
-    cursor: pointer;
-}
-
-li {
-    list-style-type: circle;
-    margin-left: 10px;
+#stats-moves-container ul li span {
+    position: absolute;
+    bottom: 0;
+    font-size: 100%;
 }

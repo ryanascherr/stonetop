@@ -1,5 +1,7 @@
-let damageDie = $(".damage");
+let statsMovesBtn = $("#stats-moves-btn");
+let inventoryBtn = $("#inventory-btn");
+let backgroundBtn = $("#background-btn");
 
-damageDie.click(function(){
-
+statsMovesBtn.click(function(){
+    $("#stats-moves-container").toggleClass("hidden");
 })
