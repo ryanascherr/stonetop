@@ -25,12 +25,82 @@
                     <p>2</p>
                     <span>STR</span>
                 </li>
-                <li>0</li>
-                <li>0</li>
-                <li>1</li>
-                <li>1</li>
-                <li>-1</li>
+                <li>
+                    <p>0</p>
+                    <span>DEX</span>
+                </li>
+                <li>
+                    <p>0</p>
+                    <span>INT</span>
+                </li>
+                <li>
+                    <p>1</p>
+                    <span>WIS</span>
+                </li>
+                <li>
+                    <p>1</p>
+                    <span>CON</span>
+                </li>
+                <li>
+                    <p>-1</p>
+                    <span>CHA</span>
+                </li>
             </ul>
+        </div>
+        <div class="flex flex-center">
+            <button id="player-moves-btn">Player Moves</button>
+            <button id="steading-moves-btn">Steading Moves</button>
+        </div>
+        <div class="flex">
+            <div class="w50">
+                <h2>Heavy Moves</h2>
+                <div>
+                    <h3>Armored</h3>
+                    <p>When you wear armor or carry a shield, mark only 1 for each (instead of 2), and ignore the clumsy tag (you don’t suffer disadvantage for wearing it).</p>
+                </div>
+                <div>
+                    <h3>Dangerous</h3>
+                    <p>When you deal your damage, you have advantage.</p>
+                </div>
+                <div>
+                    <h3>Hard to Kill</h3>
+                    <p>When you are at Death’s Door, you can roll +CON
+                    or +nothing (your choice). On a 7-9, you can mark
+                    a debility of your choice to regain 1 HP.</p>
+                </div>
+            </div>
+            <div class="w50">
+                <h2>Basic Moves</h2>
+                <div class="flex wrap">
+                    <div class="w50">
+                        <h3>Aid</h3>
+                        <p>When you help someone who has not yet rolled, the GM picks 1:</p>
+                        <ul>
+                            <li>-They can accomplish more than they could alone</li>
+                            <li>-They gain advantage on their roll</li>
+                        </ul>
+                        <p>Regardless, you are exposed to any risk, cost, or
+                        consequence associated with their roll.</p>
+                    </div>
+                    <div class="w50">
+                        <h3>Clash</h3>
+                        <p>When you fight in melee or close quarters, roll +STR:
+                        on a 10+, your maneuver works as expected (deal
+                        your damage) and pick 1.</p>
+                        <ul>
+                            <li>Avoid, prevent, or counter your enemy’s attack</li>
+                            <li>Strike hard and fast, for 1d6 extra damage, but
+                            suffer your enemy’s attack</li>
+                        </ul>
+                        <p>On a 7-9, your maneuver works, mostly (deal your
+                        damage) but you suffer your enemy’s attack.</p>
+                    </div>
+                    <div class="w50">
+                        <h3>Defend</h3>
+                        <p>When you take up a defensive stance or jump in to protect others, roll +CON: on a 10+, hold 3 Readiness (or 4 if you bear a shield); on a 7-9, hold 1 Readiness (or 2 with a shield). Spend your Readiness 1-for-1 to:</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

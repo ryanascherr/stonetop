@@ -33,3 +33,19 @@ header {
     bottom: 0;
     font-size: 100%;
 }
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
