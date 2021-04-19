@@ -59,7 +59,7 @@ nav button {
     display: flex;
 }
 
-.class-select-btn {
+.class-select-btn, .background-select-btn {
     width: 50%;
     padding: 10px;
 }
