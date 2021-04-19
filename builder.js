@@ -358,7 +358,7 @@ $("#drive-card-container").click(function(event){
 
 $(".origin-name-btn").click(function(){
     
-    if (!$("#name-input").val()) {
+    if (!$("#name-input").val() || !$("#option option:selected").text() || $("#option option:selected").text() === "-") {
         return;
     }
     
