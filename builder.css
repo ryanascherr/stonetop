@@ -64,14 +64,9 @@ h2 {
     display: flex;
 }
 
-.class-select-btn, .background-select-btn, .drive-select-btn {
+.class-select-btn, .background-select-btn, .drive-select-btn, .origin-name-btn {
     width: 50%;
     padding: 10px;
-}
-
-.name-select-btn {
-    padding: 5px;
-    margin-left: 10px;
 }
 
 .stat-select-btn {
@@ -130,4 +125,8 @@ h2 {
 .start {
     justify-content: flex-start;
     align-items: center;
+}
+
+.origin-name-card label {
+    margin: 0 5px 0 0;
 }
