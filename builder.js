@@ -81,12 +81,12 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "seeker") {
-        $("#background-name-one").text("");
-        $("#background-description-one").html("");
-        $("#background-name-two").text("");
-        $("#background-description-two").html("");
-        $("#background-name-three").text("");
-        $("#background-description-three").html("");
+        $("#background-name-one").text("Patriot");
+        $("#background-description-one").html("<p>Th ese people are family. Chaos grows all around, but you’ll be damned if you’ll let your family come to harm. Damned indeed.</p><p>You have sought out and embraced dark power to protect that which you hold dear. Or perhaps that power fell upon you, and you took it up for the greater good. Either way, you seek more.</p><p>You start with the Let’s Make a Deal move and are Well Versed in the Things Below. You’ve also acquired 1 major arcanum:</p><ul><li>The Hec’tumel Codex</li><li>The Red Scepter</li><li>The Staff of the Lidless Orb</li></ul>");
+        $("#background-name-two").text("Antiquarian");
+        $("#background-description-two").html("<p>Th e past has buried many secrets, and you are determined to dig them up. Years of study across the land have led you here, and you are convinced that this town holds the key to your greatest discoveries. What is it you hope to fi nd? What is it that keeps you here?</p><p>In any case, your travels and studies mean that you start with the Polyglot move and that you are Well Versed in the Makers and their arts. You’ve also acquired 1 major arcanum:</p><ul><li>Noruba’s Ice-Sphere</li><li>The Azure Hand</li><li>The Mindgem</li></ul>");
+        $("#background-name-three").text("Witch Hunter");
+        $("#background-description-three").html("<p>You’ve dedicated your life to rooting out and destroying horrors and their servants. What set you down this path? What did you sacrifice to walk it? What led you to call Stonetop home?</p><p>Regardless, you start with the Everything Bleeds move and are Well Versed in (pick 1) the fae, the Things Below, or the Black Gates and what lies beyond (go mark them now). You’ve also acquired 1 major arcanum:</p><ul><li>The Demonhide Cloak</li><li>The Redwood Effigy</li><li>The Twisted Spear</li></ul>");
     }
 
     if (playbook === "would-be-hero") {
