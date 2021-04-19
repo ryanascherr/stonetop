@@ -22,11 +22,12 @@ nav button {
     display: none;
 }
 
-#class-selection-container, #background-selector-container {
+#class-selection-container, #background-selector-container, #drive-selector-container {
     margin: 0 5%;
 }
 
-#class-selection-container h2, #background-selector-container h2 {
+#class-selection-container h2, #background-selector-container h2,
+#drive-selector-container h2 {
     text-align: center;
     margin: 5% 0;
 }
@@ -35,7 +36,7 @@ nav button {
     font-weight: bold;
 }
 
-.class-card, .background-card {
+.class-card, .background-card, .drive-card {
     border: 2px solid black;
     padding: 10px;
     margin-bottom: 2%;
@@ -59,7 +60,7 @@ nav button {
     display: flex;
 }
 
-.class-select-btn, .background-select-btn {
+.class-select-btn, .background-select-btn, .drive-select-btn {
     width: 50%;
     padding: 10px;
 }
@@ -70,4 +71,13 @@ nav button {
 
 #background-selector-container ul {
     margin-left: 30px;
+}
+
+#drive-selector-container h3 {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#drive-selector-container p {
+    text-align: center;
 }

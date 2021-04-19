@@ -2,6 +2,7 @@ const createCharacterBtn = $("#create-character-btn");
 const selectCharacterBtn = $("#select-character-btn");
 const classSelectBtn = document.querySelectorAll(".class-select-btn");
 let playbook;
+let background;
 
 createCharacterBtn.click(function(){
     $("#class-selection-container").removeClass("hidden");
@@ -99,8 +100,130 @@ $("#class-card-container").click(function(event){
     }
 })
 
-$("#backgroun-card-container").click(function(event){
+$("#background-card-container").click(function(event){
     
     let element = event.target;
 
+    if (element.matches(".background-select-btn")) {
+        $("#background-selector-container").addClass("hidden");
+        $("#drive-selector-container").removeClass("hidden");
+        background = element.getAttribute("data-background");
+    }
+
+    if (playbook === "blessed") {
+        $("#drive-name-one").text("Conciliation");
+        $("#drive-description-one").text("Calm, soothe, or mollify a hostile spirit or beast.");
+        $("#drive-name-two").text("Cultivation");
+        $("#drive-description-two").text("Help an NPC learn, grow, or improve themselves.");
+        $("#drive-name-three").text("Preservation");
+        $("#drive-description-three").text("Convince others to protect something of natural beauty or of importance to Danu.");
+        $("#drive-name-four").text("Renewal");
+        $("#drive-description-four").text("Restore someone or thing to its prior, untainted state, or defeat a perversion of the natural order.");
+        $("#drive-name-five").text("");
+        $("#drive-description-five").text("");
+    }
+
+    if (playbook === "fox") {
+        $("#drive-name-one").text("Conscience");
+        $("#drive-description-one").text("Forego comfort or advantage to do the right thing.");
+        $("#drive-name-two").text("Excitement");
+        $("#drive-description-two").text("Cause an ally trouble by taking an unnecessary risk.");
+        $("#drive-name-three").text("Glory");
+        $("#drive-description-three").text("Show off in front of NPCs who will tell your tale.");
+        $("#drive-name-four").text("Romance");
+        $("#drive-description-four").text("Get intimate with someone you’re attracted to.");
+        $("#drive-name-five").text("Trickery");
+        $("#drive-description-five").text("Get someone or thing to act on false information.");
+    }
+
+    if (playbook === "heavy") {
+        $("#drive-name-one").text("Challenge");
+        $("#drive-description-one").text("Provoke a fight with a worthy foe, just you & them.");
+        $("#drive-name-two").text("Honor");
+        $("#drive-description-two").text("Fullfill a vow or oath made to an NPC.");
+        $("#drive-name-three").text("Peace");
+        $("#drive-description-three").text("Prevent violence or end it without hurting anyone.");
+        $("#drive-name-four").text("Pride");
+        $("#drive-description-four").text("Put someone in their place.");
+        $("#drive-name-five").text("");
+        $("#drive-description-five").text("");
+    }
+
+    if (playbook === "judge") {
+        $("#drive-name-one").text("Duty");
+        $("#drive-description-one").text("Cause trouble by adhering strictly to doctrine.");
+        $("#drive-name-two").text("Harmony");
+        $("#drive-description-two").text("Settle a dispute without anyone feeling wronged.");
+        $("#drive-name-three").text("Knowledge");
+        $("#drive-description-three").text("Teach another something important.");
+        $("#drive-name-four").text("Zeal");
+        $("#drive-description-four").text("Pass judgement hastily, without considering nuance or consequences.");
+        $("#drive-name-five").text("");
+        $("#drive-description-five").text("");
+    }
+
+    if (playbook === "lightbearer") {
+        $("#drive-name-one").text("Charity");
+        $("#drive-description-one").text("Bring relief or comfort to someone who is suffering.");
+        $("#drive-name-two").text("Faith");
+        $("#drive-description-two").text("Walk brazenly into danger, sure of Helior’s plan.");
+        $("#drive-name-three").text("Hope");
+        $("#drive-description-three").text("Lead another to act despite fear or doubt.");
+        $("#drive-name-four").text("Mercy");
+        $("#drive-description-four").text("Forgive a wrong or set a helpless enemy free.");
+        $("#drive-name-five").text("");
+        $("#drive-description-five").text("");
+    }
+
+    if (playbook === "marshal") {
+        $("#drive-name-one").text("Honor");
+        $("#drive-description-one").text("Keep a promise you made to an NPC.");
+        $("#drive-name-two").text("Prestige");
+        $("#drive-description-two").text("Impress an NPC from outside your home steading.");
+        $("#drive-name-three").text("Resolve");
+        $("#drive-description-three").text("Give an order or enact a plan knowing it will bring an ally to harm.");
+        $("#drive-name-four").text("Ruthlessness");
+        $("#drive-description-four").text("Deny mercy to an enemy or betray a supposed ally.");
+        $("#drive-name-five").text("");
+        $("#drive-description-five").text("");
+    }
+
+    if (playbook === "ranger") {
+        $("#drive-name-one").text("Mercy");
+        $("#drive-description-one").text("Release someone/thing from bondage or suffering.");
+        $("#drive-name-two").text("Stewardship");
+        $("#drive-description-two").text("Put the best interests of a place or beast over a person’s desires.");
+        $("#drive-name-three").text("Tenacity");
+        $("#drive-description-three").text("Refuse to turn back despite objection or disaster.");
+        $("#drive-name-four").text("Wonder");
+        $("#drive-description-four").text("Show someone a place or thing of beauty.");
+        $("#drive-name-five").text("");
+        $("#drive-description-five").text("");
+    }
+
+    if (playbook === "seeker") {
+        $("#drive-name-one").text("Cunning");
+        $("#drive-description-one").text("Set up a ploy and then take advantage of it.");
+        $("#drive-name-two").text("Curiosity");
+        $("#drive-description-two").text("Cause trouble by touching, opening, or tinkering with something.");
+        $("#drive-name-three").text("Respect");
+        $("#drive-description-three").text("Impress another with your superior knowledge.");
+        $("#drive-name-four").text("Secrecy");
+        $("#drive-description-four").text("Deflect or evade an inquiry into your doings.");
+        $("#drive-name-five").text("Victory");
+        $("#drive-description-five").text("Endanger others in order to defeat the supernatural.");
+    }
+
+    if (playbook === "would-be-hero") {
+        $("#drive-name-one").text("Bravery");
+        $("#drive-description-one").text("Face up to one of your fears.");
+        $("#drive-name-two").text("Glory");
+        $("#drive-description-two").text("Impress onlookers with your bravery.");
+        $("#drive-name-three").text("Sacrifice");
+        $("#drive-description-three").text("Suffer or endure hardship so that someone else does not need to do so.");
+        $("#drive-name-four").text("Succor");
+        $("#drive-description-four").text("Provide aid or comfort to an NPC in need.");
+        $("#drive-name-five").text("");
+        $("#drive-description-five").text("");
+    }
 })
