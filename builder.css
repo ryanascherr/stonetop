@@ -22,12 +22,13 @@ nav button {
     display: none;
 }
 
-#class-selection-container, #background-selector-container, #drive-selector-container {
+#class-selection-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container {
     margin: 0 5%;
 }
 
 #class-selection-container h2, #background-selector-container h2,
-#drive-selector-container h2 {
+#drive-selector-container h2,
+#origin-name-selector-container h2 {
     text-align: center;
     margin: 5% 0;
 }
@@ -36,7 +37,7 @@ nav button {
     font-weight: bold;
 }
 
-.class-card, .background-card, .drive-card {
+.class-card, .background-card, .drive-card, .origin-name-card {
     border: 2px solid black;
     padding: 10px;
     margin-bottom: 2%;
@@ -65,8 +66,22 @@ nav button {
     padding: 10px;
 }
 
+.name-select-btn {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.name-select-el {
+    margin: 5% 0;
+}
+
 .center {
     justify-content: center;
+}
+
+.center-both {
+    justify-content: center;
+    align-items: center;
 }
 
 #background-selector-container ul {
@@ -78,6 +93,6 @@ nav button {
     margin-bottom: 5%;
 }
 
-#drive-selector-container p {
+#drive-selector-container p, #origin-name-selector-container p {
     text-align: center;
 }

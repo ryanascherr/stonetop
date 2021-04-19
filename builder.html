@@ -144,10 +144,26 @@
             <p>Stonetop is your home, or close enough, but where are you (or your family) from originally? Pick 1 and a name to match (or make up something similar).</p>
             <div id="origin-name-container">
                 <div class="origin-name-card">
-                    <input type="text">
+                    <div class="flex-row center-both name-select-el">
+                        <label for="origin">Choose a Place of Origin:</label>
+                        <select id="option" name="origin">
+                            <option id="option-one" value="option-one">Display Text 1</option>
+                            <option id="option-two" value="option-two">Display Text 2</option>
+                            <option id="option-three" value="option-three"></option>
+                            <option id="option-four" value="option-four"></option>
+                            <option id="option-five" value="option-five"></option>
+                          </select>
+                    </div>
+                    <div class="flex-row center-both name-select-el">
+                        <input id="name-input" type="text">
+                        <button class="name-select-btn">Select</button>
+                    </div>
                     <div id="origin"></div>
                 </div>
             </div>
+        </div>
+        <div id="stats-selector-container" class="hidden">
+            <h2>Assign each number to one of the stats</h2>
         </div>
     </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

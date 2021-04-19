@@ -6,6 +6,8 @@ let background;
 let drive;
 let hitPoints;
 let damage;
+let name;
+let origin;
 
 createCharacterBtn.click(function(){
     $("#class-selection-container").removeClass("hidden");
@@ -260,6 +262,9 @@ $("#drive-card-container").click(function(event){
     }
 
     if (playbook === "blessed") {
+        $("#option-one").text("Stonetop");
+        $("#option-two").text("The Steplands");
+        $("#option-three").text("The Wild");
         $("#origin").html("<p><b>Stonetop</b>: Arwel, Blodwen, Brynmor, Celyn, Fflur, Gwynn, Tegwen, or Winned</p><p><b>The Steplands</b> (Hillfolk): Bejn, Decla, Franza, Irv, Ivet, Jak, Sibl, or Yez</p><p><b>The Wild</b>: mix and match 1-3 of these: Autumn, Badger, Big, Black, Bloody, Brave, Crow, Cub, Dark, Doe, Fang, Fierce, Flower, Gentle, Green, Grim, Hart, Leaf, Little, Lonely, Old, Owl, Pale, Pup, Quick, Quiet, Rain, Red, Sharp, Snake, Snow, Spring, Summer, Tall, Tree, Yellow, White, Wind, Winter, Wolf, Whisper");
     }
 
@@ -294,6 +299,14 @@ $("#drive-card-container").click(function(event){
     if (playbook === "would-be-hero") {
         $("#origin").html("<p><b>Stonetop</b>: Anwen, Caradoc, Dafyd, Glenys, Madoc, Morwenna, Siwan, or Wynfor</p><p><b>The Steplands</b> (Hillfolk): Annic, Cosette, Denl, Hugenne, Jag, Marc, Oanz, or Sandre</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Bridin, Clian, Engis, Fearghul, Lan, Neasa, Nill, or Una</p><p><b>Lygos or some other southern town</b>: Chara, Davud, Korina, Omid, Parvaneh, Tamir, Takish, or Yannis</p>");
     }
+})
+
+$(".name-select-btn").click(function(){
+    
+    $("#origin-name-selector-container").addClass("hidden");
+    $("#stats-selector-container").removeClass("hidden");
+    name = $("#name-input").text();
+    origin = $("#option").val();
 
 
 })
