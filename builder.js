@@ -54,12 +54,12 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "lightbearer") {
-        $("#background-name-one").text("");
-        $("#background-description-one").html("");
-        $("#background-name-two").text("");
-        $("#background-description-two").html("");
-        $("#background-name-three").text("");
-        $("#background-description-three").html("");
+        $("#background-name-one").text("Auspicious Birth");
+        $("#background-description-one").html("<p>You were born in Stonetop, and that birth was marked by the God of Light. You bear a sunshaped birthmark, perhaps, or maybe you were born during an eclipse?</p><p>Whatever the sign, your connection to Helior was clear early on. You’ve a place of honor in Stonetop, though it’d be a lie to say you don’t make some uneasy.</p><p>When <b><i>one of your moves would cause you to mark a debility</i></b>, you may mark this move instead, to no ill effect. When you <b><i>Make Camp</i></b>, clear the circle.");
+        $("#background-name-two").text("Itinerant Mystic");
+        $("#background-description-two").html("<p>Th ey think of you as a self-satisfi ed kook who comes through now and again, speaking in riddles and playing tricks with the light. Sure, they know there’s something holy about you, but it’s not like you’re a priest or anything. Priests talk sense.</p><p>When you <b><i>start a session away from the others or go off on your own to do something mysterious</i></b>, hold 1 Enigma. You or the GM may spend your Enigma at any time to have you appear out of the blue, with or without explanation, for all things are possible to one who walks with Helior.");
+        $("#background-name-three").text("Soul on Fire");
+        $("#background-description-three").html("<p>You led a worldly life. A life of fear and doubt, base pleasures and petty grudges. A life like so many others. But something happened—injury, illness, a brush with Death; perhaps a moment of such profound misery and self-loathing that you thought you could fall no further.</p><p>Th ere, in the dark, Helior’s light shined upon you, igniting in your soul, lifting you and fi lling you with a profound sense of purpose.</p><p>When you <b><i>Persaude a group by preaching charity, mercy, and hope and roll a 7+</i></b>, aside from the usual effect, choose 1:</p><ul><li>Your name and your message spread</li><li>Someone approaches you, now or later, eager to know more</li></ul>");
     }
 
     if (playbook === "marshal") {
