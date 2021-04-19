@@ -22,11 +22,11 @@ nav button {
     display: none;
 }
 
-#class-selection-container {
-    margin: 0 2%;
+#class-selection-container, #background-selector-container {
+    margin: 0 5%;
 }
 
-#class-selection-container h2 {
+#class-selection-container h2, #background-selector-container h2 {
     text-align: center;
     margin: 5% 0;
 }
@@ -35,7 +35,7 @@ nav button {
     font-weight: bold;
 }
 
-.class-card {
+.class-card, .background-card {
     border: 2px solid black;
     padding: 10px;
     margin-bottom: 2%;
@@ -66,4 +66,8 @@ nav button {
 
 .center {
     justify-content: center;
+}
+
+#background-selector-container ul {
+    margin-left: 30px;
 }
