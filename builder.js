@@ -3,6 +3,9 @@ const selectCharacterBtn = $("#select-character-btn");
 const classSelectBtn = document.querySelectorAll(".class-select-btn");
 let playbook;
 let background;
+let drive;
+let hitPoints;
+let damage;
 
 createCharacterBtn.click(function(){
     $("#class-selection-container").removeClass("hidden");
@@ -19,6 +22,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "blessed") {
+        hitPoints = 18;
+        damage = 6;
         $("#background-name-one").text("Initiate");
         $("#background-description-one").html("<p>Stonetop has long been home to a sacred order, keepers of the old ways and speakers for Danu. You are one such initiate, the most gifted in generations. You gain the Rites of the Land move.</p><p>There are other initiates in Stonetop, serving the goddess and the village. They aid you as followers—see the Initiates of Danu insert. Who are they? Choose 2 or 3:</p><ul><li><b>Enfys</b>, your acolyte, beloved by birds</li><li><b>Afon</b>, strange and fae-touched</li><li><b>Gwendyl</b>, your mentor, a talented healer</li><li><b>Olwin</b>, your anointed lover, seer of fates</li><li><b>Seren the Eldest</b>, wise and hard as winter</li></ul>");
         $("#background-name-two").text("Raised by Wolves");
@@ -28,6 +33,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "fox") {
+        hitPoints = 16;
+        damage = 8;
         $("#background-name-one").text("The Natural");
         $("#background-description-one").html("<p>You grew up around here, and always picked things up quickly. Reading and numbers, sure, but more. Hide and seek. Throwing stones. Climbing. Fighting. Whatever you tried, you were good at it. As good as anyone else, if not better.</p><p>Sure, you’ve got a reputation for bending the rules. Playing dirty. But why play if you don’t play to win, right? And who do they come to when there’s a problem needs solving? You, that’s who.</p><p>When you <b><i>Seek Insight</i></b>, you may roll +INT instead +WIS and add “What opportunity does no one else see?” to the list of possible questions.");
         $("#background-name-two").text("A Life of Crime");
@@ -37,6 +44,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "heavy") {
+        hitPoints = 20;
+        damage = 10;
         $("#background-name-one").text("Sheriff");
         $("#background-description-one").html("<p>You keep order in Stonetop and protect it from outside threats. It might not be anything official, but everyone knows you’ve got a cool head and the weight to back up your words.</p><p>When you <b><i>bark an order or warning</i></b>, roll +CHA: <b>on a 7+</b>, they must choose 1:</p><ul><li>Do what you say</li><li>Dig in/take cover/flee</li><li>Attack you</li></ul><p><b>On a 10+</b>, you can tell which one they’re going to do and do something first; gain advantage if you do.");
         $("#background-name-two").text("Blood-Soaked Past");
@@ -46,6 +55,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "judge") {
+        hitPoints = 20;
+        damage = 6;
         $("#background-name-one").text("Legacy");
         $("#background-description-one").html("<p>You are the latest in a long line of Judges—born here, apprenticed to the prior Judge, and charged with the passing of the mantle. The Chronicle is a rich repository of lore, but there’s no index, so good luck fi nding anything.</p><p>When you <b><i>Know Things about the people or history of Stonetop</i></b>, you have advantage.</p><p>When you <b><i>spend days, weeks, or months poring over the Chronicle</i></b>, ask the GM a question, and the GM will tell you what you learn in that time.</p>");
         $("#background-name-two").text("Missionary");
@@ -55,6 +66,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "lightbearer") {
+        hitPoints = 18;
+        damage = 4;
         $("#background-name-one").text("Auspicious Birth");
         $("#background-description-one").html("<p>You were born in Stonetop, and that birth was marked by the God of Light. You bear a sunshaped birthmark, perhaps, or maybe you were born during an eclipse?</p><p>Whatever the sign, your connection to Helior was clear early on. You’ve a place of honor in Stonetop, though it’d be a lie to say you don’t make some uneasy.</p><p>When <b><i>one of your moves would cause you to mark a debility</i></b>, you may mark this move instead, to no ill effect. When you <b><i>Make Camp</i></b>, clear the circle.");
         $("#background-name-two").text("Itinerant Mystic");
@@ -64,6 +77,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "marshal") {
+        hitPoints = 20;
+        damage = 8;
         $("#background-name-one").text("Scion");
         $("#background-description-one").html("<p>You grew up here, descended from a long line. Some of the biggest names in Stonetop’s past are perched in your family tree. Everyone in the village takes your authority as a given, and your crew is a well-established institution in town.</p><p>You start with the Veteran Crew move, in addition to your usual moves.</p><p>When you <b><i>create your Crew</i></b>, they automatically have the <i>respected</i> tag (in addition to your usual picks, and any you get from Veteran Crew).</p>");
         $("#background-name-two").text("Penitent");
@@ -73,6 +88,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "ranger") {
+        hitPoints = 18;
+        damage = 8;
         $("#background-name-one").text("Mighty Hunter");
         $("#background-description-one").html("<p>You are a hunter of the Great Wood, the best the town has seen in generations. You know every part of the Wood within a two-day march.</p><p>You start with both the Expert Tracker move and the Stalker move.</p>");
         $("#background-name-two").text("Wide Wanderer");
@@ -82,6 +99,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "seeker") {
+        hitPoints = 16;
+        damage = 6;
         $("#background-name-one").text("Patriot");
         $("#background-description-one").html("<p>Th ese people are family. Chaos grows all around, but you’ll be damned if you’ll let your family come to harm. Damned indeed.</p><p>You have sought out and embraced dark power to protect that which you hold dear. Or perhaps that power fell upon you, and you took it up for the greater good. Either way, you seek more.</p><p>You start with the Let’s Make a Deal move and are Well Versed in the Things Below. You’ve also acquired 1 major arcanum:</p><ul><li>The Hec’tumel Codex</li><li>The Red Scepter</li><li>The Staff of the Lidless Orb</li></ul>");
         $("#background-name-two").text("Antiquarian");
@@ -91,6 +110,8 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "would-be-hero") {
+        hitPoints = 16;
+        damage = 6;
         $("#background-name-one").text("Impetuous Youth");
         $("#background-description-one").html("<p>Stonetop has always been home, but you chafe at the demands of mundane life and have always longed for more. Excitement! Danger!</p><p>When you <b><i>make a move and come up short</i></b>, you can give it your all and turn a 6- into a 7-9, a 7-9 into a 10+, and (if it matters), a 10-11 into a 12+. But if you do, pick 1 (the GM will fill in the details):<ul><li>You get hurt (2d4 damage and an actual injury)</li><li>You cause collateral damage, endanger others, or otherwise escalate the situation</li><li>Something on your person is lost or breaks</li></ul>");
         $("#background-name-two").text("Driven");
@@ -226,4 +247,53 @@ $("#background-card-container").click(function(event){
         $("#drive-name-five").text("");
         $("#drive-description-five").text("");
     }
+})
+
+$("#drive-card-container").click(function(event){
+
+    let element = event.target;
+
+    if (element.matches(".drive-select-btn")) {
+        $("#drive-selector-container").addClass("hidden");
+        $("#origin-name-selector-container").removeClass("hidden");
+        drive = element.getAttribute("data-drive");
+    }
+
+    if (playbook === "blessed") {
+        $("#origin").html("<p><b>Stonetop</b>: Arwel, Blodwen, Brynmor, Celyn, Fflur, Gwynn, Tegwen, or Winned</p><p><b>The Steplands</b> (Hillfolk): Bejn, Decla, Franza, Irv, Ivet, Jak, Sibl, or Yez</p><p><b>The Wild</b>: mix and match 1-3 of these: Autumn, Badger, Big, Black, Bloody, Brave, Crow, Cub, Dark, Doe, Fang, Fierce, Flower, Gentle, Green, Grim, Hart, Leaf, Little, Lonely, Old, Owl, Pale, Pup, Quick, Quiet, Rain, Red, Sharp, Snake, Snow, Spring, Summer, Tall, Tree, Yellow, White, Wind, Winter, Wolf, Whisper");
+    }
+
+    if (playbook === "fox") {
+        $("#origin").html("<p><b>Stonetop</b>: Bran, Carwyn, Delyth, Elin, Fion, Geral, Mair, Rannon, Vaughn, or Wynn</p><p><b>Gordin’s Delve</b>: Pick a name from any list.</p><p><b>Marshedge</b>: Comyna, Crevan, Fitz, Greagir, Maired, Nainsi, Naiclas, or Saraid</p><p><b>Lygos or some other point south</b>: Amit, Baz, Dafna, Mahsa, Parviz, Sanaz, Tzofi ya, Yaniv</p>");
+    }
+
+    if (playbook === "heavy") {
+        $("#origin").html("<p><b>Stonetop</b>: Aerona, Arthfael, Cadmor, Esyllt, Pedr, Rhonwen, Terrwen, or Trystan</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Aengus, Bairbre, Bronach, Flann, Laughn, Muirdoc, Quinn, or Treasa</p><p><b>The Steplands</b> (Hillfolk): Andr, Gabrl, Kaetl, Mael, Maela, Par, Ral, or Umbert</p><p><b>The Manmarch</b>: Bathhilde, Clothar, Ganter, Hiltrude, Ludig, Luise, Modd, or Wiland</p><p><b>Lygos or some other point south</b>: Arihl, Akios, Bhadur, Seble, Shahnaz, Shay, Tisi, or Zubin</p>");
+    }
+
+    if (playbook === "judge") {
+        $("#origin").html("<p><b>Stonetop</b>: Arianrhod, Caerwyn, Einion, Eleri, Magda, Nerys, Trahaern, or Trefor</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Briget, Comhall, Elnor, Liadain, Mirdach, Onghus, Somha, or Toal</p><p><b>Lygos or some other southern town</b>: Abrim, Cassander, Despina, Hypatta, Morecai, Nomika, Sofia, or Yose</p>");
+    }
+
+    if (playbook === "lightbearer") {
+        $("#origin").html("<p><b>Stonetop</b>: Dai, Eirian, Eurig, Haf, Haul, Hefin, Hulwen, or Tesni</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Adfin, Callach, Conlad, Eadna, Fionntan, Niamh, Orlaith, or Sorsha</p><p><b>Lygos or some other point south</b>: Arash, Azar, Hafiz, Murat, Roshan, Shideh, Zara, or Zohara</p>");
+    }
+
+    if (playbook === "marshal") {
+        $("#origin").html("<p><b>Stonetop</b>: Bethan, Cadfael, Ffraid, Gwythyr, Llewelyn, Meredith, Rhianna, or Urien</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Brigh, Cathal, Conn, Donal, Fionna, Laith, Talulla, or Torin</p><p><b>Steplands</b> (Hillfolk): Adl, Aeln, Clotild, Judoc, Katrn, Mygl, Pirn, or Sera</p><p><b>The Manmarch</b>: Berkhard, Gerhild, Hartig, Hilde, Sabrinne, Ulrike, Urrsla, or Weillem</p><p><b>Lygos or some other point south</b>: Ameer, Calixta, Hadar, Kelila, Sulaim, Ursa or Xandros");
+    }
+
+    if (playbook === "ranger") {
+        $("#origin").html("<p><b>Stonetop</b>: Aran, Bledyn, Branwen, Deryn, Ifur, Meinir, Rhys or Teagan</p><p><b>Marshedge</b>: Asling, Conar, Enna, Flannan, Macha, Mave, Proinsias, or Rowen</p><p><b>The Steplands</b> (Hillfolk): Bernd, Elown, Irn, Kani, Pol, Nol, Rozn, or Sterin</p><p><b>The Manmarch</b>: Alfher, Bertrim, Dagmar, Elfrida, Hramn, Meike, Swanhilde, or Wulfrim</p><p><b>Lygos or some other point south</b>: Ari, Boriz, Dimitra, Gorhan, Nitza, Selen, Todora, or Vasil</p>");
+    }
+
+    if (playbook === "seeker") {
+        $("#origin").html("<p><b>Stonetop</b>: Alis, Dylan, Eilwen, Gerlt, Gwenda, Macsen, Mirgan, Owena, Taliesyn, or Twymor</p><p><b>The Steplands</b> (Hillfolk): Anook, Anxo, Dors, Jory, Mari, Padg, Pons, or Silf</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Aiden, Barrfind, Caolan, Ciara, Deirbhile, Moirin, Tiern, or Reamann</p><p><b>Lygos or another southern town</b>: Dana, Eliana, Erez, Fikri, Isra, Persefoni, Spiro, or Vahid</p>");
+    }
+
+    if (playbook === "would-be-hero") {
+        $("#origin").html("<p><b>Stonetop</b>: Anwen, Caradoc, Dafyd, Glenys, Madoc, Morwenna, Siwan, or Wynfor</p><p><b>The Steplands</b> (Hillfolk): Annic, Cosette, Denl, Hugenne, Jag, Marc, Oanz, or Sandre</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Bridin, Clian, Engis, Fearghul, Lan, Neasa, Nill, or Una</p><p><b>Lygos or some other southern town</b>: Chara, Davud, Korina, Omid, Parvaneh, Tamir, Takish, or Yannis</p>");
+    }
+
+
 })
