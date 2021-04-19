@@ -72,12 +72,12 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "ranger") {
-        $("#background-name-one").text("");
-        $("#background-description-one").html("");
-        $("#background-name-two").text("");
-        $("#background-description-two").html("");
-        $("#background-name-three").text("");
-        $("#background-description-three").html("");
+        $("#background-name-one").text("Mighty Hunter");
+        $("#background-description-one").html("<p>You are a hunter of the Great Wood, the best the town has seen in generations. You know every part of the Wood within a two-day march.</p><p>You start with both the Expert Tracker move and the Stalker move.</p>");
+        $("#background-name-two").text("Wide Wanderer");
+        $("#background-description-two").html("<p>You have travelled much of the known world and perhaps parts beyond. Add each of the following to the Neighbors list in the Stonetop playbook, choosing 1 trait for each:</p><ul><li>Ennis (from Marshedge)</li><li>Shahar (from Gordan's Delve)</li><li>Yannic (from the Hillfolk)</li><li>Tovia (from Lygos)</li><li>Sasca (frim the northern Manmarch</li></ul><p>You start with the Mental Map move.</p><p>When you <b><i>Know Things about the wider world</i></b>, you can roll +WIS instead of +INT.</p><p>When you <b><i>arrive somewhere you’ve visited before</i></b> (your call), tell the GM when you were last here, and the GM will tell you how it’s changed.</p>");
+        $("#background-name-three").text("Beast-Bonded");
+        $("#background-description-three").html("<p>You grew up civilized, but your soul is bound to a beast of the wild. You’re closer to it than to any man or woman. How did this bond come about? How long ago? Regardless, you start with the Animal Companion move.</p><p>When you <b><i>focus on your animal companion for a few moments</i></b>, you can use any of the actions you’ve marked below, no matter the distance between you. Mark 1 action at 1st level, then another at 3rd, 5th, 7th, and 9th.</p><ul><li>Gauge its distance and direction from you</li><li>Call it back to your side</li><li>Sense its emotional state</li><li>Get a brief impression of what it senses</li><li>Lend it your strength-lose 1d6 HP, and it regains an equal amount</li></ul>");
     }
 
     if (playbook === "seeker") {
