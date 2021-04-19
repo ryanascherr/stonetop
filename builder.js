@@ -6,7 +6,7 @@ let background;
 let drive;
 let hitPoints;
 let damage;
-let name;
+let characterName;
 let origin;
 
 createCharacterBtn.click(function(){
@@ -305,7 +305,7 @@ $(".name-select-btn").click(function(){
     
     $("#origin-name-selector-container").addClass("hidden");
     $("#stats-selector-container").removeClass("hidden");
-    name = $("#name-input").text();
+    characterName = $("#name-input").text();
     origin = $("#option").val();
 
 
