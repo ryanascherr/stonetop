@@ -90,12 +90,12 @@ $("#class-card-container").click(function(event){
     }
 
     if (playbook === "would-be-hero") {
-        $("#background-name-one").text("");
-        $("#background-description-one").html("");
-        $("#background-name-two").text("");
-        $("#background-description-two").html("");
-        $("#background-name-three").text("");
-        $("#background-description-three").html("");
+        $("#background-name-one").text("Impetuous Youth");
+        $("#background-description-one").html("<p>Stonetop has always been home, but you chafe at the demands of mundane life and have always longed for more. Excitement! Danger!</p><p>When you <b><i>make a move and come up short</i></b>, you can give it your all and turn a 6- into a 7-9, a 7-9 into a 10+, and (if it matters), a 10-11 into a 12+. But if you do, pick 1 (the GM will fill in the details):<ul><li>You get hurt (2d4 damage and an actual injury)</li><li>You cause collateral damage, endanger others, or otherwise escalate the situation</li><li>Something on your person is lost or breaks</li></ul>");
+        $("#background-name-two").text("Driven");
+        $("#background-description-two").html("<p>You once led a simple life, but something happened. Something changed you, burdened you with terrible purpose. What was it? Choose 1:</p><ul><li>A loved one was killed or abducted</li><li>Someone gave their life to save you</li><li>Your idol sacrificed themselves to save many</li><li>You stumbled upon a dark mystery</li><li>You must make amends for a terrible mistake</li></ul><p>You always have the option of Burning Bright; you can spend 2 XP after you roll to add +1, even if you don’t have enough XP to level.");
+        $("#background-name-three").text("Destined");
+        $("#background-description-three").html("<p>Fate has laid her hand upon you and set you on a course for greatness. Choose 3-4 of the items below to describe your destiny:</p><p>anointed, marked at birth, your coming foretold, destroy, discover, free, protect, restore, unify, blood, civilization, darkness, earth & stone, fire, ice, light, life, storms, war, water, the fae, the gods, the Makers, the Stone, the Things Below</p><p>When you <b><i>start a session</i></b>, roll +nothing: <b>on a 7+</b>, the GM will describe a recent omen, dream, or vision that points toward your fate; <b>on a 10+</b>, you can ask the GM a follow-up question and get a clear, helpful answer; <b>on a 6-</b>, tell us of the nightmares you’ve been having and how your fears play into them.</p><p>When you <b><i>are at Death’s Door</i></b>, ask yourself, “Is my destiny fulfilled?” If it is not, treat a miss as a 7-9 and a 7-9 as a 10+.");
     }
 })
 
