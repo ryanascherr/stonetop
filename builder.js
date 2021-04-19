@@ -8,6 +8,12 @@ let hitPoints;
 let damage;
 let characterName;
 let origin;
+let str;
+let dex;
+let int;
+let wis;
+let con;
+let cha;
 
 createCharacterBtn.click(function(){
     $("#background-selector-container").addClass("hidden");
@@ -367,5 +373,37 @@ $(".origin-name-btn").click(function(){
     characterName = $("#name-input").val().trim();
     origin = $("#option").val();
 
+
+})
+
+$(".stat-select-btn").click(function(){
+
+//add stats to variables
+// str = 
+// dex =
+// int = 
+// wis =
+// con =
+// cha =
+
+//set things to local storage via object
+
+let newCharacter = {
+    playbook: playbook,
+    background: background,
+    drive: drive,
+    hitPoints: hitPoints,
+    damage: damage,
+    characterName: characterName,
+    origin: origin,
+    // str: str,
+    // dex: dex,
+    // int: int,
+    // wis: wis,
+    // con: con,
+    // cha: cha
+}
+
+localStorage.setItem("new-character", newCharacter)
 
 })
