@@ -172,3 +172,8 @@ h2 {
     text-align: center;
     align-self: center;
 }
+
+#strength, #dexterity, #intelligence, #wisdom, #constitution, #charisma, #damage-display {
+    background-color: gray;
+    color: white;
+}
