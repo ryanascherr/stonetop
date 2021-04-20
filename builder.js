@@ -14,14 +14,56 @@ let int;
 let wis;
 let con;
 let cha;
+let onFrontPage = true;
+
+selectCharacterBtn.click(function(){
+   $("#character-sheet-container").removeClass("hidden");
+})
 
 createCharacterBtn.click(function(){
+
+    // if (onFrontPage === false) {
+    //     $("#create-character-btn").text("Create a Character");
+    //     $("header").removeClass("hidden");
+    //     $("#background-selector-container").addClass("hidden");
+    //     $("#drive-selector-container").addClass("hidden");
+    //     $("#origin-name-selector-container").addClass("hidden");
+    //     $("#stats-selector-container").addClass("hidden");
+    //     onFrontPage = true;
+    // }
+
+    if (onFrontPage === true) {
+
+    $("#create-character-btn").text("Main Page");
+    $("header").addClass("hidden");
+    $("select-character-btn").addClass("hidden");
     $("#background-selector-container").addClass("hidden");
     $("#drive-selector-container").addClass("hidden");
     $("#origin-name-selector-container").addClass("hidden");
     $("#stats-selector-container").addClass("hidden");
+    $("#select-character-btn").addClass("hidden");
     $("#class-selection-container").removeClass("hidden");
     window.scrollTo(0, 0);
+    onFrontPage = false;
+
+    } else {
+        
+        $("#create-character-btn").text("Create a Character");
+        $("header").removeClass("hidden");
+        $("#class-selection-container").addClass("hidden");
+        $("#background-selector-container").addClass("hidden");
+        $("#drive-selector-container").addClass("hidden");
+        $("#origin-name-selector-container").addClass("hidden");
+        $("#stats-selector-container").addClass("hidden");
+        onFrontPage = true;
+
+        if ($("#select-character-btn").text() !== "") {
+            $("#select-character-btn").removeClass("hidden");
+        }
+    }
+
+
+
 })
 
 $("#class-card-container").click(function(event){
@@ -33,6 +75,7 @@ $("#class-card-container").click(function(event){
         $("#class-selection-container").addClass("hidden");
         $("#background-selector-container").removeClass("hidden");
         playbook = element.getAttribute("data-playbook");
+        onFrontPage = false;
     }
 
     if (playbook === "blessed") {
@@ -430,9 +473,16 @@ $(".stat-select-btn").click(function(){
     console.log(stonetopHero);
 
     $("#select-character-btn").removeClass("hidden").text(stonetopHero.characterName);
+
+    onFrontPage = true;
+
+    $("#create-character-btn").text("Create a Character");
 })
 
 function initialize(){
+
+    $("#create-character-btn").text("Create a Character");
+
     let stonetopHero = JSON.parse(localStorage.getItem("new-character"));
 
     if (stonetopHero) {
