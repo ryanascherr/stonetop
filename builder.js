@@ -423,6 +423,24 @@ $(".stat-select-btn").click(function(){
         cha: cha
     };    
     
-    localStorage.setItem(`${characterName}`, JSON.stringify(newCharacter));
+    localStorage.setItem("new-character", JSON.stringify(newCharacter));
 
+    let stonetopHero = JSON.parse(localStorage.getItem("new-character"));
+
+    console.log(stonetopHero);
+
+    $("#select-character-btn").removeClass("hidden").text(stonetopHero.characterName);
 })
+
+function initialize(){
+    let stonetopHero = JSON.parse(localStorage.getItem("new-character"));
+
+    if (stonetopHero) {
+
+        $("#select-character-btn").removeClass("hidden").text(stonetopHero.characterName);
+    }
+
+    console.log(stonetopHero);
+}
+
+initialize();
