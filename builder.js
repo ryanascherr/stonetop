@@ -15,9 +15,26 @@ let wis;
 let con;
 let cha;
 let onFrontPage = true;
+let stonetopHero;
 
 selectCharacterBtn.click(function(){
    $("#character-sheet-container").removeClass("hidden");
+   $("#create-character-btn").addClass("hidden");
+   $("header").addClass("hidden");
+   window.scrollTo(0, 0);
+   stonetopHero = JSON.parse(localStorage.getItem("new-character"));
+
+   $("#name-playbook").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
+   $("#strength").text(`STR (${stonetopHero.str})`);
+   $("#dexterity").text(`DEX (${stonetopHero.dex})`);
+   $("#intelligence").text(`INT (${stonetopHero.int})`);
+   $("#wisdom").text(`WIS (${stonetopHero.wis})`);
+   $("#constitution").text(`CON (${stonetopHero.con})`);
+   $("#charisma").text(`CHA (${stonetopHero.cha})`);
+   $("#damage-display").text(`Damage (d${stonetopHero.damage})`);
+   $("#hit-points-display").text(`HP (${stonetopHero.hitPoints})`);
+   $("#armor-display").text("Armor (+0)");
+   $("#xp-display").text("XP (+0)");
 })
 
 createCharacterBtn.click(function(){
@@ -78,7 +95,7 @@ $("#class-card-container").click(function(event){
         onFrontPage = false;
     }
 
-    if (playbook === "blessed") {
+    if (playbook === "Blessed") {
         hitPoints = 18;
         damage = 6;
         $("#background-name-one").text("Initiate");
@@ -89,7 +106,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>A seed of Danu’s power has taken root in your soul. Perhaps it has always been there and only recently sprouted. Or maybe it was planted in you during some portentous event.</p><p>Regardless, your dreams have been haunted by strange markings and symbols. You feel the mystic power in plants, stones, and soil. And you’ve felt the growing wrath of the Earth Mother as foul things begin to move about. Take the Danu’s Grasp move.</p><p>Danu’s power flows through you, but at great cost. When you <b><i>would spend 1 Stock from your sacred pouch</i></b>, you may choose to lose 2d4 HP instead.");
     }
 
-    if (playbook === "fox") {
+    if (playbook === "Fox") {
         hitPoints = 16;
         damage = 8;
         $("#background-name-one").text("The Natural");
@@ -100,7 +117,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>You left long ago, travelling far and living by your wits. Why did you leave? What deeds do you boast of, and which do you regret?</p><p>You always longed to return to Stonetop, and return you have. You’re a bit of a celebrity now, and you’ve got friends (or close enough) strewn about the known world.</p><p>When you <b><i>declare that you know someone outside of Stonetop</i></b>, someone who can help, name them and roll +CHA: on a 10+, yeah, they can help (tell us why they’re willing); on a 7-9, they can help but pick 1 from the list below; on a 6-, the GM chooses 1 and then some.</p><ul><li>They still hold a grudge</li><li>They're going to need something from you first</li><li>They swore off this sort of thing long ago</li><li>You can't exactly, y'know, trust them</li></ul>");
     }
 
-    if (playbook === "heavy") {
+    if (playbook === "Heavy") {
         hitPoints = 20;
         damage = 10;
         $("#background-name-one").text("Sheriff");
@@ -111,7 +128,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>You’ve been touched by Tor (Rainmaker, Thunderhead, Slayer-of-Beasts!) and bear runic markings similar to those etched into the Stone. When did the marks manifest? Are they a symbol of your strength, speed, and courage? Or their source?</p><p>You start with the Storm Markings major arcanum. Mark one of the boxes on the front of the Storm Markings sheet, and describe here the time you were struck by lightning and walked away unharmed.</p>");
     }
 
-    if (playbook === "judge") {
+    if (playbook === "Judge") {
         hitPoints = 20;
         damage = 6;
         $("#background-name-one").text("Legacy");
@@ -122,7 +139,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>The line of Judges was broken long ago, the Chronicle lost or fallen into ruin. Aratis has called you personally to her service though dreams, omens, and visions. Some in town resent the authority you’ve assumed.</p>When you <b><i>spend a few days communing with Aratis about a threat facing Stonetop or civilization as a whole</i></b>, roll +WIS: <b>on a 7+</b>, Aratis reveals the course of action she would have you take; <b>on a 10+</b>, you also hold 2 Sanction. While <b><i>acting on her orders</i></b>, spend 1 Sanction to add +1 to a roll you just made.</p>");
     }
 
-    if (playbook === "lightbearer") {
+    if (playbook === "Lightbearer") {
         hitPoints = 18;
         damage = 4;
         $("#background-name-one").text("Auspicious Birth");
@@ -133,7 +150,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>You led a worldly life. A life of fear and doubt, base pleasures and petty grudges. A life like so many others. But something happened—injury, illness, a brush with Death; perhaps a moment of such profound misery and self-loathing that you thought you could fall no further.</p><p>Th ere, in the dark, Helior’s light shined upon you, igniting in your soul, lifting you and fi lling you with a profound sense of purpose.</p><p>When you <b><i>Persaude a group by preaching charity, mercy, and hope and roll a 7+</i></b>, aside from the usual effect, choose 1:</p><ul><li>Your name and your message spread</li><li>Someone approaches you, now or later, eager to know more</li></ul>");
     }
 
-    if (playbook === "marshal") {
+    if (playbook === "Marshal") {
         hitPoints = 20;
         damage = 8;
         $("#background-name-one").text("Scion");
@@ -144,7 +161,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>You’re a natural leader—your words inspire, your plans win the day, your deeds are recounted far and wide. How is it that a luminary like you hails from this backwater? Are you touched by the gods? Does ancient blood fl ow in your veins? Or are you simply the champion that Stonetop needs in these trying times?</p><p>You start with the We Happy Few move, in addition to your usual moves.</p><p>When you <b><i>create your Crew</i></b>, they start with the Glory cost, in addition to 1 other cost of your choice. You may use either cost to trigger the Pay Up move.</p>");
     }
 
-    if (playbook === "ranger") {
+    if (playbook === "Ranger") {
         hitPoints = 18;
         damage = 8;
         $("#background-name-one").text("Mighty Hunter");
@@ -155,7 +172,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>You grew up civilized, but your soul is bound to a beast of the wild. You’re closer to it than to any man or woman. How did this bond come about? How long ago? Regardless, you start with the Animal Companion move.</p><p>When you <b><i>focus on your animal companion for a few moments</i></b>, you can use any of the actions you’ve marked below, no matter the distance between you. Mark 1 action at 1st level, then another at 3rd, 5th, 7th, and 9th.</p><ul><li>Gauge its distance and direction from you</li><li>Call it back to your side</li><li>Sense its emotional state</li><li>Get a brief impression of what it senses</li><li>Lend it your strength-lose 1d6 HP, and it regains an equal amount</li></ul>");
     }
 
-    if (playbook === "seeker") {
+    if (playbook === "Seeker") {
         hitPoints = 16;
         damage = 6;
         $("#background-name-one").text("Patriot");
@@ -166,7 +183,7 @@ $("#class-card-container").click(function(event){
         $("#background-description-three").html("<p>You’ve dedicated your life to rooting out and destroying horrors and their servants. What set you down this path? What did you sacrifice to walk it? What led you to call Stonetop home?</p><p>Regardless, you start with the Everything Bleeds move and are Well Versed in (pick 1) the fae, the Things Below, or the Black Gates and what lies beyond (go mark them now). You’ve also acquired 1 major arcanum:</p><ul><li>The Demonhide Cloak</li><li>The Redwood Effigy</li><li>The Twisted Spear</li></ul>");
     }
 
-    if (playbook === "would-be-hero") {
+    if (playbook === "Would-Be Hero") {
         hitPoints = 16;
         damage = 6;
         $("#background-name-one").text("Impetuous Youth");
@@ -192,7 +209,7 @@ $("#background-card-container").click(function(event){
         background = element.getAttribute("data-background");
     }
 
-    if (playbook === "blessed") {
+    if (playbook === "Blessed") {
         $("#drive-name-one").text("Conciliation");
         $("#drive-description-one").text("Calm, soothe, or mollify a hostile spirit or beast.");
         $("#drive-name-two").text("Cultivation");
@@ -205,7 +222,7 @@ $("#background-card-container").click(function(event){
         $("#last-drive").addClass("hidden");
     }
 
-    if (playbook === "fox") {
+    if (playbook === "Fox") {
         $("#drive-name-one").text("Conscience");
         $("#drive-description-one").text("Forego comfort or advantage to do the right thing.");
         $("#drive-name-two").text("Excitement");
@@ -218,7 +235,7 @@ $("#background-card-container").click(function(event){
         $("#drive-description-five").text("Get someone or thing to act on false information.");
     }
 
-    if (playbook === "heavy") {
+    if (playbook === "Heavy") {
         $("#drive-name-one").text("Challenge");
         $("#drive-description-one").text("Provoke a fight with a worthy foe, just you & them.");
         $("#drive-name-two").text("Honor");
@@ -231,7 +248,7 @@ $("#background-card-container").click(function(event){
         $("#last-drive").addClass("hidden");
     }
 
-    if (playbook === "judge") {
+    if (playbook === "Judge") {
         $("#drive-name-one").text("Duty");
         $("#drive-description-one").text("Cause trouble by adhering strictly to doctrine.");
         $("#drive-name-two").text("Harmony");
@@ -244,7 +261,7 @@ $("#background-card-container").click(function(event){
         $("#last-drive").addClass("hidden");
     }
 
-    if (playbook === "lightbearer") {
+    if (playbook === "Lightbearer") {
         $("#drive-name-one").text("Charity");
         $("#drive-description-one").text("Bring relief or comfort to someone who is suffering.");
         $("#drive-name-two").text("Faith");
@@ -257,7 +274,7 @@ $("#background-card-container").click(function(event){
         $("#last-drive").addClass("hidden");
     }
 
-    if (playbook === "marshal") {
+    if (playbook === "Marshal") {
         $("#drive-name-one").text("Honor");
         $("#drive-description-one").text("Keep a promise you made to an NPC.");
         $("#drive-name-two").text("Prestige");
@@ -270,7 +287,7 @@ $("#background-card-container").click(function(event){
         $("#last-drive").addClass("hidden");
     }
 
-    if (playbook === "ranger") {
+    if (playbook === "Ranger") {
         $("#drive-name-one").text("Mercy");
         $("#drive-description-one").text("Release someone/thing from bondage or suffering.");
         $("#drive-name-two").text("Stewardship");
@@ -283,7 +300,7 @@ $("#background-card-container").click(function(event){
         $("#last-drive").addClass("hidden");
     }
 
-    if (playbook === "seeker") {
+    if (playbook === "Seeker") {
         $("#drive-name-one").text("Cunning");
         $("#drive-description-one").text("Set up a ploy and then take advantage of it.");
         $("#drive-name-two").text("Curiosity");
@@ -296,7 +313,7 @@ $("#background-card-container").click(function(event){
         $("#drive-description-five").text("Endanger others in order to defeat the supernatural.");
     }
 
-    if (playbook === "would-be-hero") {
+    if (playbook === "Would-Be Hero") {
         $("#drive-name-one").text("Bravery");
         $("#drive-description-one").text("Face up to one of your fears.");
         $("#drive-name-two").text("Glory");
@@ -322,7 +339,7 @@ $("#drive-card-container").click(function(event){
         $("#name-input").val("");
     }
 
-    if (playbook === "blessed") {
+    if (playbook === "Blessed") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("The Steplands");
         $("#option-three").text("The Wild");
@@ -332,7 +349,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Arwel, Blodwen, Brynmor, Celyn, Fflur, Gwynn, Tegwen, or Winned</p><p><b>The Steplands</b> (Hillfolk): Bejn, Decla, Franza, Irv, Ivet, Jak, Sibl, or Yez</p><p><b>The Wild</b>: mix and match 1-3 of these: Autumn, Badger, Big, Black, Bloody, Brave, Crow, Cub, Dark, Doe, Fang, Fierce, Flower, Gentle, Green, Grim, Hart, Leaf, Little, Lonely, Old, Owl, Pale, Pup, Quick, Quiet, Rain, Red, Sharp, Snake, Snow, Spring, Summer, Tall, Tree, Yellow, White, Wind, Winter, Wolf, Whisper");
     }
 
-    if (playbook === "fox") {
+    if (playbook === "Fox") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("Gordin's Delve");
         $("#option-three").text("Marshedge");
@@ -342,7 +359,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Bran, Carwyn, Delyth, Elin, Fion, Geral, Mair, Rannon, Vaughn, or Wynn</p><p><b>Gordin’s Delve</b>: Pick a name from any list.</p><p><b>Marshedge</b>: Comyna, Crevan, Fitz, Greagir, Maired, Nainsi, Naiclas, or Saraid</p><p><b>Lygos or some other point south</b>: Amit, Baz, Dafna, Mahsa, Parviz, Sanaz, Tzofi ya, Yaniv</p>");
     }
 
-    if (playbook === "heavy") {
+    if (playbook === "Heavy") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("Gordin's Delve");
         $("#option-three").text("Marshedge");
@@ -352,7 +369,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Aerona, Arthfael, Cadmor, Esyllt, Pedr, Rhonwen, Terrwen, or Trystan</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Aengus, Bairbre, Bronach, Flann, Laughn, Muirdoc, Quinn, or Treasa</p><p><b>The Steplands</b> (Hillfolk): Andr, Gabrl, Kaetl, Mael, Maela, Par, Ral, or Umbert</p><p><b>The Manmarch</b>: Bathhilde, Clothar, Ganter, Hiltrude, Ludig, Luise, Modd, or Wiland</p><p><b>Lygos or some other point south</b>: Arihl, Akios, Bhadur, Seble, Shahnaz, Shay, Tisi, or Zubin</p>");
     }
 
-    if (playbook === "judge") {
+    if (playbook === "Judge") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("Gordin's Delve");
         $("#option-three").text("Marshedge");
@@ -362,7 +379,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Arianrhod, Caerwyn, Einion, Eleri, Magda, Nerys, Trahaern, or Trefor</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Briget, Comhall, Elnor, Liadain, Mirdach, Onghus, Somha, or Toal</p><p><b>Lygos or some other southern town</b>: Abrim, Cassander, Despina, Hypatta, Morecai, Nomika, Sofia, or Yose</p>");
     }
 
-    if (playbook === "lightbearer") {
+    if (playbook === "Lightbearer") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("Gordin's Delve");
         $("#option-three").text("Marshedge");
@@ -372,7 +389,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Dai, Eirian, Eurig, Haf, Haul, Hefin, Hulwen, or Tesni</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Adfin, Callach, Conlad, Eadna, Fionntan, Niamh, Orlaith, or Sorsha</p><p><b>Lygos or some other point south</b>: Arash, Azar, Hafiz, Murat, Roshan, Shideh, Zara, or Zohara</p>");
     }
 
-    if (playbook === "marshal") {
+    if (playbook === "Marshal") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("Gordin's Delve");
         $("#option-three").text("Marshedge");
@@ -382,7 +399,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Bethan, Cadfael, Ffraid, Gwythyr, Llewelyn, Meredith, Rhianna, or Urien</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Brigh, Cathal, Conn, Donal, Fionna, Laith, Talulla, or Torin</p><p><b>Steplands</b> (Hillfolk): Adl, Aeln, Clotild, Judoc, Katrn, Mygl, Pirn, or Sera</p><p><b>The Manmarch</b>: Berkhard, Gerhild, Hartig, Hilde, Sabrinne, Ulrike, Urrsla, or Weillem</p><p><b>Lygos or some other point south</b>: Ameer, Calixta, Hadar, Kelila, Sulaim, Ursa or Xandros");
     }
 
-    if (playbook === "ranger") {
+    if (playbook === "Ranger") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("Marshedge");
         $("#option-three").text("The Steplands");
@@ -392,7 +409,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Aran, Bledyn, Branwen, Deryn, Ifur, Meinir, Rhys or Teagan</p><p><b>Marshedge</b>: Asling, Conar, Enna, Flannan, Macha, Mave, Proinsias, or Rowen</p><p><b>The Steplands</b> (Hillfolk): Bernd, Elown, Irn, Kani, Pol, Nol, Rozn, or Sterin</p><p><b>The Manmarch</b>: Alfher, Bertrim, Dagmar, Elfrida, Hramn, Meike, Swanhilde, or Wulfrim</p><p><b>Lygos or some other point south</b>: Ari, Boriz, Dimitra, Gorhan, Nitza, Selen, Todora, or Vasil</p>");
     }
 
-    if (playbook === "seeker") {
+    if (playbook === "Seeker") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("The Steplands");
         $("#option-three").text("Gordin's Delve");
@@ -402,7 +419,7 @@ $("#drive-card-container").click(function(event){
         $("#origin").html("<p><b>Stonetop</b>: Alis, Dylan, Eilwen, Gerlt, Gwenda, Macsen, Mirgan, Owena, Taliesyn, or Twymor</p><p><b>The Steplands</b> (Hillfolk): Anook, Anxo, Dors, Jory, Mari, Padg, Pons, or Silf</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Aiden, Barrfind, Caolan, Ciara, Deirbhile, Moirin, Tiern, or Reamann</p><p><b>Lygos or another southern town</b>: Dana, Eliana, Erez, Fikri, Isra, Persefoni, Spiro, or Vahid</p>");
     }
 
-    if (playbook === "would-be-hero") {
+    if (playbook === "Would-Be Hero") {
         $("#option-one").text("Stonetop");
         $("#option-two").text("The Steplands");
         $("#option-three").text("Gordin's Delve");
@@ -436,6 +453,8 @@ $(".stat-select-btn").click(function(){
     }
 
     $("#stats-selector-container").addClass("hidden");
+
+    localStorage.clear();
 
     window.scrollTo(0, 0);
 
@@ -483,7 +502,7 @@ function initialize(){
 
     $("#create-character-btn").text("Create a Character");
 
-    let stonetopHero = JSON.parse(localStorage.getItem("new-character"));
+    stonetopHero = JSON.parse(localStorage.getItem("new-character"));
 
     if (stonetopHero) {
 

@@ -26,7 +26,7 @@
                     <h4>Medium Complexity</h4>
                     <img src="./assets/img/icon-blessed.png" alt="">
                     <p>Nature priest. Speaks to spirits and beasts. Works subtle magics via sacred markings and materials.</p>
-                    <button class="class-select-btn" data-playbook="blessed">Select</button>
+                    <button class="class-select-btn" data-playbook="Blessed">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Fox</h3>
@@ -34,28 +34,28 @@
                     </h4>
                     <img src="./assets/img/icon-fox.png" alt="">
                     <p>Clever, quick, and skillful. Not above bending the rules or fighting dirty. Can be quite the charmer, too.</p>
-                    <button class="class-select-btn" data-playbook="fox">Select</button>
+                    <button class="class-select-btn" data-playbook="Fox">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Heavy</h3>
                     <h4>Low/Medium Complexity</h4>
                     <img src="./assets/img/icon-heavy.png" alt="">
                     <p>Not just a violent individual—our violent individual. A champion, yes, but a bit of a liability, too.</p>
-                    <button class="class-select-btn" data-playbook="heavy">Select</button>
+                    <button class="class-select-btn" data-playbook="Heavy">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Judge</h3>
                     <h4>Lower Complexity</h4>
                     <img src="./assets/img/icon-judge.png" alt="">
                     <p>Settler of disputes, chronicler, and divine bulwark against chaos. Insightful, tough, not necessarily persuasive.</p>
-                    <button class="class-select-btn" data-playbook="judge">Select</button>
+                    <button class="class-select-btn" data-playbook="Judge">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Lightbearer</h3>
                     <h4>High Complexity</h4>
                     <img src="./assets/img/icon-lightbearer.png" alt="">
                     <p>Invokes divine power via flame and candle. Beacon of hope, charity, and mercy. Fiery foe of the dark.</p>
-                    <button class="class-select-btn" data-playbook="lightbearer">Select</button>
+                    <button class="class-select-btn" data-playbook="Lightbearer">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Marshal</h3>
@@ -63,14 +63,14 @@
                     </h4>
                     <img src="./assets/img/icon-marshal.png" alt="">
                     <p>Leads the town’s militia, plus a crew of followers. Makes choices about who lives and who dies.</p>
-                    <button class="class-select-btn" data-playbook="marshal">Select</button>
+                    <button class="class-select-btn" data-playbook="Marshal">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Ranger</h3>
                     <h4>Lower Complexity</h4>
                     <img src="./assets/img/icon-ranger.png" alt="">
                     <p>At home in the wild, the one you want with you when you travel. A resourceful guide and deadly hunter.</p>
-                    <button class="class-select-btn" data-playbook="ranger">Select</button>
+                    <button class="class-select-btn" data-playbook="Ranger">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Seeker</h3>
@@ -78,14 +78,14 @@
                     </h4>
                     <img src="./assets/img/icon-seeker.png" alt="">
                     <p>Collector of lost lore and power, with potent artifacts that might well lead to their ruin.</p>
-                    <button class="class-select-btn" data-playbook="seeker">Select</button>
+                    <button class="class-select-btn" data-playbook="Seeker">Select</button>
                 </div>
                 <div class="class-card">
                     <h3>The Would-Be Hero</h3>
                     <h4>Variable Complexity</h4>
                     <img src="./assets/img/icon-would-be-hero.png" alt="">
                     <p>They’re in over their head and full of fear and anger, but they just might outshine us all.</p>
-                    <button class="class-select-btn" data-playbook="would-be-hero">Select</button>
+                    <button class="class-select-btn" data-playbook="Would-Be Hero">Select</button>
                 </div>
             </div>
         </div>
@@ -259,7 +259,32 @@
         </div>
 
         <div id="character-sheet-container" class="hidden">
-
+            <h1 id="name-playbook"></h1>
+            <div id="stat-sheet-container" class="flex-column">
+                <div class="flex-row center">
+                    <button id="strength" class="stat-display"></button>
+                    <button id="dexterity" class="stat-display"></button>
+                </div>
+                <div class="flex-row center">
+                    <button id="intelligence" class="stat-display"></button>
+                    <button id="wisdom" class="stat-display"></button>
+                </div>
+                <div class="flex-row center">
+                    <button id="constitution" class="stat-display"></button>
+                    <button id="charisma" class="stat-display"></button>
+                </div>
+                <div class="flex-row center">
+                    <button id="damage-display" class="stat-display"></button>
+                    <div id="hit-points-display" class="stat-display"></div>
+                </div>
+                <div class="flex-row center">
+                    <div id="armor-display" class="stat-display"></div>
+                    <div id="xp-display" class="stat-display"></div>
+                </div>
+                <div id="roll">
+                    Click a button to make a roll!
+                </div>
+            </div>
         </div>
     </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
