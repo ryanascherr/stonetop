@@ -21,9 +21,12 @@ createCharacterBtn.click(function(){
     $("#origin-name-selector-container").addClass("hidden");
     $("#stats-selector-container").addClass("hidden");
     $("#class-selection-container").removeClass("hidden");
+    window.scrollTo(0, 0);
 })
 
 $("#class-card-container").click(function(event){
+
+    window.scrollTo(0, 0);
 
     let element = event.target;
 
@@ -134,6 +137,11 @@ $("#class-card-container").click(function(event){
 })
 
 $("#background-card-container").click(function(event){
+
+    window.scrollTo(0, 0);
+
+    $("#last-drive").removeClass("hidden");
+    $("#last-drive").addClass("drive-card");
     
     let element = event.target;
 
@@ -152,8 +160,8 @@ $("#background-card-container").click(function(event){
         $("#drive-description-three").text("Convince others to protect something of natural beauty or of importance to Danu.");
         $("#drive-name-four").text("Renewal");
         $("#drive-description-four").text("Restore someone or thing to its prior, untainted state, or defeat a perversion of the natural order.");
-        $("#drive-name-five").text("");
-        $("#drive-description-five").text("");
+        $("#last-drive").removeClass("drive-card");
+        $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "fox") {
@@ -178,8 +186,8 @@ $("#background-card-container").click(function(event){
         $("#drive-description-three").text("Prevent violence or end it without hurting anyone.");
         $("#drive-name-four").text("Pride");
         $("#drive-description-four").text("Put someone in their place.");
-        $("#drive-name-five").text("");
-        $("#drive-description-five").text("");
+        $("#last-drive").removeClass("drive-card");
+        $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "judge") {
@@ -191,8 +199,8 @@ $("#background-card-container").click(function(event){
         $("#drive-description-three").text("Teach another something important.");
         $("#drive-name-four").text("Zeal");
         $("#drive-description-four").text("Pass judgement hastily, without considering nuance or consequences.");
-        $("#drive-name-five").text("");
-        $("#drive-description-five").text("");
+        $("#last-drive").removeClass("drive-card");
+        $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "lightbearer") {
@@ -204,8 +212,8 @@ $("#background-card-container").click(function(event){
         $("#drive-description-three").text("Lead another to act despite fear or doubt.");
         $("#drive-name-four").text("Mercy");
         $("#drive-description-four").text("Forgive a wrong or set a helpless enemy free.");
-        $("#drive-name-five").text("");
-        $("#drive-description-five").text("");
+        $("#last-drive").removeClass("drive-card");
+        $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "marshal") {
@@ -217,8 +225,8 @@ $("#background-card-container").click(function(event){
         $("#drive-description-three").text("Give an order or enact a plan knowing it will bring an ally to harm.");
         $("#drive-name-four").text("Ruthlessness");
         $("#drive-description-four").text("Deny mercy to an enemy or betray a supposed ally.");
-        $("#drive-name-five").text("");
-        $("#drive-description-five").text("");
+        $("#last-drive").removeClass("drive-card");
+        $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "ranger") {
@@ -230,8 +238,8 @@ $("#background-card-container").click(function(event){
         $("#drive-description-three").text("Refuse to turn back despite objection or disaster.");
         $("#drive-name-four").text("Wonder");
         $("#drive-description-four").text("Show someone a place or thing of beauty.");
-        $("#drive-name-five").text("");
-        $("#drive-description-five").text("");
+        $("#last-drive").removeClass("drive-card");
+        $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "seeker") {
@@ -256,13 +264,15 @@ $("#background-card-container").click(function(event){
         $("#drive-description-three").text("Suffer or endure hardship so that someone else does not need to do so.");
         $("#drive-name-four").text("Succor");
         $("#drive-description-four").text("Provide aid or comfort to an NPC in need.");
-        $("#drive-name-five").text("");
-        $("#drive-description-five").text("");
+        $("#last-drive").removeClass("drive-card");
+        $("#last-drive").addClass("hidden");
     }
 })
 
 $("#drive-card-container").click(function(event){
 
+    window.scrollTo(0, 0);
+    
     let element = event.target;
 
     if (element.matches(".drive-select-btn")) {
@@ -364,6 +374,8 @@ $("#drive-card-container").click(function(event){
 
 $(".origin-name-btn").click(function(){
     
+    window.scrollTo(0, 0);
+    
     if (!$("#name-input").val() || !$("#option option:selected").text() || $("#option option:selected").text() === "-") {
         return;
     }
@@ -387,6 +399,8 @@ $(".stat-select-btn").click(function(){
 // cha =
 
 //set things to local storage via object
+
+window.scrollTo(0, 0);
 
 let newCharacter = {
     playbook: playbook,
