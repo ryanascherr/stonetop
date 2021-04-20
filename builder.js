@@ -26,11 +26,10 @@ createCharacterBtn.click(function(){
 
 $("#class-card-container").click(function(event){
 
-    window.scrollTo(0, 0);
-
     let element = event.target;
 
     if (element.matches(".class-select-btn")) {
+        window.scrollTo(0, 0);
         $("#class-selection-container").addClass("hidden");
         $("#background-selector-container").removeClass("hidden");
         playbook = element.getAttribute("data-playbook");
@@ -138,14 +137,13 @@ $("#class-card-container").click(function(event){
 
 $("#background-card-container").click(function(event){
 
-    window.scrollTo(0, 0);
-
     $("#last-drive").removeClass("hidden");
     $("#last-drive").addClass("drive-card");
     
     let element = event.target;
 
     if (element.matches(".background-select-btn")) {
+        window.scrollTo(0, 0);
         $("#background-selector-container").addClass("hidden");
         $("#drive-selector-container").removeClass("hidden");
         background = element.getAttribute("data-background");
@@ -270,15 +268,15 @@ $("#background-card-container").click(function(event){
 })
 
 $("#drive-card-container").click(function(event){
-
-    window.scrollTo(0, 0);
     
     let element = event.target;
 
     if (element.matches(".drive-select-btn")) {
+        window.scrollTo(0, 0);
         $("#drive-selector-container").addClass("hidden");
         $("#origin-name-selector-container").removeClass("hidden");
         drive = element.getAttribute("data-drive");
+        $("#name-input").val("");
     }
 
     if (playbook === "blessed") {
@@ -374,11 +372,11 @@ $("#drive-card-container").click(function(event){
 
 $(".origin-name-btn").click(function(){
     
-    window.scrollTo(0, 0);
-    
     if (!$("#name-input").val() || !$("#option option:selected").text() || $("#option option:selected").text() === "-") {
         return;
     }
+
+    window.scrollTo(0, 0);
     
     $("#origin-name-selector-container").addClass("hidden");
     $("#stats-selector-container").removeClass("hidden");
@@ -390,34 +388,41 @@ $(".origin-name-btn").click(function(){
 
 $(".stat-select-btn").click(function(){
 
-//add stats to variables
-// str = 
-// dex =
-// int = 
-// wis =
-// con =
-// cha =
+    if ($("#stat-one").val() === "-" || $("#stat-two").val() === "-" || $("#stat-three").val() === "-" || $("#stat-four").val() === "-" || $("#stat-five").val() === "-" || $("#stat-six").val() === "-") {
+    return;
+    }
+
+    $("#stats-selector-container").addClass("hidden");
+
+    window.scrollTo(0, 0);
+
+    str = $("#stat-one").val();
+    dex = $("#stat-two").val();
+    int = $("#stat-three").val();
+    wis = $("#stat-four").val();
+    con = $("#stat-five").val();
+    cha = $("#stat-six").val();
+
+    // localStorage.setItem("playbook", playbook);
 
 //set things to local storage via object
 
-window.scrollTo(0, 0);
-
-let newCharacter = {
-    playbook: playbook,
-    background: background,
-    drive: drive,
-    hitPoints: hitPoints,
-    damage: damage,
-    characterName: characterName,
-    origin: origin,
-    // str: str,
-    // dex: dex,
-    // int: int,
-    // wis: wis,
-    // con: con,
-    // cha: cha
-}
-
-localStorage.setItem("new-character", newCharacter)
+    let newCharacter = {
+        playbook: playbook,
+        background: background,
+        drive: drive,
+        hitPoints: hitPoints,
+        damage: damage,
+        characterName: characterName,
+        origin: origin,
+        str: str,
+        dex: dex,
+        int: int,
+        wis: wis,
+        con: con,
+        cha: cha
+    };    
+    
+    localStorage.setItem(`${characterName}`, JSON.stringify(newCharacter));
 
 })

@@ -18,11 +18,15 @@ nav button {
     padding: 10px;
 }
 
+h4 {
+    margin-bottom: 0;
+}
+
 .hidden {
     display: none;
 }
 
-#class-selection-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container, #stat-card-container {
+#class-selection-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container, #stats-selector-container {
     margin: 0 5%;
 }
 
@@ -35,7 +39,7 @@ h2 {
     font-weight: bold;
 }
 
-.class-card, .background-card, .drive-card, .origin-name-card, .stat-card {
+.class-card, .background-card, .drive-card, .origin-name-card {
     border: 2px solid black;
     padding: 10px;
     margin-bottom: 2%;
@@ -43,11 +47,6 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.stat-card {
-    border-radius: 10px;
-    margin-left: 5%;
 }
 
 #class-selection-container img {
@@ -62,6 +61,11 @@ h2 {
 
 .flex-row {
     display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .class-select-btn, .background-select-btn, .drive-select-btn, .origin-name-btn {
@@ -108,9 +112,7 @@ h2 {
 #stats-selector-container ul li {
     list-style-type: none;
     margin: 0 2%;
-    border: 2px solid black;
     padding: 10px;
-    border-radius: 10px;
 }
 
 .wrap {
@@ -118,16 +120,26 @@ h2 {
 }
 
 .stats {
-    width: 50%;
     margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.start {
-    justify-content: flex-start;
-    align-items: center;
+#stat-card-container select {
+    margin-right: 5%;
 }
 
 .origin-name-card label {
     margin: 0 5px 0 0;
+}
+
+.stat-card {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 50%;
 }
 
