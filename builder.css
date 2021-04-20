@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 header {
@@ -37,6 +38,10 @@ h2 {
 
 #class-selection-container h3 {
     font-weight: bold;
+}
+
+#class-selection-container h4 {
+    text-align: center;
 }
 
 .class-card, .background-card, .drive-card, .origin-name-card {

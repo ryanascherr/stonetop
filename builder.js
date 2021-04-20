@@ -16,6 +16,9 @@ let con;
 let cha;
 let onFrontPage = true;
 let stonetopHero;
+let rollNormal;
+let rollAdvantage;
+let rollDisadvantage;
 
 selectCharacterBtn.click(function(){
    $("#character-sheet-container").removeClass("hidden");
@@ -442,8 +445,7 @@ $(".origin-name-btn").click(function(){
     $("#stats-selector-container").removeClass("hidden");
     characterName = $("#name-input").val().trim();
     origin = $("#option").val();
-
-
+    $("header").removeClass("hidden");
 })
 
 $(".stat-select-btn").click(function(){
@@ -497,6 +499,126 @@ $(".stat-select-btn").click(function(){
 
     $("#create-character-btn").text("Create a Character");
 })
+
+$("#strength").click(function(){
+    statRollNormal(parseInt(stonetopHero.str));
+    statRollAdvantage(parseInt(stonetopHero.str));
+    statRollDisadvantage(parseInt(stonetopHero.str));
+
+    $("#roll").html(`<b><i>Strength</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+})
+
+$("#dexterity").click(function(){
+    statRollNormal(parseInt(stonetopHero.dex));
+    statRollAdvantage(parseInt(stonetopHero.dex));
+    statRollDisadvantage(parseInt(stonetopHero.dex));
+
+    $("#roll").html(`<b><i>Dexterity</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+})
+
+$("#intelligence").click(function(){
+    statRollNormal(parseInt(stonetopHero.int));
+    statRollAdvantage(parseInt(stonetopHero.int));
+    statRollDisadvantage(parseInt(stonetopHero.int));
+
+    $("#roll").html(`<b><i>Intelligence</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+})
+
+$("#wisdom").click(function(){
+    statRollNormal(parseInt(stonetopHero.wis));
+    statRollAdvantage(parseInt(stonetopHero.wis));
+    statRollDisadvantage(parseInt(stonetopHero.wis));
+
+    $("#roll").html(`<b><i>Wisdom</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+})
+
+$("#constitution").click(function(){
+    statRollNormal(parseInt(stonetopHero.con));
+    statRollAdvantage(parseInt(stonetopHero.con));
+    statRollDisadvantage(parseInt(stonetopHero.con));
+
+    $("#roll").html(`<b><i>Constitution</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+})
+
+$("#charisma").click(function(){
+    statRollNormal(parseInt(stonetopHero.cha));
+    statRollAdvantage(parseInt(stonetopHero.cha));
+    statRollDisadvantage(parseInt(stonetopHero.cha));
+
+    $("#roll").html(`<b><i>Charisma</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+})
+
+$("#damage-display").click(function(){
+    damageRollNormal(stonetopHero.damage);
+    damageRollAdvantage(stonetopHero.damage);
+    damageRollDisadvantage(stonetopHero.damage);
+
+    $("#roll").html(`<b><i>Damage</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+})
+
+function statRollNormal(stat) {
+    let rollOne = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollTwo = Math.floor(Math.random() * stonetopHero.damage) + 1;
+
+    rollNormal = rollOne + rollTwo + stat;
+
+}
+
+function statRollAdvantage(stat) {
+    let rollOne = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollTwo = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollThree = Math.floor(Math.random() * stonetopHero.damage) + 1;
+
+    if (rollThree <= rollTwo && rollThree <= rollOne) {
+        rollAdvantage = rollOne + rollTwo + stat;
+    } else if (rollTwo <= rollOne && rollTwo <= rollThree) {
+        rollAdvantage = rollOne + rollThree + stat;
+    } else {
+        rollAdvantage = rollTwo + rollThree + stat;
+    }
+}
+
+function statRollDisadvantage(stat) {
+    let rollOne = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollTwo = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollThree = Math.floor(Math.random() * stonetopHero.damage) + 1;
+
+    if (rollThree >= rollTwo && rollThree >= rollOne) {
+        rollDisadvantage = rollOne + rollTwo + stat;
+    } else if (rollTwo >= rollOne && rollTwo >= rollThree) {
+        rollDisadvantage = rollOne + rollThree + stat;
+    } else {
+        rollDisadvantage = rollTwo + rollThree + stat;
+    }
+}
+
+function damageRollNormal(damage) {
+    let rollOne = Math.floor(Math.random() * damage) + 1;
+
+    rollNormal = rollOne;
+}
+
+function damageRollAdvantage(damage) {
+    let rollOne = Math.floor(Math.random() * damage) + 1;
+    let rollTwo = Math.floor(Math.random() * damage) + 1;
+
+    if (rollOne >= rollTwo) {
+        rollNormal = rollOne;
+    } else {
+        rollAdvantage = rollTwo;
+    }  
+}
+
+function damageRollDisadvantage(damage) {
+    let rollOne = Math.floor(Math.random() * damage) + 1;
+    let rollTwo = Math.floor(Math.random() * damage) + 1;
+
+    if (rollOne >= rollTwo) {
+        rollNormal = rollTwo;
+    } else {
+        rollDisadvantage = rollOne;
+    }  
+}
 
 function initialize(){
 
