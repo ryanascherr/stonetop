@@ -45,6 +45,13 @@ selectCharacterBtn.click(function(){
         $("#xp-display").text("XP (+0)");
         $("#stat-btn").addClass("highlight");
 
+        if (stonetopHero.playbook === "Blessed") {
+            $("#move-one-title").text("Spirit Tongue");
+            $("#move-one-content").html('You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.');
+            $("#move-two-title").text("Call the Spirits");
+            $("#move-two-content").html('When you <b><i>perform a short ritual and invoke the spirit(s) of a place or object</i></b>, spend 1 Stock. The spirit(s) manifest before you and will hear what you have to say. What they do next is up to them.');
+        }
+
         window.scrollTo(0, 0);
         onFrontPage = false;
     
@@ -59,32 +66,50 @@ selectCharacterBtn.click(function(){
 
 $("#stat-btn").click(function(){
     $("#stat-btn").addClass("highlight");
-    $("#moves-btn").removeClass("highlight");
+    $("#playbook-moves-btn").removeClass("highlight");
     $("#background-btn").removeClass("highlight");
+    $("#basic-moves-btn").removeClass("highlight");
 
-    $("#moves-sheet-container").addClass("hidden");
+    $("#playbook-moves-sheet-container").addClass("hidden");
     $("#background-sheet-container").addClass("hidden");
+    $("#basic-moves-sheet-container").addClass("hidden");
     $("#stat-sheet-container").removeClass("hidden");
 })
 
-$("#moves-btn").click(function(){
-    $("#moves-btn").addClass("highlight");
+$("#playbook-moves-btn").click(function(){
+    $("#playbook-moves-btn").addClass("highlight");
     $("#stat-btn").removeClass("highlight");
     $("#background-btn").removeClass("highlight");
+    $("#basic-moves-btn").removeClass("highlight");
 
     $("#stat-sheet-container").addClass("hidden");
     $("#background-sheet-container").addClass("hidden");
-    $("#moves-sheet-container").removeClass("hidden");
+    $("#basic-moves-sheet-container").addClass("hidden");
+    $("#playbook-moves-sheet-container").removeClass("hidden");
 })
 
 $("#background-btn").click(function(){
     $("#background-btn").addClass("highlight");
     $("#stat-btn").removeClass("highlight");
-    $("#moves-btn").removeClass("highlight");
+    $("#playbook-moves-btn").removeClass("highlight");
+    $("#basic-moves-btn").removeClass("highlight");
 
-    $("#moves-sheet-container").addClass("hidden");
+    $("#playbook-moves-sheet-container").addClass("hidden");
     $("#stat-sheet-container").addClass("hidden");
+    $("#basic-moves-sheet-container").addClass("hidden");
     $("#background-sheet-container").removeClass("hidden");
+})
+
+$("#basic-moves-btn").click(function(){
+    $("#basic-moves-btn").addClass("highlight");
+    $("#background-btn").removeClass("highlight");
+    $("#stat-btn").removeClass("highlight");
+    $("#playbook-moves-btn").removeClass("highlight");
+
+    $("#playbook-moves-sheet-container").addClass("hidden");
+    $("#stat-sheet-container").addClass("hidden");
+    $("#background-sheet-container").addClass("hidden");
+    $("#basic-moves-sheet-container").removeClass("hidden");
 })
 
 createCharacterBtn.click(function(){
