@@ -46,6 +46,10 @@ h2 {
     margin-bottom: 10px;
 }
 
+#name-input {
+    text-align: center;
+}
+
 .class-card, .background-card, .drive-card, .origin-name-card {
     border: 2px solid black;
     padding: 10px;
@@ -110,15 +114,22 @@ h2 {
     text-align: center;
 }
 
-#stats-selector-container ul {
+#stats-array {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     margin: 5% 0;
 }
 
-#stats-selector-container ul li {
-    list-style-type: none;
+#stats-array h4 {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 33.33%;
+}
+
+#stat-card-container h4 {
     margin: 0 2%;
     padding: 10px;
 }
@@ -148,7 +159,9 @@ h2 {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 75%;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
 }
 
 #name-playbook {

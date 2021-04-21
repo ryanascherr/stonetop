@@ -445,7 +445,6 @@ $(".origin-name-btn").click(function(){
     $("#stats-selector-container").removeClass("hidden");
     characterName = $("#name-input").val().trim();
     origin = $("#option").val();
-    $("header").removeClass("hidden");
 })
 
 $(".stat-select-btn").click(function(){
@@ -455,6 +454,8 @@ $(".stat-select-btn").click(function(){
     }
 
     $("#stats-selector-container").addClass("hidden");
+
+    $("header").removeClass("hidden");
 
     localStorage.clear();
 
