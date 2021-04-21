@@ -38,10 +38,12 @@ h2 {
 
 #class-selection-container h3 {
     font-weight: bold;
+    text-align: center;
 }
 
 #class-selection-container h4 {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .class-card, .background-card, .drive-card, .origin-name-card {
@@ -138,7 +140,7 @@ h2 {
 }
 
 .origin-name-card label {
-    margin: 0 5px 0 0;
+    margin-bottom: 0 0 5px 0;
 }
 
 .stat-card {

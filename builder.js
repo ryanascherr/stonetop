@@ -349,7 +349,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("-");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>: Arwel, Blodwen, Brynmor, Celyn, Fflur, Gwynn, Tegwen, or Winned</p><p><b>The Steplands</b> (Hillfolk): Bejn, Decla, Franza, Irv, Ivet, Jak, Sibl, or Yez</p><p><b>The Wild</b>: mix and match 1-3 of these: Autumn, Badger, Big, Black, Bloody, Brave, Crow, Cub, Dark, Doe, Fang, Fierce, Flower, Gentle, Green, Grim, Hart, Leaf, Little, Lonely, Old, Owl, Pale, Pup, Quick, Quiet, Rain, Red, Sharp, Snake, Snow, Spring, Summer, Tall, Tree, Yellow, White, Wind, Winter, Wolf, Whisper");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Arwel, Blodwen, Brynmor, Celyn, Fflur, Gwynn, Tegwen, or Winned</p><p><b>The Steplands</b> (Hillfolk):<br>Bejn, Decla, Franza, Irv, Ivet, Jak, Sibl, or Yez</p><p><b>The Wild</b> (mix and match 1-3):<br>Autumn, Badger, Big, Black, Bloody, Brave, Crow, Cub, Dark, Doe, Fang, Fierce, Flower, Gentle, Green, Grim, Hart, Leaf, Little, Lonely, Old, Owl, Pale, Pup, Quick, Quiet, Rain, Red, Sharp, Snake, Snow, Spring, Summer, Tall, Tree, Yellow, White, Wind, Winter, Wolf, Whisper");
     }
 
     if (playbook === "Fox") {
@@ -359,7 +359,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Lygos");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>: Bran, Carwyn, Delyth, Elin, Fion, Geral, Mair, Rannon, Vaughn, or Wynn</p><p><b>Gordin’s Delve</b>: Pick a name from any list.</p><p><b>Marshedge</b>: Comyna, Crevan, Fitz, Greagir, Maired, Nainsi, Naiclas, or Saraid</p><p><b>Lygos or some other point south</b>: Amit, Baz, Dafna, Mahsa, Parviz, Sanaz, Tzofi ya, Yaniv</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Bran, Carwyn, Delyth, Elin, Fion, Geral, Mair, Rannon, Vaughn, or Wynn</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Comyna, Crevan, Fitz, Greagir, Maired, Nainsi, Naiclas, or Saraid</p><p><b>Lygos or some other point south</b>:<br>Amit, Baz, Dafna, Mahsa, Parviz, Sanaz, Tzofi ya, Yaniv</p>");
     }
 
     if (playbook === "Heavy") {
@@ -369,7 +369,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("The Steplands");
         $("#option-five").text("The Manmarch");
         $("#option-six").text("Lygos");
-        $("#origin").html("<p><b>Stonetop</b>: Aerona, Arthfael, Cadmor, Esyllt, Pedr, Rhonwen, Terrwen, or Trystan</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Aengus, Bairbre, Bronach, Flann, Laughn, Muirdoc, Quinn, or Treasa</p><p><b>The Steplands</b> (Hillfolk): Andr, Gabrl, Kaetl, Mael, Maela, Par, Ral, or Umbert</p><p><b>The Manmarch</b>: Bathhilde, Clothar, Ganter, Hiltrude, Ludig, Luise, Modd, or Wiland</p><p><b>Lygos or some other point south</b>: Arihl, Akios, Bhadur, Seble, Shahnaz, Shay, Tisi, or Zubin</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Aerona, Arthfael, Cadmor, Esyllt, Pedr, Rhonwen, Terrwen, or Trystan</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Aengus, Bairbre, Bronach, Flann, Laughn, Muirdoc, Quinn, or Treasa</p><p><b>The Steplands</b> (Hillfolk):<br>Andr, Gabrl, Kaetl, Mael, Maela, Par, Ral, or Umbert</p><p><b>The Manmarch</b>:<br> Bathhilde, Clothar, Ganter, Hiltrude, Ludig, Luise, Modd, or Wiland</p><p><b>Lygos or some other point south</b>:<br>Arihl, Akios, Bhadur, Seble, Shahnaz, Shay, Tisi, or Zubin</p>");
     }
 
     if (playbook === "Judge") {
@@ -379,7 +379,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Lygos");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>: Arianrhod, Caerwyn, Einion, Eleri, Magda, Nerys, Trahaern, or Trefor</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Briget, Comhall, Elnor, Liadain, Mirdach, Onghus, Somha, or Toal</p><p><b>Lygos or some other southern town</b>: Abrim, Cassander, Despina, Hypatta, Morecai, Nomika, Sofia, or Yose</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Arianrhod, Caerwyn, Einion, Eleri, Magda, Nerys, Trahaern, or Trefor</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Briget, Comhall, Elnor, Liadain, Mirdach, Onghus, Somha, or Toal</p><p><b>Lygos or some other southern town</b>:<br>Abrim, Cassander, Despina, Hypatta, Morecai, Nomika, Sofia, or Yose</p>");
     }
 
     if (playbook === "Lightbearer") {
@@ -389,7 +389,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Lygos");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>: Dai, Eirian, Eurig, Haf, Haul, Hefin, Hulwen, or Tesni</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Adfin, Callach, Conlad, Eadna, Fionntan, Niamh, Orlaith, or Sorsha</p><p><b>Lygos or some other point south</b>: Arash, Azar, Hafiz, Murat, Roshan, Shideh, Zara, or Zohara</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Dai, Eirian, Eurig, Haf, Haul, Hefin, Hulwen, or Tesni</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Adfin, Callach, Conlad, Eadna, Fionntan, Niamh, Orlaith, or Sorsha</p><p><b>Lygos or some other point south</b>:<br>Arash, Azar, Hafiz, Murat, Roshan, Shideh, Zara, or Zohara</p>");
     }
 
     if (playbook === "Marshal") {
@@ -399,7 +399,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("The Steplands");
         $("#option-five").text("The Manmarch");
         $("#option-six").text("Lygos");
-        $("#origin").html("<p><b>Stonetop</b>: Bethan, Cadfael, Ffraid, Gwythyr, Llewelyn, Meredith, Rhianna, or Urien</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Brigh, Cathal, Conn, Donal, Fionna, Laith, Talulla, or Torin</p><p><b>Steplands</b> (Hillfolk): Adl, Aeln, Clotild, Judoc, Katrn, Mygl, Pirn, or Sera</p><p><b>The Manmarch</b>: Berkhard, Gerhild, Hartig, Hilde, Sabrinne, Ulrike, Urrsla, or Weillem</p><p><b>Lygos or some other point south</b>: Ameer, Calixta, Hadar, Kelila, Sulaim, Ursa or Xandros");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Bethan, Cadfael, Ffraid, Gwythyr, Llewelyn, Meredith, Rhianna, or Urien</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>: Brigh, Cathal, Conn, Donal, Fionna, Laith, Talulla, or Torin</p><p><b>Steplands</b> (Hillfolk):<br>Adl, Aeln, Clotild, Judoc, Katrn, Mygl, Pirn, or Sera</p><p><b>The Manmarch</b>:<br>Berkhard, Gerhild, Hartig, Hilde, Sabrinne, Ulrike, Urrsla, or Weillem</p><p><b>Lygos or some other point south</b>:<br>Ameer, Calixta, Hadar, Kelila, Sulaim, Ursa or Xandros");
     }
 
     if (playbook === "Ranger") {
@@ -409,7 +409,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("The Manmarch");
         $("#option-five").text("Lygos");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>: Aran, Bledyn, Branwen, Deryn, Ifur, Meinir, Rhys or Teagan</p><p><b>Marshedge</b>: Asling, Conar, Enna, Flannan, Macha, Mave, Proinsias, or Rowen</p><p><b>The Steplands</b> (Hillfolk): Bernd, Elown, Irn, Kani, Pol, Nol, Rozn, or Sterin</p><p><b>The Manmarch</b>: Alfher, Bertrim, Dagmar, Elfrida, Hramn, Meike, Swanhilde, or Wulfrim</p><p><b>Lygos or some other point south</b>: Ari, Boriz, Dimitra, Gorhan, Nitza, Selen, Todora, or Vasil</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Aran, Bledyn, Branwen, Deryn, Ifur, Meinir, Rhys or Teagan</p><p><b>Marshedge</b>:<br>Asling, Conar, Enna, Flannan, Macha, Mave, Proinsias, or Rowen</p><p><b>The Steplands</b> (Hillfolk):<br>Bernd, Elown, Irn, Kani, Pol, Nol, Rozn, or Sterin</p><p><b>The Manmarch</b>:<br>Alfher, Bertrim, Dagmar, Elfrida, Hramn, Meike, Swanhilde, or Wulfrim</p><p><b>Lygos or some other point south</b>:<br>Ari, Boriz, Dimitra, Gorhan, Nitza, Selen, Todora, or Vasil</p>");
     }
 
     if (playbook === "Seeker") {
@@ -419,7 +419,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Marshedge");
         $("#option-five").text("Lygos");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>: Alis, Dylan, Eilwen, Gerlt, Gwenda, Macsen, Mirgan, Owena, Taliesyn, or Twymor</p><p><b>The Steplands</b> (Hillfolk): Anook, Anxo, Dors, Jory, Mari, Padg, Pons, or Silf</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Aiden, Barrfind, Caolan, Ciara, Deirbhile, Moirin, Tiern, or Reamann</p><p><b>Lygos or another southern town</b>: Dana, Eliana, Erez, Fikri, Isra, Persefoni, Spiro, or Vahid</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Alis, Dylan, Eilwen, Gerlt, Gwenda, Macsen, Mirgan, Owena, Taliesyn, or Twymor</p><p><b>The Steplands</b> (Hillfolk):<br>Anook, Anxo, Dors, Jory, Mari, Padg, Pons, or Silf</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Aiden, Barrfind, Caolan, Ciara, Deirbhile, Moirin, Tiern, or Reamann</p><p><b>Lygos or another southern town</b>:<br>Dana, Eliana, Erez, Fikri, Isra, Persefoni, Spiro, or Vahid</p>");
     }
 
     if (playbook === "Would-Be Hero") {
@@ -429,7 +429,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Marshedge");
         $("#option-five").text("Lygos");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>: Anwen, Caradoc, Dafyd, Glenys, Madoc, Morwenna, Siwan, or Wynfor</p><p><b>The Steplands</b> (Hillfolk): Annic, Cosette, Denl, Hugenne, Jag, Marc, Oanz, or Sandre</p><p><b>Gordin’s Delve</b>: Pick a name from any list</p><p><b>Marshedge</b>: Bridin, Clian, Engis, Fearghul, Lan, Neasa, Nill, or Una</p><p><b>Lygos or some other southern town</b>: Chara, Davud, Korina, Omid, Parvaneh, Tamir, Takish, or Yannis</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Anwen, Caradoc, Dafyd, Glenys, Madoc, Morwenna, Siwan, or Wynfor</p><p><b>The Steplands</b> (Hillfolk):<br>Annic, Cosette, Denl, Hugenne, Jag, Marc, Oanz, or Sandre</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Bridin, Clian, Engis, Fearghul, Lan, Neasa, Nill, or Una</p><p><b>Lygos or some other southern town</b>:<br>Chara, Davud, Korina, Omid, Parvaneh, Tamir, Takish, or Yannis</p>");
     }
 })
 
