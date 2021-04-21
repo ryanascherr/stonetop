@@ -19,6 +19,10 @@ nav button {
     padding: 10px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
 h4 {
     margin-bottom: 0;
 }
@@ -112,7 +116,7 @@ h2 {
     align-items: center;
 }
 
-#background-selector-container ul {
+#background-selector-container ul, #background-sheet-container ul {
     margin-left: 30px;
 }
 
@@ -215,4 +219,8 @@ h2 {
 
 .move-card ul {
     margin-left: 30px;
+}
+
+#background-sheet-container {
+    /* text-align: center; */
 }
