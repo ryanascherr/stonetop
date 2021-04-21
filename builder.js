@@ -569,6 +569,8 @@ $("#strength").click(function(){
     statRollDisadvantage(parseInt(stonetopHero.str));
 
     $("#roll").html(`<b><i>Strength</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+
+    window.scrollTo(0,document.body.scrollHeight);
 })
 
 $("#dexterity").click(function(){
@@ -577,6 +579,8 @@ $("#dexterity").click(function(){
     statRollDisadvantage(parseInt(stonetopHero.dex));
 
     $("#roll").html(`<b><i>Dexterity</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+
+    window.scrollTo(0,document.body.scrollHeight);
 })
 
 $("#intelligence").click(function(){
@@ -585,6 +589,8 @@ $("#intelligence").click(function(){
     statRollDisadvantage(parseInt(stonetopHero.int));
 
     $("#roll").html(`<b><i>Intelligence</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+
+    window.scrollTo(0,document.body.scrollHeight);
 })
 
 $("#wisdom").click(function(){
@@ -593,6 +599,8 @@ $("#wisdom").click(function(){
     statRollDisadvantage(parseInt(stonetopHero.wis));
 
     $("#roll").html(`<b><i>Wisdom</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+
+    window.scrollTo(0,document.body.scrollHeight);
 })
 
 $("#constitution").click(function(){
@@ -601,6 +609,8 @@ $("#constitution").click(function(){
     statRollDisadvantage(parseInt(stonetopHero.con));
 
     $("#roll").html(`<b><i>Constitution</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+
+    window.scrollTo(0,document.body.scrollHeight);
 })
 
 $("#charisma").click(function(){
@@ -609,6 +619,8 @@ $("#charisma").click(function(){
     statRollDisadvantage(parseInt(stonetopHero.cha));
 
     $("#roll").html(`<b><i>Charisma</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+
+    window.scrollTo(0,document.body.scrollHeight);
 })
 
 $("#damage-display").click(function(){
@@ -617,6 +629,8 @@ $("#damage-display").click(function(){
     damageRollDisadvantage(stonetopHero.damage);
 
     $("#roll").html(`<b><i>Damage</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
+
+    window.scrollTo(0,document.body.scrollHeight);
 })
 
 function statRollNormal(stat) {
@@ -624,7 +638,6 @@ function statRollNormal(stat) {
     let rollTwo = Math.floor(Math.random() * stonetopHero.damage) + 1;
 
     rollNormal = rollOne + rollTwo + stat;
-
 }
 
 function statRollAdvantage(stat) {
@@ -666,7 +679,7 @@ function damageRollAdvantage(damage) {
     let rollTwo = Math.floor(Math.random() * damage) + 1;
 
     if (rollOne >= rollTwo) {
-        rollNormal = rollOne;
+        rollAdvantage = rollOne;
     } else {
         rollAdvantage = rollTwo;
     }  
@@ -677,7 +690,7 @@ function damageRollDisadvantage(damage) {
     let rollTwo = Math.floor(Math.random() * damage) + 1;
 
     if (rollOne >= rollTwo) {
-        rollNormal = rollTwo;
+        rollDisadvantage = rollTwo;
     } else {
         rollDisadvantage = rollOne;
     }  
