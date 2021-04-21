@@ -21,36 +21,41 @@ let rollAdvantage;
 let rollDisadvantage;
 
 selectCharacterBtn.click(function(){
-   $("#character-sheet-container").removeClass("hidden");
-   $("#create-character-btn").addClass("hidden");
-   $("header").addClass("hidden");
-   window.scrollTo(0, 0);
-   stonetopHero = JSON.parse(localStorage.getItem("new-character"));
 
-   $("#name-playbook").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
-   $("#strength").text(`STR (${stonetopHero.str})`);
-   $("#dexterity").text(`DEX (${stonetopHero.dex})`);
-   $("#intelligence").text(`INT (${stonetopHero.int})`);
-   $("#wisdom").text(`WIS (${stonetopHero.wis})`);
-   $("#constitution").text(`CON (${stonetopHero.con})`);
-   $("#charisma").text(`CHA (${stonetopHero.cha})`);
-   $("#damage-display").text(`Damage (d${stonetopHero.damage})`);
-   $("#hit-points-display").text(`HP (${stonetopHero.hitPoints})`);
-   $("#armor-display").text("Armor (+0)");
-   $("#xp-display").text("XP (+0)");
+    if (onFrontPage === true) {
+
+        $("#select-character-btn").text("Main Page");
+        $("#create-character-btn").addClass("hidden");
+        $("header").addClass("hidden");
+        $("#character-sheet-container").removeClass("hidden");
+        
+        window.scrollTo(0, 0);
+        stonetopHero = JSON.parse(localStorage.getItem("new-character"));
+
+        $("#name-playbook").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
+        $("#strength").text(`STR (${stonetopHero.str})`);
+        $("#dexterity").text(`DEX (${stonetopHero.dex})`);
+        $("#intelligence").text(`INT (${stonetopHero.int})`);
+        $("#wisdom").text(`WIS (${stonetopHero.wis})`);
+        $("#constitution").text(`CON (${stonetopHero.con})`);
+        $("#charisma").text(`CHA (${stonetopHero.cha})`);
+        $("#damage-display").text(`Damage (d${stonetopHero.damage})`);
+        $("#hit-points-display").text(`HP (${stonetopHero.hitPoints})`);
+        $("#armor-display").text("Armor (+0)");
+        $("#xp-display").text("XP (+0)");
+        window.scrollTo(0, 0);
+        onFrontPage = false;
+    
+        } else {
+            $("#create-character-btn").removeClass("hidden");
+            $("#select-character-btn").text(`${stonetopHero.characterName}`);
+            $("header").removeClass("hidden");
+            $("#character-sheet-container").addClass("hidden");
+            onFrontPage = true;
+        }
 })
 
 createCharacterBtn.click(function(){
-
-    // if (onFrontPage === false) {
-    //     $("#create-character-btn").text("Create a Character");
-    //     $("header").removeClass("hidden");
-    //     $("#background-selector-container").addClass("hidden");
-    //     $("#drive-selector-container").addClass("hidden");
-    //     $("#origin-name-selector-container").addClass("hidden");
-    //     $("#stats-selector-container").addClass("hidden");
-    //     onFrontPage = true;
-    // }
 
     if (onFrontPage === true) {
 
