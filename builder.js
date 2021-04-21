@@ -179,7 +179,7 @@ createCharacterBtn.click(function(){
     $("#origin-name-selector-container").addClass("hidden");
     $("#stats-selector-container").addClass("hidden");
     $("#select-character-btn").addClass("hidden");
-    $("#class-selection-container").removeClass("hidden");
+    $("#class-selector-container").removeClass("hidden");
     window.scrollTo(0, 0);
     onFrontPage = false;
 
@@ -187,7 +187,7 @@ createCharacterBtn.click(function(){
         
         $("#create-character-btn").text("Create a Character");
         $("header").removeClass("hidden");
-        $("#class-selection-container").addClass("hidden");
+        $("#class-selector-container").addClass("hidden");
         $("#background-selector-container").addClass("hidden");
         $("#drive-selector-container").addClass("hidden");
         $("#origin-name-selector-container").addClass("hidden");
@@ -209,7 +209,7 @@ $("#class-card-container").click(function(event){
 
     if (element.matches(".class-select-btn")) {
         window.scrollTo(0, 0);
-        $("#class-selection-container").addClass("hidden");
+        $("#class-selector-container").addClass("hidden");
         $("#background-selector-container").removeClass("hidden");
         playbook = element.getAttribute("data-playbook");
         onFrontPage = false;

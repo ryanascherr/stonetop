@@ -1,3 +1,5 @@
+/* all */
+
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +7,52 @@
     line-height: 1.5;
 }
 
-header {
+.hidden {
+    display: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+}
+
+.center-both {
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
+
+h2 {
+    margin: 5% 0;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+/* header */
 
 nav {
     display: flex;
@@ -15,43 +60,28 @@ nav {
     margin: 5% 0;
 }
 
-nav button {
-    padding: 10px;
-}
+/* class-selector-container */
 
-h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-}
-
-h4 {
-    margin-bottom: 0;
-}
-
-.hidden {
-    display: none;
-}
-
-#class-selection-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container, #stats-selector-container, #character-sheet-container {
+#class-selector-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container, #stats-selector-container, #character-sheet-container {
     margin: 0 5%;
 }
 
-h2 {
-    text-align: center;
-    margin: 5% 0;
-}
-
-#class-selection-container h3 {
+#class-selector-container h3 {
     font-weight: bold;
-    text-align: center;
 }
 
-#class-selection-container h4 {
-    text-align: center;
+#class-selector-container h4 {
     margin-bottom: 10px;
 }
 
-#name-input {
+#class-selector-container img {
+    width: 100px;
+}
+
+#class-selector-container p {
     text-align: center;
+    margin-top: 10px;
+    width: 75%;
 }
 
 .class-card, .background-card, .drive-card, .origin-name-card {
@@ -64,75 +94,36 @@ h2 {
     align-items: center;
 }
 
-.drive-card p {
-    text-align: center;
-    margin-top: 10px;
-}
-
-#class-selection-container img {
-    width: 100px;
-}
-
-#class-selection-container p {
-    text-align: center;
-    margin-top: 10px;
-    width: 75%;
-}
-
-.flex-row {
-    display: flex;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
 .class-select-btn, .background-select-btn, .drive-select-btn, .origin-name-btn {
     width: 50%;
-    padding: 10px;
 }
 
-#character-sheet-container button {
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-}
-
-.highlight {
-    background-color: black;
-    color: white;
-}
-
-.stat-select-btn {
-    padding: 10px;
-}
-
-.name-select-el {
-    margin: 5% 0;
-}
-
-.center {
-    justify-content: center;
-}
-
-.center-both {
-    justify-content: center;
-    align-items: center;
-}
-
-#background-selector-container ul, #background-sheet-container ul {
-    margin-left: 30px;
-}
+/* drive-selector-container */
 
 #drive-selector-container h3 {
-    text-align: center;
     margin-bottom: 5%;
 }
 
 #drive-selector-container p, #origin-name-selector-container p {
     text-align: center;
 }
+
+.drive-card p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* origin-name-selector-container */
+
+.origin-name-card label {
+    margin-bottom: 0 0 5px 0;
+}
+
+#name-input {
+    text-align: center;
+}
+
+/* stats-selector-container */
 
 #stats-array {
     display: flex;
@@ -151,11 +142,10 @@ h2 {
 
 #stat-card-container h4 {
     margin: 0 2%;
-    padding: 10px;
 }
 
-.wrap {
-    flex-wrap: wrap;
+#stat-card-container select {
+    margin-right: 5%;
 }
 
 .stats {
@@ -164,14 +154,6 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#stat-card-container select {
-    margin-right: 5%;
-}
-
-.origin-name-card label {
-    margin-bottom: 0 0 5px 0;
 }
 
 .stat-card {
@@ -184,8 +166,16 @@ h2 {
     border: 2px solid black;
 }
 
-#name-playbook {
-    text-align: center;
+/* character-sheet-container */
+
+.highlight {
+    background-color: black;
+    color: white;
+}
+
+#strength, #dexterity, #intelligence, #wisdom, #constitution, #charisma, #damage-display {
+    background-color: gray;
+    color: white;
 }
 
 .stat-display {
@@ -207,25 +197,8 @@ h2 {
     text-align: center;
 }
 
-#strength, #dexterity, #intelligence, #wisdom, #constitution, #charisma, #damage-display {
-    background-color: gray;
-    color: white;
-}
-
 .move-card {
     border: 2px solid black;
     padding: 10px;
     margin-bottom: 2%;
-}
-
-.move-card h3 {
-    text-align: center;
-}
-
-.move-card ul {
-    margin-left: 30px;
-}
-
-#background-sheet-container {
-    /* text-align: center; */
 }
