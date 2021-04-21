@@ -46,6 +46,9 @@ selectCharacterBtn.click(function(){
         $("#stat-btn").addClass("highlight");
 
         if (stonetopHero.playbook === "Blessed") {
+
+            $("#playbook-moves-sheet-container").children().addClass("move-card");
+
             $("#move-one-title").text("Spirit Tongue");
             $("#move-one-content").html('You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.');
             $("#move-two-title").text("Call the Spirits");
@@ -95,6 +98,446 @@ selectCharacterBtn.click(function(){
 
                 $("#background-move-title").text("Danu's Grasp");
                 $("#background-move-content").html("<p>When you <b><i>call on the world itself to bind a spirit or a perversion of nature</i></b>, spend 1 Stock and roll +WIS: <b>on a 10+</b>, choose 2 from the list below; <b>on a 7-9</b>, choose 1.</p><ul><li>You avoid or prevent their counterattack</li><li>Roots, vines, and earth restrain them</li><li>They take 2d4 damage (ignores armor)</li></ul><p>If this brings them to 0 HP, they are pulled into the earth and bound in rune-etched stone.</p>");
+            }
+        }
+
+        if (stonetopHero.playbook === "Fox") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+            }
+        }
+
+        if (stonetopHero.playbook === "Heavy") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+            }
+        }
+
+        if (stonetopHero.playbook === "Judge") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+            }
+        }
+
+        if (stonetopHero.playbook === "Lightbearer") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+            }
+        }
+
+        if (stonetopHero.playbook === "Marshal") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+            }
+        }
+
+        if (stonetopHero.playbook === "Ranger") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+            }
+        }
+
+        if (stonetopHero.playbook === "Seeker") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+            }
+        }
+
+        if (stonetopHero.playbook === "Would-Be Hero") {
+            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+            $("#move-one-title").text("");
+            $("#move-one-content").html("");
+
+            if (stonetopHero.origin === "option-one") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-two") {
+                $("#origin-sheet").html("<h4></h4>");
+            } else if (stonetopHero.origin === "option-three") {
+                $("#origin-sheet").html("<h4></h4>");
+            }
+
+            if (stonetopHero.drive === "one") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "two") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("");
+                $("#drive-sheet-description").text("");
+            }
+
+            if (stonetopHero.background === "one") {
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "two") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
+
+            } else if (stonetopHero.background === "three") {
+
+                $("#background-sheet-name").text("");
+                $("#background-sheet-description").html("");
+
+                $("#background-move-title").text("");
+                $("#background-move-content").html("");
             }
         }
 
