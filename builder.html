@@ -264,7 +264,12 @@
 
         <div id="character-sheet-container" class="hidden">
             <h1 id="name-playbook"></h1>
-            <div id="stat-sheet-container" class="flex-column">
+            <div class="flex-row center wrap">
+                <button id="stat-btn">Stats</button>
+                <button id="moves-btn">Moves</button>
+                <button id="background-btn">Background</button>
+            </div>
+            <div id="stat-sheet-container" class="">
                 <div class="flex-row center">
                     <button id="strength" class="stat-display"></button>
                     <button id="dexterity" class="stat-display"></button>
@@ -288,6 +293,12 @@
                 <div id="roll">
                     Click a button to make a roll!
                 </div>
+            </div>
+            <div id="moves-sheet-container" class="hidden">
+                Moves!
+            </div>
+            <div id="background-sheet-container" class="hidden">
+                Background!
             </div>
         </div>
     </main>

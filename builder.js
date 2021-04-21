@@ -28,7 +28,7 @@ selectCharacterBtn.click(function(){
         $("#create-character-btn").addClass("hidden");
         $("header").addClass("hidden");
         $("#character-sheet-container").removeClass("hidden");
-        
+
         window.scrollTo(0, 0);
         stonetopHero = JSON.parse(localStorage.getItem("new-character"));
 
@@ -43,6 +43,8 @@ selectCharacterBtn.click(function(){
         $("#hit-points-display").text(`HP (${stonetopHero.hitPoints})`);
         $("#armor-display").text("Armor (+0)");
         $("#xp-display").text("XP (+0)");
+        $("#stat-btn").addClass("highlight");
+
         window.scrollTo(0, 0);
         onFrontPage = false;
     
@@ -53,6 +55,36 @@ selectCharacterBtn.click(function(){
             $("#character-sheet-container").addClass("hidden");
             onFrontPage = true;
         }
+})
+
+$("#stat-btn").click(function(){
+    $("#stat-btn").addClass("highlight");
+    $("#moves-btn").removeClass("highlight");
+    $("#background-btn").removeClass("highlight");
+
+    $("#moves-sheet-container").addClass("hidden");
+    $("#background-sheet-container").addClass("hidden");
+    $("#stat-sheet-container").removeClass("hidden");
+})
+
+$("#moves-btn").click(function(){
+    $("#moves-btn").addClass("highlight");
+    $("#stat-btn").removeClass("highlight");
+    $("#background-btn").removeClass("highlight");
+
+    $("#stat-sheet-container").addClass("hidden");
+    $("#background-sheet-container").addClass("hidden");
+    $("#moves-sheet-container").removeClass("hidden");
+})
+
+$("#background-btn").click(function(){
+    $("#background-btn").addClass("highlight");
+    $("#stat-btn").removeClass("highlight");
+    $("#moves-btn").removeClass("highlight");
+
+    $("#moves-sheet-container").addClass("hidden");
+    $("#stat-sheet-container").addClass("hidden");
+    $("#background-sheet-container").removeClass("hidden");
 })
 
 createCharacterBtn.click(function(){

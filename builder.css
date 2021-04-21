@@ -27,7 +27,7 @@ h4 {
     display: none;
 }
 
-#class-selection-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container, #stats-selector-container {
+#class-selection-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container, #stats-selector-container, #character-sheet-container {
     margin: 0 5%;
 }
 
@@ -82,6 +82,17 @@ h2 {
 .class-select-btn, .background-select-btn, .drive-select-btn, .origin-name-btn {
     width: 50%;
     padding: 10px;
+}
+
+#character-sheet-container button {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: black;
+    color: white;
 }
 
 .stat-select-btn {
@@ -180,12 +191,11 @@ h2 {
 
 #roll {
     padding: 10px;
-    margin: 10px;
+    margin: 10px auto;
     border: 2px solid black;
     border-radius: 5px;
     width: 90%;
     text-align: center;
-    align-self: center;
 }
 
 #strength, #dexterity, #intelligence, #wisdom, #constitution, #charisma, #damage-display {
