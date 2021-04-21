@@ -64,6 +64,11 @@ h2 {
     align-items: center;
 }
 
+.drive-card p {
+    text-align: center;
+    margin-top: 10px;
+}
+
 #class-selection-container img {
     width: 100px;
 }

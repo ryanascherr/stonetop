@@ -60,9 +60,17 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html("<h4>Conciliation:</h4><p>Calm, soothe, or mollify a hostile spirit or beast.</p>")
+                $("#drive-sheet-name").text("Conciliation");
+                $("#drive-sheet-description").text("Calm, soothe, or mollify a hostile spirit or beast.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html("<h4>Cultivation:</h4><p>Help an NPC learn, grow, or improve themselves.</p>")
+                $("#drive-sheet-name").text("Cultivation");
+                $("#drive-sheet-description").text("Help an NPC learn, grow, or improve themselves.");
+            } else if (stonetopHero.drive === "three") {
+                $("#drive-sheet-name").text("Preservation");
+                $("#drive-sheet-description").text("Convince others to protect something of natural beauty or of importance to Danu.");
+            } else if (stonetopHero.drive === "four") {
+                $("#drive-sheet-name").text("Renewal");
+                $("#drive-sheet-description").text("Restore someone or thing to its prior, untainted state, or defeat a perversion of the natural order.");
             }
 
             if (stonetopHero.background === "one") {
