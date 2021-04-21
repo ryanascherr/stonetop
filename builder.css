@@ -202,3 +202,9 @@ nav {
     padding: 10px;
     margin-bottom: 2%;
 }
+
+
+
+#add-move-btn {
+    align-self: center;
+}
