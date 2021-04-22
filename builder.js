@@ -110,46 +110,51 @@ selectCharacterBtn.click(function(){
             $("#move-one-content").html("");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Conscience");
+                $("#drive-sheet-description").text("Forego comfort or advantage to do the right thing.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Excitement");
+                $("#drive-sheet-description").text("Cause an ally trouble by taking an unnecessary risk.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Glory");
+                $("#drive-sheet-description").text("Show off in front of NPCs who will tell your tale.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Romance");
+                $("#drive-sheet-description").text("Get intimate with someone you’re attracted to.");
+            } else if (stonetopHero.drive === "five") {
+                $("#drive-sheet-name").text("Trickery");
+                $("#drive-sheet-description").text("Get someone or thing to act on false information.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("The Natural");
+                $("#background-sheet-description").html("<p>You grew up around here, and always picked things up quickly. Reading and numbers, sure, but more. Hide and seek. Throwing stones. Climbing. Fighting. Whatever you tried, you were good at it. As good as anyone else, if not better.</p><p>Sure, you’ve got a reputation for bending the rules. Playing dirty. But why play if you don’t play to win, right? And who do they come to when there’s a problem needs solving? You, that’s who.</p><p>When you <b><i>Seek Insight</i></b>, you may roll +INT instead +WIS and add “What opportunity does no one else see?” to the list of possible questions.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("A Life of Crime");
+                $("#background-sheet-description").html("<p>You’re new to Stonetop, having left behind a...<i>colorful</i> past. How did you get into that life? Why and how did you get out? Who and what did you leave behind?</p><p>Regardless, these people have taken you in. Time to lead an honest life, right?</p><p>You start with either Burgle or Light Fingers (your choice) as an extra move, and either burglar tools or a hidden stash (your choice) as an additional special possession.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("The Prodigal Returned");
+                $("#background-sheet-description").html("<p>You left long ago, travelling far and living by your wits. Why did you leave? What deeds do you boast of, and which do you regret?</p><p>You always longed to return to Stonetop, and return you have. You’re a bit of a celebrity now, and you’ve got friends (or close enough) strewn about the known world.</p><p>When you <b><i>declare that you know someone outside of Stonetop</i></b>, someone who can help, name them and roll +CHA: on a 10+, yeah, they can help (tell us why they’re willing); on a 7-9, they can help but pick 1 from the list below; on a 6-, the GM chooses 1 and then some.</p><ul><li>They still hold a grudge</li><li>They're going to need something from you first</li><li>They swore off this sort of thing long ago</li><li>You can't exactly, y'know, trust them</li></ul>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
@@ -157,54 +162,60 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Heavy") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+            $("#playbook-moves-sheet-container").children().addClass("move-card");
 
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-one-title").text("Dangerous");
+            $("#move-one-content").html("<p>When you deal your damage, you have advantage.</p>");
+            $("#move-two-title").text("Hard to Kill");
+            $("#move-two-content").html("<p>When you <b><i>are at Death’s Door</i></b>, you can roll +CON or +nothing (your choice). <b>On a 7-9</b>, you can mark a debility of your choice to regain 1 HP.</p>");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>The Steplands</h4>");
+            } else if (stonetopHero.origin === "option-five") {
+                $("#origin-sheet").html("<h4>The Manmarch</h4>");
+            } else if (stonetopHero.origin === "option-six") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Challenge");
+                $("#drive-sheet-description").text("Provoke a fight with a worthy foe, just you & them.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Honor");
+                $("#drive-sheet-description").text("Fullfi ll a vow or oath made to an NPC.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Peace");
+                $("#drive-sheet-description").text("Prevent violence or end it without hurting anyone.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Pride");
+                $("#drive-sheet-description").text("Put someone in their place.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Sheriff");
+                $("#background-sheet-description").html("<p>You keep order in Stonetop and protect it from outside threats. It might not be anything official, but everyone knows you’ve got a cool head and the weight to back up your words.</p><p>When you <b><i>bark an order or warning</i></b>, roll +CHA: <b>on a 7+</b>, they must choose 1:</p><ul><li>Do what you say</li><li>Dig in/take cover/flee</li><li>Attack you</li></ul><p><b>On a 10+</b>, you can tell which one they’re going to do and do something first; gain advantage if you do.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Blood-Soaked Past");
+                $("#background-sheet-description").html("<p>You left behind a life of violence and a name mothers used to scare their children. For whatever reason, the people of Stonetop took you (back?) in and treat you like one of their own.</p><p>When you <b><i>Persuade using violence or threats against someone who knows your black reputation</i></b>, you can roll +STR instead of +CHA. Also, if you take the Formidable move, you can choose to roll +CON instead of +CHA.</p><p>When you <b><i>fight to kill without mercy or hesitation</i></b>, you deal +1d4 damage.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Storm-Marked");
+                $("#background-sheet-description").html("<p>You’ve been touched by Tor (Rainmaker, Thunderhead, Slayer-of-Beasts!) and bear runic markings similar to those etched into the Stone. When did the marks manifest? Are they a symbol of your strength, speed, and courage? Or their source?</p><p>You start with the Storm Markings major arcanum. Mark one of the boxes on the front of the Storm Markings sheet, and describe here the time you were struck by lightning and walked away unharmed.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
@@ -216,8 +227,8 @@ selectCharacterBtn.click(function(){
 
             $("#move-one-title").text("");
             $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-two-title").text("");
+            $("#move-two-content").html("");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4></h4>");
@@ -271,8 +282,8 @@ selectCharacterBtn.click(function(){
 
             $("#move-one-title").text("");
             $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-two-title").text("");
+            $("#move-two-content").html("");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4></h4>");
@@ -326,8 +337,8 @@ selectCharacterBtn.click(function(){
 
             $("#move-one-title").text("");
             $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-two-title").text("");
+            $("#move-two-content").html("");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4></h4>");
@@ -381,8 +392,8 @@ selectCharacterBtn.click(function(){
 
             $("#move-one-title").text("");
             $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-two-title").text("");
+            $("#move-two-content").html("");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4></h4>");
@@ -436,8 +447,8 @@ selectCharacterBtn.click(function(){
 
             $("#move-one-title").text("");
             $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-two-title").text("");
+            $("#move-two-content").html("");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4></h4>");
@@ -491,8 +502,8 @@ selectCharacterBtn.click(function(){
 
             $("#move-one-title").text("");
             $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-two-title").text("");
+            $("#move-two-content").html("");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4></h4>");
@@ -673,9 +684,9 @@ $("#class-card-container").click(function(event){
         hitPoints = 16;
         damage = 8;
         $("#background-name-one").text("The Natural");
-        $("#background-description-one").html("<p>You grew up around here, and always picked things up quickly. Reading and numbers, sure, but more. Hide and seek. Throwing stones. Climbing. Fighting. Whatever you tried, you were good at it. As good as anyone else, if not better.</p><p>Sure, you’ve got a reputation for bending the rules. Playing dirty. But why play if you don’t play to win, right? And who do they come to when there’s a problem needs solving? You, that’s who.</p><p>When you <b><i>Seek Insight</i></b>, you may roll +INT instead +WIS and add “What opportunity does no one else see?” to the list of possible questions.");
+        $("#background-description-one").html("<p>You grew up around here, and always picked things up quickly. Reading and numbers, sure, but more. Hide and seek. Throwing stones. Climbing. Fighting. Whatever you tried, you were good at it. As good as anyone else, if not better.</p><p>Sure, you’ve got a reputation for bending the rules. Playing dirty. But why play if you don’t play to win, right? And who do they come to when there’s a problem needs solving? You, that’s who.</p><p>When you <b><i>Seek Insight</i></b>, you may roll +INT instead +WIS and add “What opportunity does no one else see?” to the list of possible questions.</p>");
         $("#background-name-two").text("A Life of Crime");
-        $("#background-description-two").html("<p>You’re new to Stonetop, having left behind a...<i>colorful</i> past. How did you get into that life? Why and how did you get out? Who and what did you leave behind?</p><p>Regardless, these people have taken you in. Time to lead an honest life, right?</p><p>You start with either Burgle or Light Fingers (your choice) as an extra move, and either burglar tools or a hidden stash (your choice) as an additional special possession.");
+        $("#background-description-two").html("<p>You’re new to Stonetop, having left behind a...<i>colorful</i> past. How did you get into that life? Why and how did you get out? Who and what did you leave behind?</p><p>Regardless, these people have taken you in. Time to lead an honest life, right?</p><p>You start with either Burgle or Light Fingers (your choice) as an extra move, and either burglar tools or a hidden stash (your choice) as an additional special possession.</p>");
         $("#background-name-three").text("The Prodigal Returned");
         $("#background-description-three").html("<p>You left long ago, travelling far and living by your wits. Why did you leave? What deeds do you boast of, and which do you regret?</p><p>You always longed to return to Stonetop, and return you have. You’re a bit of a celebrity now, and you’ve got friends (or close enough) strewn about the known world.</p><p>When you <b><i>declare that you know someone outside of Stonetop</i></b>, someone who can help, name them and roll +CHA: on a 10+, yeah, they can help (tell us why they’re willing); on a 7-9, they can help but pick 1 from the list below; on a 6-, the GM chooses 1 and then some.</p><ul><li>They still hold a grudge</li><li>They're going to need something from you first</li><li>They swore off this sort of thing long ago</li><li>You can't exactly, y'know, trust them</li></ul>");
     }
@@ -684,9 +695,9 @@ $("#class-card-container").click(function(event){
         hitPoints = 20;
         damage = 10;
         $("#background-name-one").text("Sheriff");
-        $("#background-description-one").html("<p>You keep order in Stonetop and protect it from outside threats. It might not be anything official, but everyone knows you’ve got a cool head and the weight to back up your words.</p><p>When you <b><i>bark an order or warning</i></b>, roll +CHA: <b>on a 7+</b>, they must choose 1:</p><ul><li>Do what you say</li><li>Dig in/take cover/flee</li><li>Attack you</li></ul><p><b>On a 10+</b>, you can tell which one they’re going to do and do something first; gain advantage if you do.");
+        $("#background-description-one").html("<p>You keep order in Stonetop and protect it from outside threats. It might not be anything official, but everyone knows you’ve got a cool head and the weight to back up your words.</p><p>When you <b><i>bark an order or warning</i></b>, roll +CHA: <b>on a 7+</b>, they must choose 1:</p><ul><li>Do what you say</li><li>Dig in/take cover/flee</li><li>Attack you</li></ul><p><b>On a 10+</b>, you can tell which one they’re going to do and do something first; gain advantage if you do.</p>");
         $("#background-name-two").text("Blood-Soaked Past");
-        $("#background-description-two").html("<p>You left behind a life of violence and a name mothers used to scare their children. For whatever reason, the people of Stonetop took you (back?) in and treat you like one of their own.</p><p>When you <b><i>Persuade using violence or threats against someone who knows your black reputation</i></b>, you can roll +STR instead of +CHA. Also, if you take the Formidable move, you can choose to roll +CON instead of +CHA.</p><p>When you <b><i>fight to kill without mercy or hesitation</i></b>, you deal +1d4 damage.");
+        $("#background-description-two").html("<p>You left behind a life of violence and a name mothers used to scare their children. For whatever reason, the people of Stonetop took you (back?) in and treat you like one of their own.</p><p>When you <b><i>Persuade using violence or threats against someone who knows your black reputation</i></b>, you can roll +STR instead of +CHA. Also, if you take the Formidable move, you can choose to roll +CON instead of +CHA.</p><p>When you <b><i>fight to kill without mercy or hesitation</i></b>, you deal +1d4 damage.</p>");
         $("#background-name-three").text("Storm-Marked");
         $("#background-description-three").html("<p>You’ve been touched by Tor (Rainmaker, Thunderhead, Slayer-of-Beasts!) and bear runic markings similar to those etched into the Stone. When did the marks manifest? Are they a symbol of your strength, speed, and courage? Or their source?</p><p>You start with the Storm Markings major arcanum. Mark one of the boxes on the front of the Storm Markings sheet, and describe here the time you were struck by lightning and walked away unharmed.</p>");
     }
@@ -919,7 +930,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Lygos");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Bran, Carwyn, Delyth, Elin, Fion, Geral, Mair, Rannon, Vaughn, or Wynn</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Comyna, Crevan, Fitz, Greagir, Maired, Nainsi, Naiclas, or Saraid</p><p><b>Lygos or some other point south</b>:<br>Amit, Baz, Dafna, Mahsa, Parviz, Sanaz, Tzofi ya, Yaniv</p>");
+        $("#origin").html("<p><b>Stonetop</b>:<br>Bran, Carwyn, Delyth, Elin, Fion, Geral, Mair, Rannon, Vaughn, or Wynn</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Comyna, Crevan, Fitz, Greagir, Maired, Nainsi, Naiclas, or Saraid</p><p><b>Lygos or some other point south</b>:<br>Amit, Baz, Dafna, Mahsa, Parviz, Sanaz, Tzofiya, Yaniv</p>");
     }
 
     if (playbook === "Heavy") {
