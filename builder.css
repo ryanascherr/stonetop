@@ -36,6 +36,8 @@
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
+    margin-bottom: 10px;
+    padding: 0;
 }
 
 h1 {
@@ -186,10 +188,6 @@ nav {
     color: white;
 }
 
-.checkbox-box {
-    margin: 0 10px;
-}
-
 .stat-display {
     padding: 10px;
     margin: 10px;
@@ -198,6 +196,10 @@ nav {
     width: 50%;
     text-align: center;
     font-weight: bold;
+}
+
+.checkbox-box {
+    padding: 5px;
 }
 
 #roll {
@@ -220,6 +222,14 @@ nav {
     align-self: center;
 }
 
+#background-sheet-container h3 {
+    margin: 20px 0 10px 0;
+}
+
+#background-sheet-container p {
+    text-align: center;
+}
+
 .drive-sheet-card, .background-sheet-card {
     border: 2px solid black;
     padding: 10px;
@@ -230,43 +240,47 @@ nav {
     align-items: center;
 }
 
-@media only screen and (min-width: 678px) {
-    #class-card-container, #drive-card-container, #stat-card-container {
+@media only screen and (min-width: 768px) {
+    #class-card-container, #drive-card-container, #stat-card-container, #sub-basic-moves {
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
     
-    .class-card, .drive-card, .stat-card {
+    .class-card, .drive-card, .stat-card, .move-card {
         width: 45%;
         margin: 2%;
     }
 
     #roll {
         font-size: 125%;
-    }
+    } 
 }
 
 @media only screen and (min-width: 992px) {
-    .class-card, .drive-card, .stat-card, .move-card {
+    .class-card, .drive-card, .stat-card {
         width: 29%;
     }
 
-    #background-card-container, #sub-basic-moves {
+    #background-card-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .background-card, .move-card {
+    .background-card {
         width: 45%;
         margin: 2%;
     }
 
     #roll {
         font-size: 150%;
+    }
+
+    #background-sheet {
+        width: 75%;
     }
 }
 
