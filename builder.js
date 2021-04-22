@@ -225,52 +225,54 @@ selectCharacterBtn.click(function(){
         if (stonetopHero.playbook === "Judge") {
             $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
-            $("#move-two-title").text("");
-            $("#move-two-content").html("");
+            $("#move-one-title").text("Censure");
+            $("#move-one-content").html("<p>When you <b><i>first denounce someone (or thing) as an agent of chaos or anathema to civilization</i></b>, pick 1:</p><ul><li>You/your allies deal +1 damage against them</li><li>They deal -1 damage</li><li>They recoil and might be momentarily stunned</li><p>The bonus/penalty ends if you use this move again.</p>");
+            $("#move-two-title").text("Chronicler of Stonetop");
+            $("#move-two-content").html("<p>When you <b><i>write up detailed session notes and share them with the other players</i></b>, hold +1 Diligence.</p><p>You can spend 1 Diligence at any time to add +1 to a roll that you or a fellow player just made.</p>");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Duty");
+                $("#drive-sheet-description").text("Cause trouble by adhering strictly to doctrine");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Harmony");
+                $("#drive-sheet-description").text("Settle a dispute without anyone feeling wronged.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Knowledge");
+                $("#drive-sheet-description").text("Teach another something important.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Zeal");
+                $("#drive-sheet-description").text("Pass judgement hastily, without considering nuance or consequences.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Legacy");
+                $("#background-sheet-description").html("<p>You are the latest in a long line of Judges—born here, apprenticed to the prior Judge, and charged with the passing of the mantle. The Chronicle is a rich repository of lore, but there’s no index, so good luck fi nding anything.</p><p>When you <b><i>Know Things about the people or history of Stonetop</i></b>, you have advantage.</p><p>When you <b><i>spend days, weeks, or months poring over the Chronicle</i></b>, ask the GM a question, and the GM will tell you what you learn in that time.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Missionary");
+                $("#background-sheet-description").html("<p>You are part of a larger order of Aratis, sent to Stonetop to spread the faith and protect the flickering flame of civilization. The Chronicle is new and a work in progress; your position in town is far from certain. Add the following Judges to the Neighbors section of the Stonetop playbook:</p><ul><li>Devin (from Marshedge)</li><li>Haeris (from Gordin's Delve)</li><li>Rahat (from Lygos)</li></ul><p>When you <b><i>call upon the Judge of another steading for aid or information</i></b>, they are oath-bound to give it. You are likewise oathbound to support them.</p><p>You have an aviary in addition to your usual choice of special possessions. When you <b><i>send a message via trained bird</i></b>, as is the way of the Judges of your order, the GM will tell you if and when you receive a response, and what it says.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Prophet");
+                $("#background-sheet-description").html("<p>The line of Judges was broken long ago, the Chronicle lost or fallen into ruin. Aratis has called you personally to her service though dreams, omens, and visions. Some in town resent the authority you’ve assumed.</p>When you <b><i>spend a few days communing with Aratis about a threat facing Stonetop or civilization as a whole</i></b>, roll +WIS: <b>on a 7+</b>, Aratis reveals the course of action she would have you take; <b>on a 10+</b>, you also hold 2 Sanction. While <b><i>acting on her orders</i></b>, spend 1 Sanction to add +1 to a roll you just made.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
@@ -280,52 +282,54 @@ selectCharacterBtn.click(function(){
         if (stonetopHero.playbook === "Lightbearer") {
             $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
-            $("#move-two-title").text("");
-            $("#move-two-content").html("");
+            $("#move-one-title").text("Consecrated Flame");
+            $("#move-one-content").html("</p>When you <b><i>whisper words of consecration to a flame</i></b>, the flame casts a holy light. Holy light is uncomfortable for creatures of darkness to look upon, but does no true harm. The holy light lasts until the flame goes out or until you consecrate another flame, whichever comes first.</p>");
+            $("#move-two-title").text("Invoke the Sun God");
+            $("#move-two-content").html("<p>When you <b><i>imbue a holy light with Helior’s power</i></b>,choose an Invocation you know and roll +WIS: <b>on a 10+</b>, it works as described but you must choose 1 consequence from the list below; <b>on a 7-9</b>, it works as described, but you and the GM each choose 1.</p>");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Charity");
+                $("#drive-sheet-description").text("Bring relief or comfort to someone who is suffering.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Faith");
+                $("#drive-sheet-description").text("Walk brazenly into danger, sure of Helior’s plan.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Hope");
+                $("#drive-sheet-description").text("Lead another to act despite fear or doubt.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Mercy");
+                $("#drive-sheet-description").text("Forgive a wrong or set a helpless enemy free.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Auspicious Birth");
+                $("#background-sheet-description").html("<p>You were born in Stonetop, and that birth was marked by the God of Light. You bear a sunshaped birthmark, perhaps, or maybe you were born during an eclipse?</p><p>Whatever the sign, your connection to Helior was clear early on. You’ve a place of honor in Stonetop, though it’d be a lie to say you don’t make some uneasy.</p><p>When <b><i>one of your moves would cause you to mark a debility</i></b>, you may mark this move instead, to no ill effect. When you <b><i>Make Camp</i></b>, clear the circle.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Itinerant Mystic");
+                $("#background-sheet-description").html("<p>They think of you as a self-satisfi ed kook who comes through now and again, speaking in riddles and playing tricks with the light. Sure, they know there’s something holy about you, but it’s not like you’re a priest or anything. Priests talk sense.</p><p>When you <b><i>start a session away from the others or go off on your own to do something mysterious</i></b>, hold 1 Enigma. You or the GM may spend your Enigma at any time to have you appear out of the blue, with or without explanation, for all things are possible to one who walks with Helior.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Soul on Fire");
+                $("#background-sheet-description").html("<p>You led a worldly life. A life of fear and doubt, base pleasures and petty grudges. A life like so many others. But something happened—injury, illness, a brush with Death; perhaps a moment of such profound misery and self-loathing that you thought you could fall no further.</p><p>Th ere, in the dark, Helior’s light shined upon you, igniting in your soul, lifting you and fi lling you with a profound sense of purpose.</p><p>When you <b><i>Persaude a group by preaching charity, mercy, and hope and roll a 7+</i></b>, aside from the usual effect, choose 1:</p><ul><li>Your name and your message spread</li><li>Someone approaches you, now or later, eager to know more</li></ul>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
@@ -333,57 +337,63 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Marshal") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+            $("#playbook-moves-sheet-container").children().addClass("move-card");
 
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
-            $("#move-two-title").text("");
-            $("#move-two-content").html("");
+            $("#move-one-title").text("Crew");
+            $("#move-one-content").html("<p>You’ve got a crew of stalwarts, six or so residents of Stonetop with some steel to them. See the Crew insert for details.</p>");
+            $("#move-two-title").text("Logistics");
+            $("#move-two-content").html("When you <b><i>have a steading Muster or Pull Together</i></b>, or when you <b><i>Requisition</i></b>, you have advantage.");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>The Steplands</h4>");
+            } else if (stonetopHero.origin === "option-five") {
+                $("#origin-sheet").html("<h4>The Manmarch</h4>");
+            } else if (stonetopHero.origin === "option-six") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Honor");
+                $("#drive-sheet-description").text("Keep a promise you made to an NPC.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Prestige");
+                $("#drive-sheet-description").text("Impress an NPC from outside your home steading.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Resolve");
+                $("#drive-sheet-description").text("Give an order or enact a plan knowing it will bring an ally to harm.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Ruthlessness");
+                $("#drive-sheet-description").text("Deny mercy to an enemy or betray a supposed ally.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Scion");
+                $("#background-sheet-description").html("<p>You grew up here, descended from a long line. Some of the biggest names in Stonetop’s past are perched in your family tree. Everyone in the village takes your authority as a given, and your crew is a well-established institution in town.</p><p>You start with the Veteran Crew move, in addition to your usual moves.</p><p>When you <b><i>create your Crew</i></b>, they automatically have the <i>respected</i> tag (in addition to your usual picks, and any you get from Veteran Crew).</p>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#background-move-title").text("Veteran Crew");
+                $("#background-move-content").html("<p>Each time you take this move, pick 1. You can also choose to reselect their Instinct and Cost.</p><ul><li>Select 2 new tags for your Crew</li><li>Increase their damage die from d6 to d8</li><li>Increase their max HP by 2 each</li></ul>");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Penitent");
+                $("#background-sheet-description").html("<p>Before you came here, you led a band of ne’er-dowells: bandits, raiders, or bloody-handed mercenaries. But something changed. A moment of truth led you and your followers—some of them at least—to leave that life behind. And for whatever reason, the people of Stonetop took you in.</p><p>When you <b><i>draw on your bloody past to Know Things</i></b>, you may roll +STR instead of +INT. If you do, the GM will ask you who you wronged back then or who might still hold a grudge. Answer them now.</p><p>When you <b><i>create your Crew</i></b>, they automatically have the <i>warriors</i> tag (in addition to your usual picks).</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Luminary");
+                $("#background-sheet-description").html("<p>You’re a natural leader—your words inspire, your plans win the day, your deeds are recounted far and wide. How is it that a luminary like you hails from this backwater? Are you touched by the gods? Does ancient blood fl ow in your veins? Or are you simply the champion that Stonetop needs in these trying times?</p><p>You start with the We Happy Few move, in addition to your usual moves.</p><p>When you <b><i>create your Crew</i></b>, they start with the Glory cost, in addition to 1 other cost of your choice. You may use either cost to trigger the Pay Up move.</p>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#background-move-title").text("We Happy Few");
+                $("#background-move-content").html("<p>When you <b><i>give an inspiring speech to your allies before facing a dire threat</i></b>, roll +CHA: <b>on a 10+</b>, each ally holds 2 Inspiration; <b>on a 7-9</b>, each ally holds 1 Inspiration; <b>on a 6-</b>, each ally holds 1, but you have disadvantage on all rolls until you share your nagging doubts with someone else.</p><p>Once battle is joined, your allies can spend their Inspiration at any time, 1-for-1 to do the following:</p><ul><li>Act fearlessly in the face of terror or overwhelming odds</li><li>Keep 1 HP instead of being reduced to 0 HP</li><li>Add 1d6 to a damage roll they just made</li></ul>");
             }
         }
 
@@ -708,7 +718,7 @@ $("#class-card-container").click(function(event){
         $("#background-name-one").text("Legacy");
         $("#background-description-one").html("<p>You are the latest in a long line of Judges—born here, apprenticed to the prior Judge, and charged with the passing of the mantle. The Chronicle is a rich repository of lore, but there’s no index, so good luck fi nding anything.</p><p>When you <b><i>Know Things about the people or history of Stonetop</i></b>, you have advantage.</p><p>When you <b><i>spend days, weeks, or months poring over the Chronicle</i></b>, ask the GM a question, and the GM will tell you what you learn in that time.</p>");
         $("#background-name-two").text("Missionary");
-        $("#background-description-two").html("<p>You are part of a larger order of Aratis, sent to Stonetop to spread the faith and protect the flickering flame of civilization. The Chronicle is new and a work in progress; your position in town is far from certain. Add the following Judges to the Neighbors section of the Stonetop playbook:</p><ul><li>Devin (from Marshedge)</li><li>Haeris (from Gordin's Delve)</li><li>Rahat (from Lygos)</li></ul><p>When you <b><i>call upon the Judge of another steading for aid or information</i></b>, they are oath-bound to give it. You are likewise oathbound to support them.</p><p>You have an aviary in addition to your usual choice of special possessions. When you <b><i>send a message via trained bird</i></b>, as is the way of the Judges of your order, the GM will tell you if and when you receive a response, and what it says.");
+        $("#background-description-two").html("<p>You are part of a larger order of Aratis, sent to Stonetop to spread the faith and protect the flickering flame of civilization. The Chronicle is new and a work in progress; your position in town is far from certain. Add the following Judges to the Neighbors section of the Stonetop playbook:</p><ul><li>Devin (from Marshedge)</li><li>Haeris (from Gordin's Delve)</li><li>Rahat (from Lygos)</li></ul><p>When you <b><i>call upon the Judge of another steading for aid or information</i></b>, they are oath-bound to give it. You are likewise oathbound to support them.</p><p>You have an aviary in addition to your usual choice of special possessions. When you <b><i>send a message via trained bird</i></b>, as is the way of the Judges of your order, the GM will tell you if and when you receive a response, and what it says.</p>");
         $("#background-name-three").text("Prophet");
         $("#background-description-three").html("<p>The line of Judges was broken long ago, the Chronicle lost or fallen into ruin. Aratis has called you personally to her service though dreams, omens, and visions. Some in town resent the authority you’ve assumed.</p>When you <b><i>spend a few days communing with Aratis about a threat facing Stonetop or civilization as a whole</i></b>, roll +WIS: <b>on a 7+</b>, Aratis reveals the course of action she would have you take; <b>on a 10+</b>, you also hold 2 Sanction. While <b><i>acting on her orders</i></b>, spend 1 Sanction to add +1 to a roll you just made.</p>");
     }
@@ -717,9 +727,9 @@ $("#class-card-container").click(function(event){
         hitPoints = 18;
         damage = 4;
         $("#background-name-one").text("Auspicious Birth");
-        $("#background-description-one").html("<p>You were born in Stonetop, and that birth was marked by the God of Light. You bear a sunshaped birthmark, perhaps, or maybe you were born during an eclipse?</p><p>Whatever the sign, your connection to Helior was clear early on. You’ve a place of honor in Stonetop, though it’d be a lie to say you don’t make some uneasy.</p><p>When <b><i>one of your moves would cause you to mark a debility</i></b>, you may mark this move instead, to no ill effect. When you <b><i>Make Camp</i></b>, clear the circle.");
+        $("#background-description-one").html("<p>You were born in Stonetop, and that birth was marked by the God of Light. You bear a sunshaped birthmark, perhaps, or maybe you were born during an eclipse?</p><p>Whatever the sign, your connection to Helior was clear early on. You’ve a place of honor in Stonetop, though it’d be a lie to say you don’t make some uneasy.</p><p>When <b><i>one of your moves would cause you to mark a debility</i></b>, you may mark this move instead, to no ill effect. When you <b><i>Make Camp</i></b>, clear the circle.</p>");
         $("#background-name-two").text("Itinerant Mystic");
-        $("#background-description-two").html("<p>Th ey think of you as a self-satisfi ed kook who comes through now and again, speaking in riddles and playing tricks with the light. Sure, they know there’s something holy about you, but it’s not like you’re a priest or anything. Priests talk sense.</p><p>When you <b><i>start a session away from the others or go off on your own to do something mysterious</i></b>, hold 1 Enigma. You or the GM may spend your Enigma at any time to have you appear out of the blue, with or without explanation, for all things are possible to one who walks with Helior.");
+        $("#background-description-two").html("<p>They think of you as a self-satisfi ed kook who comes through now and again, speaking in riddles and playing tricks with the light. Sure, they know there’s something holy about you, but it’s not like you’re a priest or anything. Priests talk sense.</p><p>When you <b><i>start a session away from the others or go off on your own to do something mysterious</i></b>, hold 1 Enigma. You or the GM may spend your Enigma at any time to have you appear out of the blue, with or without explanation, for all things are possible to one who walks with Helior.</p>");
         $("#background-name-three").text("Soul on Fire");
         $("#background-description-three").html("<p>You led a worldly life. A life of fear and doubt, base pleasures and petty grudges. A life like so many others. But something happened—injury, illness, a brush with Death; perhaps a moment of such profound misery and self-loathing that you thought you could fall no further.</p><p>Th ere, in the dark, Helior’s light shined upon you, igniting in your soul, lifting you and fi lling you with a profound sense of purpose.</p><p>When you <b><i>Persaude a group by preaching charity, mercy, and hope and roll a 7+</i></b>, aside from the usual effect, choose 1:</p><ul><li>Your name and your message spread</li><li>Someone approaches you, now or later, eager to know more</li></ul>");
     }

@@ -69,7 +69,7 @@ nav {
 /* class-selector-container */
 
 #class-selector-container, #background-selector-container, #drive-selector-container, #origin-name-selector-container, #stats-selector-container, #character-sheet-container {
-    margin: 0 5%;
+    margin: 0 2.5%;
 }
 
 #class-selector-container h3 {
@@ -224,10 +224,6 @@ nav {
 
 #background-sheet-container h3 {
     margin: 20px 0 10px 0;
-}
-
-#background-sheet-container p {
-    text-align: center;
 }
 
 .drive-sheet-card, .background-sheet-card {
