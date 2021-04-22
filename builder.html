@@ -264,7 +264,6 @@
 
         <div id="character-sheet-container" class="hidden">
             <h1 id="name-playbook"></h1>
-            <img src=`` alt="">
             <div class="flex-row center wrap">
                 <button id="stat-btn">Stats</button>
                 <button id="playbook-moves-btn">Playbook Moves</button>
@@ -279,14 +278,26 @@
                 </div>
                 <div class="flex-row center">
                     <button id="strength" class="stat-display"></button>
+                    <div class="checkbox-box flex-column center-both">
+                        <label for="weakened">Weakened</label>
+                        <input type="checkbox" id="weakened" name="weakened" value="weakened">
+                    </div>
                     <button id="dexterity" class="stat-display"></button>
                 </div>
                 <div class="flex-row center">
                     <button id="intelligence" class="stat-display"></button>
+                    <div class="checkbox-box flex-column center-both">
+                        <label for="dazed">Dazed</label>
+                        <input type="checkbox" id="dazed" name="dazed" value="dazed">
+                    </div>
                     <button id="wisdom" class="stat-display"></button>
                 </div>
                 <div class="flex-row center">
                     <button id="constitution" class="stat-display"></button>
+                    <div class="checkbox-box flex-column center-both">
+                        <label for="miserable">Miserable</label>
+                        <input type="checkbox" id="miserable" name="miserable" value="miserable">
+                    </div>
                     <button id="charisma" class="stat-display"></button>
                 </div>
                 <div class="flex-row center">

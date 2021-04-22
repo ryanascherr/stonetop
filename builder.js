@@ -1143,16 +1143,16 @@ $("#damage-display").click(function(){
 })
 
 function statRollNormal(stat) {
-    let rollOne = Math.floor(Math.random() * stonetopHero.damage) + 1;
-    let rollTwo = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollOne = Math.floor(Math.random() * 6) + 1;
+    let rollTwo = Math.floor(Math.random() * 6) + 1;
 
     rollNormal = rollOne + rollTwo + stat;
 }
 
 function statRollAdvantage(stat) {
-    let rollOne = Math.floor(Math.random() * stonetopHero.damage) + 1;
-    let rollTwo = Math.floor(Math.random() * stonetopHero.damage) + 1;
-    let rollThree = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollOne = Math.floor(Math.random() * 6) + 1;
+    let rollTwo = Math.floor(Math.random() * 6) + 1;
+    let rollThree = Math.floor(Math.random() * 6) + 1;
 
     if (rollThree <= rollTwo && rollThree <= rollOne) {
         rollAdvantage = rollOne + rollTwo + stat;
@@ -1164,9 +1164,9 @@ function statRollAdvantage(stat) {
 }
 
 function statRollDisadvantage(stat) {
-    let rollOne = Math.floor(Math.random() * stonetopHero.damage) + 1;
-    let rollTwo = Math.floor(Math.random() * stonetopHero.damage) + 1;
-    let rollThree = Math.floor(Math.random() * stonetopHero.damage) + 1;
+    let rollOne = Math.floor(Math.random() * 6) + 1;
+    let rollTwo = Math.floor(Math.random() * 6) + 1;
+    let rollThree = Math.floor(Math.random() * 6) + 1;
 
     if (rollThree >= rollTwo && rollThree >= rollOne) {
         rollDisadvantage = rollOne + rollTwo + stat;

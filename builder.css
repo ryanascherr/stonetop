@@ -186,6 +186,10 @@ nav {
     color: white;
 }
 
+.checkbox-box {
+    margin: 0 10px;
+}
+
 .stat-display {
     padding: 10px;
     margin: 10px;
