@@ -20,6 +20,8 @@ let rollNormal;
 let rollAdvantage;
 let rollDisadvantage;
 
+// let anotherTest = "<p>Hello there!</p><p>Second paragraph!</p><h1>Big Text!</hi>"
+
 selectCharacterBtn.click(function(){
 
     if (onFrontPage === true) {
@@ -400,162 +402,181 @@ selectCharacterBtn.click(function(){
         if (stonetopHero.playbook === "Ranger") {
             $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
+            $("#move-one-title").text("Home on the Range");
+            $("#move-one-content").html("<p>When <b><i>a journey requires you to Defy Danger or Struggle as One</i></b>, treat a 6- as a 7-9.");
+
             $("#move-two-title").text("");
             $("#move-two-content").html("");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>The Steplands</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>The Manmarch</h4>");
+            } else if (stonetopHero.origin === "option-five") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Mercy");
+                $("#drive-sheet-description").text("Release someone/thing from bondage or suff ering.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Stewardship");
+                $("#drive-sheet-description").text("Put the best interests of a place or beast over a person’s desires.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Tenacity");
+                $("#drive-sheet-description").text("Refuse to turn back despite objection or disaster.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Wonder");
+                $("#drive-sheet-description").text("Show someone a place or thing of beauty.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Mighty Hunter");
+                $("#background-sheet-description").html("<p>You are a hunter of the Great Wood, the best the town has seen in generations. You know every part of the Wood within a two-day march.</p><p>You start with both the Expert Tracker move and the Stalker move.</p>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#move-two-title").text("Expert Tracker");
+                $("#move-two-content").html("<p>When you <b><i>Seek Insight by searching for tracks or studying the signs left by passing creatures</i></b>, you can ask “What happened here recently?” for free, even on a 6-.</p><p>When you <b><i>follow a creature’s trail</i></b>, roll +WIS: <b>on a 7+</b> you follow the trail to a significant change in direction, terrain, or mode of transport; <b>on a 10+</b>, you can also ask the GM a reasonable question about your quarry and get an honest, useful answer.</p>");
+
+                $("#background-move-title").text("Stalker");
+                $("#background-move-content").html("<p>When you <b><i>carry a normal or light load and move with care</i></b>, you make no noise and leave no sign of your passing. When you <b><i>hide yourself in a natural environment</i></b>, you remain unseen until you draw attention to yourself, move positions, or attack.</p>");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Wide Wanderer");
+                $("#background-sheet-description").html("<p>You have travelled much of the known world and perhaps parts beyond. Add each of the following to the Neighbors list in the Stonetop playbook, choosing 1 trait for each:</p><ul><li>Ennis (from Marshedge)</li><li>Shahar (from Gordan's Delve)</li><li>Yannic (from the Hillfolk)</li><li>Tovia (from Lygos)</li><li>Sasca (frim the northern Manmarch</li></ul><p>You start with the Mental Map move.</p><p>When you <b><i>Know Things about the wider world</i></b>, you can roll +WIS instead of +INT.</p><p>When you <b><i>arrive somewhere you’ve visited before</i></b> (your call), tell the GM when you were last here, and the GM will tell you how it’s changed.</p>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#background-move-title").text("Mental Map");
+                $("#background-move-content").html("<p>You can always retrace your steps and can accurately gauge distances and directions. You might not know the way forward but can always find your way back.</p><p>When you <b><i>think back on a place you’ve been to or observed</i></b>, you can retroactively Seek Insight about it as if you were still there.</p>");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Beast Bonded");
+                $("#background-sheet-description").html("ou grew up civilized, but your soul is bound to a beast of the wild. You’re closer to it than to any man or woman. How did this bond come about? How long ago? Regardless, you start with the Animal Companion move.</p><p>When you <b><i>focus on your animal companion for a few moments</i></b>, you can use any of the actions you’ve marked below, no matter the distance between you. Mark 1 action at 1st level, then another at 3rd, 5th, 7th, and 9th.</p><ul><li>Gauge its distance and direction from you</li><li>Call it back to your side</li><li>Sense its emotional state</li><li>Get a brief impression of what it senses</li><li>Lend it your strength-lose 1d6 HP, and it regains an equal amount</li></ul>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#background-move-title").text("Animal Companion");
+                $("#background-move-content").html("<p>You are accompanied by a beast of uncommon loyalty and cleverness. See the Animal Companion insert for details.</p>");
             }
         }
 
         if (stonetopHero.playbook === "Seeker") {
             $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
-            $("#move-two-title").text("");
-            $("#move-two-content").html("");
+            $("#move-one-title").text("Well Versed");
+            $("#move-one-content").html("<p>Mark 1 topic, in addition to the one noted in your Background. Each additional time you take this move, mark 2 more topics.</p><ul><li>The Last Door, death, and the undead</li><li>The civilizations of humanity</li><li>The fae and their strange ways</li><li>The Makers and their arts</li><li>The primordial powers</li><li>The Things Below</li><li>The wild world and its spirits</li></ul><p>When you <b><i>Know Things about one of your topics</i></b>, you can ask the GM a follow-up question of your choice (even on a 6-).</p>");
+            $("#move-two-title").text("Work With What You've Got");
+            $("#move-two-content").html("<p>When you <b><i>wield your environment against your foe(s)</i></b>, choose 1 from the list below and roll +INT: <b>on a 7+</b>, it works! <b>On a 10+</b>, pick 1 more—you get that, too.");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>The Steplands</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
+            } else if (stonetopHero.origin === "option-five") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Cunning");
+                $("#drive-sheet-description").text("Set up a ploy and then take advantage of it.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Curiosity");
+                $("#drive-sheet-description").text("Cause trouble by touching, opening, or tinkering with something.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Respect");
+                $("#drive-sheet-description").text("Impress another with your superior knowledge.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Secrecy");
+                $("#drive-sheet-description").text("Deflect or evade an inquiry into your doings.");
+            } else if (stonetopHero.drive === "five") {
+                $("#drive-sheet-name").text("Victory");
+                $("#drive-sheet-description").text("Endanger others in order to defeat the supernatural.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Patriot");
+                $("#background-sheet-description").html("<p>Th ese people are family. Chaos grows all around, but you’ll be damned if you’ll let your family come to harm. Damned indeed.</p><p>You have sought out and embraced dark power to protect that which you hold dear. Or perhaps that power fell upon you, and you took it up for the greater good. Either way, you seek more.</p><p>You start with the Let’s Make a Deal move and are Well Versed in the Things Below. You’ve also acquired 1 major arcanum:</p><ul><li>The Hec’tumel Codex</li><li>The Red Scepter</li><li>The Staff of the Lidless Orb</li></ul>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#background-move-title").text("Let's Make a Deal");
+                $("#background-move-content").html("<p>When you <b><i>Seek Insight</i></b>, add “What do they really want or need?” to the list of questions. When you <b><i>Persuade by offering them something that you know they want or need</i></b>, treat a 7-9 as a 10+.</p>");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Antiquarian");
+                $("#background-sheet-description").html("<p>Th e past has buried many secrets, and you are determined to dig them up. Years of study across the land have led you here, and you are convinced that this town holds the key to your greatest discoveries. What is it you hope to fi nd? What is it that keeps you here?</p><p>In any case, your travels and studies mean that you start with the Polyglot move and that you are Well Versed in the Makers and their arts. You’ve also acquired 1 major arcanum:</p><ul><li>Noruba’s Ice-Sphere</li><li>The Azure Hand</li><li>The Mindgem</li></ul>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#background-move-title").text("Polyglot");
+                $("#background-move-content").html("<p>When you <b><i>first encounter a living language in play</i></b>, describe your proficiency with it (if any) and how you came to acquire it.</p><p>When you <b><i>Know Things about any script, text, runes or symbols that you encounter</i></b>, you have advantage.");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Witch Hunter");
+                $("#background-sheet-description").html("<p>You’ve dedicated your life to rooting out and destroying horrors and their servants. What set you down this path? What did you sacrifice to walk it? What led you to call Stonetop home?</p><p>Regardless, you start with the Everything Bleeds move and are Well Versed in (pick 1) the fae, the Things Below, or the Black Gates and what lies beyond (go mark them now). You’ve also acquired 1 major arcanum:</p><ul><li>The Demonhide Cloak</li><li>The Redwood Effigy</li><li>The Twisted Spear</li></ul>");
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
+                $("#background-move-title").text("Everything Bleeds");
+                $("#background-move-content").html("<p>When you <b><i>exploit an unnatural foe’s specific weakness or vulnerability</i></b>, deal +1d6 damage.</p>");
             }
         }
 
         if (stonetopHero.playbook === "Would-Be Hero") {
             $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
-            $("#move-two-title").text("");
-            $("#move-two-content").html("");
+            $("#move-one-title").text("Anger is a Gift");
+            $("#move-one-content").html("<p>When you <b><i>burn with righteous anger</i></b> (see Fear & Anger on back of playbook), hold 2 Resolve. You can spend your Resolve 1-for-1 to:</p><ul><li>Set aside fear and doubt to do what must be done</li><li>Act suddenly, catching them off-guard</li><li>Inspire allies or bystanders to follow your lead</li><li>Strike hard (+1d4 damage, <i>forceful</i>)</li><li>Keep your footing, position, and/or your course despite what befalls you</li></ul>");
+            $("#move-two-title").text("Potential for Greatness");
+            $("#move-two-content").html("<p>Once per level, <b><i>when you roll a stat and get a 10+</i></b>, mark one of the following (note the level during which you marked it). You don’t have to mark them in order.</p><ul><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase your max HP by 4 (at level ___)</li><li>Increase your damage die to a d8 (at level ___)</li></ul>");
 
             if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>The Steplands</h4>");
             } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4></h4>");
+                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+            } else if (stonetopHero.origin === "option-four") {
+                $("#origin-sheet").html("<h4>Marshedge</h4>");
+            } else if (stonetopHero.origin === "option-five") {
+                $("#origin-sheet").html("<h4>Lygos</h4>");
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Bravery");
+                $("#drive-sheet-description").text("Face up to one of your fears.");
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Glory");
+                $("#drive-sheet-description").text("Impress onlookers with your bravery.");
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Sacrifice");
+                $("#drive-sheet-description").text("Suffer or endure hardship so that someone else does not need to do so.");
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("");
-                $("#drive-sheet-description").text("");
+                $("#drive-sheet-name").text("Succor");
+                $("#drive-sheet-description").text("Provide aid or comfort to an NPC in need.");
             }
 
             if (stonetopHero.background === "one") {
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Impetuous Youth");
+                $("#background-sheet-description").html("<p>Stonetop has always been home, but you chafe at the demands of mundane life and have always longed for more. Excitement! Danger!</p><p>When you <b><i>make a move and come up short</i></b>, you can give it your all and turn a 6- into a 7-9, a 7-9 into a 10+, and (if it matters), a 10-11 into a 12+. But if you do, pick 1 (the GM will fill in the details):</p><ul><li>You get hurt (2d4 damage and an actual injury)</li><li>You cause collateral damage, endanger others, or otherwise escalate the situation</li><li>Something on your person is lost or breaks</li></ul>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "two") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Driven");
+                $("#background-sheet-description").html("<p>You once led a simple life, but something happened. Something changed you, burdened you with terrible purpose. What was it? Choose 1:</p><ul><li>A loved one was killed or abducted</li><li>Someone gave their life to save you</li><li>Your idol sacrificed themselves to save many</li><li>You stumbled upon a dark mystery</li><li>You must make amends for a terrible mistake</li></ul><p>You always have the option of Burning Bright; you can spend 2 XP after you roll to add +1, even if you don’t have enough XP to level.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
 
             } else if (stonetopHero.background === "three") {
 
-                $("#background-sheet-name").text("");
-                $("#background-sheet-description").html("");
+                $("#background-sheet-name").text("Destined");
+                $("#background-sheet-description").html("<p>Fate has laid her hand upon you and set you on a course for greatness. Choose 3-4 of the items below to describe your destiny:</p><p>anointed, marked at birth, your coming foretold, destroy, discover, free, protect, restore, unify, blood, civilization, darkness, earth & stone, fire, ice, light, life, storms, war, water, the fae, the gods, the Makers, the Stone, the Things Below</p><p>When you <b><i>start a session</i></b>, roll +nothing: <b>on a 7+</b>, the GM will describe a recent omen, dream, or vision that points toward your fate; <b>on a 10+</b>, you can ask the GM a follow-up question and get a clear, helpful answer; <b>on a 6-</b>, tell us of the nightmares you’ve been having and how your fears play into them.</p><p>When you <b><i>are at Death’s Door</i></b>, ask yourself, “Is my destiny fulfilled?” If it is not, treat a miss as a 7-9 and a 7-9 as a 10+.</p>");
 
                 $("#background-move-title").text("");
                 $("#background-move-content").html("");
@@ -775,7 +796,7 @@ $("#class-card-container").click(function(event){
         $("#background-name-two").text("Driven");
         $("#background-description-two").html("<p>You once led a simple life, but something happened. Something changed you, burdened you with terrible purpose. What was it? Choose 1:</p><ul><li>A loved one was killed or abducted</li><li>Someone gave their life to save you</li><li>Your idol sacrificed themselves to save many</li><li>You stumbled upon a dark mystery</li><li>You must make amends for a terrible mistake</li></ul><p>You always have the option of Burning Bright; you can spend 2 XP after you roll to add +1, even if you don’t have enough XP to level.");
         $("#background-name-three").text("Destined");
-        $("#background-description-three").html("<p>Fate has laid her hand upon you and set you on a course for greatness. Choose 3-4 of the items below to describe your destiny:</p><p>anointed, marked at birth, your coming foretold, destroy, discover, free, protect, restore, unify, blood, civilization, darkness, earth & stone, fire, ice, light, life, storms, war, water, the fae, the gods, the Makers, the Stone, the Things Below</p><p>When you <b><i>start a session</i></b>, roll +nothing: <b>on a 7+</b>, the GM will describe a recent omen, dream, or vision that points toward your fate; <b>on a 10+</b>, you can ask the GM a follow-up question and get a clear, helpful answer; <b>on a 6-</b>, tell us of the nightmares you’ve been having and how your fears play into them.</p><p>When you <b><i>are at Death’s Door</i></b>, ask yourself, “Is my destiny fulfilled?” If it is not, treat a miss as a 7-9 and a 7-9 as a 10+.");
+        $("#background-description-three").html("<p>Fate has laid her hand upon you and set you on a course for greatness. Choose 3-4 of the items below to describe your destiny:</p><p>anointed, marked at birth, your coming foretold, destroy, discover, free, protect, restore, unify, blood, civilization, darkness, earth & stone, fire, ice, light, life, storms, war, water, the fae, the gods, the Makers, the Stone, the Things Below</p><p>When you <b><i>start a session</i></b>, roll +nothing: <b>on a 7+</b>, the GM will describe a recent omen, dream, or vision that points toward your fate; <b>on a 10+</b>, you can ask the GM a follow-up question and get a clear, helpful answer; <b>on a 6-</b>, tell us of the nightmares you’ve been having and how your fears play into them.</p><p>When you <b><i>are at Death’s Door</i></b>, ask yourself, “Is my destiny fulfilled?” If it is not, treat a miss as a 7-9 and a 7-9 as a 10+.</p>");
     }
 })
 
