@@ -20,6 +20,9 @@ let rollNormal;
 let rollAdvantage;
 let rollDisadvantage;
 
+let arrayOfMoves = [];
+let newMoves;
+
 // let anotherTest = "<p>Hello there!</p><p>Second paragraph!</p><h1>Big Text!</hi>"
 
 selectCharacterBtn.click(function(){
@@ -51,10 +54,31 @@ selectCharacterBtn.click(function(){
 
             $("#playbook-moves-sheet-container").children().addClass("move-card");
 
+            let moveOneName = "Spirit Tongue";
+            let moveOneDescription = "<p>You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.</p>";
+            let moveTwoName = "Call the Spirits";
+            let moveTwoDescription = "<p>When you <b><i>perform a short ritual and invoke the spirit(s) of a place or object</i></b>, spend 1 Stock. The spirit(s) manifest before you and will hear what you have to say. What they do next is up to them.</p>";
+
+            // arrayOfMoves.push(moveOneDescription);
+            // arrayOfMoves.push(moveTwoDescription);
+
+            // console.log(arrayOfMoves);
+
+            // localStorage.setItem("array-of-moves", JSON.stringify(arrayOfMoves));
+
+            // newMoves = JSON.parse(localStorage.getItem("array-of-moves"));
+            // console.log(newMoves);
+
+            // for (i = 0; i < newMoves.length; i++) {
+            //     let newVar = $("div");
+            //     newVar.html(newMoves[i]);
+            //     $("#super-test").append(newVar);
+            // }
+
             $("#move-one-title").text("Spirit Tongue");
-            $("#move-one-content").html('You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.');
+            $("#move-one-content").html("<p>You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.</p>");
             $("#move-two-title").text("Call the Spirits");
-            $("#move-two-content").html('When you <b><i>perform a short ritual and invoke the spirit(s) of a place or object</i></b>, spend 1 Stock. The spirit(s) manifest before you and will hear what you have to say. What they do next is up to them.');
+            $("#move-two-content").html("<p>When you <b><i>perform a short ritual and invoke the spirit(s) of a place or object</i></b>, spend 1 Stock. The spirit(s) manifest before you and will hear what you have to say. What they do next is up to them.</p>");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
