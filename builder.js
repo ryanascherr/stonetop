@@ -54,10 +54,10 @@ selectCharacterBtn.click(function(){
 
             $("#playbook-moves-sheet-container").children().addClass("move-card");
 
-            let moveOneName = "Spirit Tongue";
-            let moveOneDescription = "<p>You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.</p>";
-            let moveTwoName = "Call the Spirits";
-            let moveTwoDescription = "<p>When you <b><i>perform a short ritual and invoke the spirit(s) of a place or object</i></b>, spend 1 Stock. The spirit(s) manifest before you and will hear what you have to say. What they do next is up to them.</p>";
+            // let moveOneName = "Spirit Tongue";
+            // let moveOneDescription = "<p>You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.</p>";
+            // let moveTwoName = "Call the Spirits";
+            // let moveTwoDescription = "<p>When you <b><i>perform a short ritual and invoke the spirit(s) of a place or object</i></b>, spend 1 Stock. The spirit(s) manifest before you and will hear what you have to say. What they do next is up to them.</p>";
 
             // arrayOfMoves.push(moveOneDescription);
             // arrayOfMoves.push(moveTwoDescription);
