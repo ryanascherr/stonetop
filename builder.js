@@ -636,6 +636,7 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.blessed[property];
+            
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
     }
