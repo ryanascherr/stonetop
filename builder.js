@@ -19,6 +19,7 @@ let stonetopHero;
 let rollNormal;
 let rollAdvantage;
 let rollDisadvantage;
+let listOfMoves = [];
 
 // const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allBackgrounds;
 // const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allDrives;
@@ -60,10 +61,15 @@ selectCharacterBtn.click(function(){
         $("#move-persuade-pc").html(allBasicMoves.persuadePCs);
         $("#move-seek-insight").html(allBasicMoves.seekInsight);
 
+        listOfMoves = [];
+        $(".move-remove").remove();
+
         if (stonetopHero.playbook === "Blessed") {
 
-            $("#move-one-display").html(allPlaybookMoves.blessed.spiritTongue);
-            $("#move-two-display").html(allPlaybookMoves.blessed.callTheSpirits);
+            listOfMoves.push(allPlaybookMoves.blessed.spiritTongue);
+            listOfMoves.push(allPlaybookMoves.blessed.callTheSpirits);
+
+            console.log(listOfMoves);
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -86,30 +92,31 @@ selectCharacterBtn.click(function(){
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.blessed.initiate);
 
-                $("#background-move-display").html(allPlaybookMoves.blessed.ritesOfTheLand);
+                listOfMoves.push(allPlaybookMoves.blessed.ritesOfTheLand);
                 
-
             } else if (stonetopHero.background === "two") {
 
                 $("#background-display").html(allBackgrounds.blessed.raisedByWolves);
 
-                $("#background-move-display").html(allPlaybookMoves.blessed.tracklessStep);
+                listOfMoves.push(allPlaybookMoves.blessed.tracklessStep);
 
             } else if (stonetopHero.background === "three") {
 
                 $("#background-display").html(allBackgrounds.blessed.vessel);
 
-                $("#background-move-display").html(allPlaybookMoves.blessed.danusGrasp);
+                listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
+            }
+
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
             }
         }
 
         if (stonetopHero.playbook === "Fox") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
-
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
-            $("#move-one-title").text("");
-            $("#move-one-content").html("");
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -122,41 +129,27 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Conscience");
-                $("#drive-sheet-description").text("Forego comfort or advantage to do the right thing.");
+                $("#drive-sheet").html(allDrives.fox.conscience);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Excitement");
-                $("#drive-sheet-description").text("Cause an ally trouble by taking an unnecessary risk.");
+                $("#drive-sheet").html(allDrives.fox.excitement);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Glory");
-                $("#drive-sheet-description").text("Show off in front of NPCs who will tell your tale.");
+                $("#drive-sheet").html(allDrives.fox.glory);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Romance");
-                $("#drive-sheet-description").text("Get intimate with someone you’re attracted to.");
+                $("#drive-sheet").html(allDrives.fox.romance);
             } else if (stonetopHero.drive === "five") {
-                $("#drive-sheet-name").text("Trickery");
-                $("#drive-sheet-description").text("Get someone or thing to act on false information.");
+                $("#drive-sheet").html(allDrives.fox.trickery);
             }
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.fox.theNatural);
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "two") {
 
                 $("#background-display").html(allBackgrounds.fox.aLifeOfCrime);
 
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "three") {
 
                 $("#background-display").html(allBackgrounds.fox.theProdigalReturned);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
             }
         }
 
@@ -183,17 +176,13 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Challenge");
-                $("#drive-sheet-description").text("Provoke a fight with a worthy foe, just you & them.");
+                $("#drive-sheet").html(allDrives.heavy.challenge);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Honor");
-                $("#drive-sheet-description").text("Fullfi ll a vow or oath made to an NPC.");
+                $("#drive-sheet").html(allDrives.heavy.honor);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Peace");
-                $("#drive-sheet-description").text("Prevent violence or end it without hurting anyone.");
+                $("#drive-sheet").html(allDrives.heavy.peace);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Pride");
-                $("#drive-sheet-description").text("Put someone in their place.");
+                $("#drive-sheet").html(allDrives.heavy.pride);
             }
 
             if (stonetopHero.background === "one") {
@@ -237,17 +226,13 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Duty");
-                $("#drive-sheet-description").text("Cause trouble by adhering strictly to doctrine");
+                $("#drive-sheet").html(allDrives.judge.duty);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Harmony");
-                $("#drive-sheet-description").text("Settle a dispute without anyone feeling wronged.");
+                $("#drive-sheet").html(allDrives.judge.harmony);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Knowledge");
-                $("#drive-sheet-description").text("Teach another something important.");
+                $("#drive-sheet").html(allDrives.judge.knowThings);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Zeal");
-                $("#drive-sheet-description").text("Pass judgement hastily, without considering nuance or consequences.");
+                $("#drive-sheet").html(allDrives.judge.zeal);
             }
 
             if (stonetopHero.background === "one") {
@@ -291,17 +276,13 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Charity");
-                $("#drive-sheet-description").text("Bring relief or comfort to someone who is suffering.");
+                $("#drive-sheet").html(allDrives.lightbearer.characterName);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Faith");
-                $("#drive-sheet-description").text("Walk brazenly into danger, sure of Helior’s plan.");
+                $("#drive-sheet").html(allDrives.lightbearer.faith);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Hope");
-                $("#drive-sheet-description").text("Lead another to act despite fear or doubt.");
+                $("#drive-sheet").html(allDrives.lightbearer.hope);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Mercy");
-                $("#drive-sheet-description").text("Forgive a wrong or set a helpless enemy free.");
+                $("#drive-sheet").html(allDrives.lightbearer.mercy);
             }
 
             if (stonetopHero.background === "one") {
@@ -349,17 +330,13 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Honor");
-                $("#drive-sheet-description").text("Keep a promise you made to an NPC.");
+                $("#drive-sheet").html(allDrives.marshal.honor);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Prestige");
-                $("#drive-sheet-description").text("Impress an NPC from outside your home steading.");
+                $("#drive-sheet").html(allDrives.marshal.preservation);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Resolve");
-                $("#drive-sheet-description").text("Give an order or enact a plan knowing it will bring an ally to harm.");
+                $("#drive-sheet").html(allDrives.marshal.resolve);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Ruthlessness");
-                $("#drive-sheet-description").text("Deny mercy to an enemy or betray a supposed ally.");
+                $("#drive-sheet").html(allDrives.marshal.ruthlessness);
             }
 
             if (stonetopHero.background === "one") {
@@ -406,17 +383,13 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Mercy");
-                $("#drive-sheet-description").text("Release someone/thing from bondage or suff ering.");
+                $("#drive-sheet").html(allDrives.ranger.mercy);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Stewardship");
-                $("#drive-sheet-description").text("Put the best interests of a place or beast over a person’s desires.");
+                $("#drive-sheet").html(allDrives.ranger.stewardship);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Tenacity");
-                $("#drive-sheet-description").text("Refuse to turn back despite objection or disaster.");
+                $("#drive-sheet").html(allDrives.ranger.tenacity);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Wonder");
-                $("#drive-sheet-description").text("Show someone a place or thing of beauty.");
+                $("#drive-sheet").html(allDrives.ranger.wonder);
             }
 
             if (stonetopHero.background === "one") {
@@ -465,20 +438,15 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Cunning");
-                $("#drive-sheet-description").text("Set up a ploy and then take advantage of it.");
+                $("#drive-sheet").html(allDrives.seeker.cunning);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Curiosity");
-                $("#drive-sheet-description").text("Cause trouble by touching, opening, or tinkering with something.");
+                $("#drive-sheet").html(allDrives.seeker.curiosity);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Respect");
-                $("#drive-sheet-description").text("Impress another with your superior knowledge.");
+                $("#drive-sheet").html(allDrives.seeker.respect);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Secrecy");
-                $("#drive-sheet-description").text("Deflect or evade an inquiry into your doings.");
+                $("#drive-sheet").html(allDrives.seeker.secrecy);
             } else if (stonetopHero.drive === "five") {
-                $("#drive-sheet-name").text("Victory");
-                $("#drive-sheet-description").text("Endanger others in order to defeat the supernatural.");
+                $("#drive-sheet").html(allDrives.seeker.victory);
             }
 
             if (stonetopHero.background === "one") {
@@ -524,17 +492,13 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Bravery");
-                $("#drive-sheet-description").text("Face up to one of your fears.");
+                $("#drive-sheet").html(allDrives.wouldBeHero.bravery);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Glory");
-                $("#drive-sheet-description").text("Impress onlookers with your bravery.");
+                $("#drive-sheet").html(allDrives.wouldBeHero.glory);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Sacrifice");
-                $("#drive-sheet-description").text("Suffer or endure hardship so that someone else does not need to do so.");
+                $("#drive-sheet").html(allDrives.wouldBeHero.sacrifice);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Succor");
-                $("#drive-sheet-description").text("Provide aid or comfort to an NPC in need.");
+                $("#drive-sheet").html(allDrives.wouldBeHero.succor);
             }
 
             if (stonetopHero.background === "one") {
@@ -635,8 +599,20 @@ $("#add-move-btn").click(function(){
         for (const property in allPlaybookMoves.blessed) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.blessed[property];
-            
+            newDiv.innerHTML = allPlaybookMoves.blessed[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Fox") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.fox) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.fox[property] + "<button>Add</button>";
+
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
     }

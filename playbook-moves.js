@@ -52,7 +52,7 @@ const allPlaybookMoves = {
 
     fox: {
 
-        allInTheWrist: "<h3>All in the Wrist</h3><p>Any knife or dagger gets the <i>thrown</i> tag in your hands. Also, you keep a number of iron throwing blades (</i>near</i>) on you; they don’t take up space in your inventory. Your ammo replenishes whenever you Outfit.</p>",
+        allInTheWrist: "<h3>All in the Wrist</h3><p>Any knife or dagger gets the <i>thrown</i> tag in your hands. Also, you keep a number of iron throwing blades (<i>near</i>) on you; they don’t take up space in your inventory. Your ammo replenishes whenever you Outfit.</p>",
 
         ambush: "<h3>Ambush</h3><p>When you <b><i>attack someone up close and they don’t see it coming</i></b>, deal your damage or roll +DEX: <b>on a 10+</b>, deal your damage and pick 2; <b>on a 7-9</b>, deal your damage and pick 1:</p><ul><li>Deal +1d4 damage</li><li>Stop them from making noise/raising an alarm</li><li>Slip away before they can react</li><li>Create an opportunity; you or an ally gains advantage on the next move to act on it</li></ul>",
 
@@ -60,7 +60,7 @@ const allPlaybookMoves = {
 
         catlike: "<h3>Catlike</h3><p>When you <b><i>carry a light load and move with care</i></b>, you make no noise.</p><p>When you <b><i>keep still in shadows or darkness</i></b>, you remain unseen until you draw attention to yourself, move positions, or attack.</p>",
 
-        dabbler: "<h3>Dabbler</h3><p>Each time you take this move, choose a move from the Heavy, Marshal, Ranger, or Seeker playbooks for which you otherwise qualify. (You can’t take Improved Stat or Superior Stat.)</p>",
+        dabbler: "<h3>Dabbler</h3><p>Each time you take this move, choose a move from the Heavy, Marshal, Ranger, or Seeker playbooks for which you otherwise qualify (you can’t take Improved Stat or Superior Stat).</p>",
 
         dangerSense: "<h3>Danger Sense</h3><p>You can always ask the GM, “Is there an ambush or trap here?” If they say “yes,” roll +INT: <b>on a 10+</b>, ask the GM both of the questions below; <b>on a 7-9</b>, ask 1; <b>either way</b>, gain advantage on your next roll to act on the answer(s).</p><ul><li>What will trigger the ambush or trap?</li><li>What will happen once it’s triggered?</li></ul><p><b>On a 6-</b>, don’t mark XP but nothing bad happens just yet.",
 
@@ -80,7 +80,7 @@ const allPlaybookMoves = {
 
         skillAtArms: "<h3>Skill at Arms</h3><p>When you <b><i>wield a spear, sword, or staff</i></b>, it has the <i>precise</i> tag (you can Clash with DEX).</p>",
 
-        parryAndRiposte: "<h3>Parry & Riposte</h3><p>When you <b><i>Defend with a precise weapon</i></b>, you can spend 1 Readiness to both halve an attack’s effects/damage and strike back at the attacker (deal your damage with disadvantage), instead of spending 1 Readiness for each.</p>",
+        parryAndRiposte: "<h3>Parry & Riposte</h3><p>When you <b><i>Defend with a </i>precise <i>weapon</i></b>, you can spend 1 Readiness to both halve an attack’s effects/damage and strike back at the attacker (deal your damage with disadvantage), instead of spending 1 Readiness for each.</p>",
 
         silverTongued: "<h3>Silver Tongued</h3><p>When you <b><i>use words to avoid suspicion or trouble</i></b>, roll +CHA: <b>on a 10+</b>, hold 3 Nerve; <b>on a 7-9</b>, hold 1 Nerve. You may spend Nerve, 1-for-1, to:</p><ul><li>Move about or maneuver unchallenged</li><li>Withstand direct scrutiny or questioning</li><li>Direct suspicion or attention elsewhere</li></ul>",
 
