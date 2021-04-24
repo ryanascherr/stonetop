@@ -49,6 +49,17 @@ selectCharacterBtn.click(function(){
         $("#xp-display").text("XP (+0)");
         $("#stat-btn").addClass("highlight");
 
+        $("#move-aid").html(allBasicMoves.aid);
+        $("#move-clash").html(allBasicMoves.clash);
+        $("#move-defend").html(allBasicMoves.defend);
+        $("#move-defy-danger").html(allBasicMoves.defyDanger);
+        $("#move-interfere").html(allBasicMoves.interfere);
+        $("#move-know-things").html(allBasicMoves.knowThings);
+        $("#move-let-fly").html(allBasicMoves.letFly);
+        $("#move-persuade-npc").html(allBasicMoves.persuadeNPCs);
+        $("#move-persuade-pc").html(allBasicMoves.persuadePCs);
+        $("#move-seek-insight").html(allBasicMoves.seekInsight);
+
         if (stonetopHero.playbook === "Blessed") {
 
             $("#playbook-moves-sheet-container").children().addClass("move-card");
