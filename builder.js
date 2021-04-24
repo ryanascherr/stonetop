@@ -553,6 +553,7 @@ $("#stat-btn").click(function(){
     $("#playbook-moves-sheet-container").addClass("hidden");
     $("#background-sheet-container").addClass("hidden");
     $("#basic-moves-sheet-container").addClass("hidden");
+    $("#add-playbook-moves-sheet-container").addClass("hidden");
     $("#stat-sheet-container").removeClass("hidden");
 })
 
@@ -565,6 +566,7 @@ $("#playbook-moves-btn").click(function(){
     $("#stat-sheet-container").addClass("hidden");
     $("#background-sheet-container").addClass("hidden");
     $("#basic-moves-sheet-container").addClass("hidden");
+    $("#add-playbook-moves-sheet-container").addClass("hidden");
     $("#playbook-moves-sheet-container").removeClass("hidden");
 })
 
@@ -577,6 +579,7 @@ $("#background-btn").click(function(){
     $("#playbook-moves-sheet-container").addClass("hidden");
     $("#stat-sheet-container").addClass("hidden");
     $("#basic-moves-sheet-container").addClass("hidden");
+    $("#add-playbook-moves-sheet-container").addClass("hidden");
     $("#background-sheet-container").removeClass("hidden");
 })
 
@@ -589,6 +592,7 @@ $("#basic-moves-btn").click(function(){
     $("#playbook-moves-sheet-container").addClass("hidden");
     $("#stat-sheet-container").addClass("hidden");
     $("#background-sheet-container").addClass("hidden");
+    $("#add-playbook-moves-sheet-container").addClass("hidden");
     $("#basic-moves-sheet-container").removeClass("hidden");
 })
 
