@@ -20,10 +20,9 @@ let rollNormal;
 let rollAdvantage;
 let rollDisadvantage;
 
-// let arrayOfMoves = [];
-// let newMoves;
-
-// let anotherTest = "<p>Hello there!</p><p>Second paragraph!</p><h1>Big Text!</hi>"
+// const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allBackgrounds;
+// const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allDrives;
+// const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allMoves;
 
 selectCharacterBtn.click(function(){
 
@@ -996,10 +995,6 @@ $(".stat-select-btn").click(function(){
     wis = $("#stat-four").val();
     con = $("#stat-five").val();
     cha = $("#stat-six").val();
-
-    // localStorage.setItem("playbook", playbook);
-
-//set things to local storage via object
 
     let newCharacter = {
         playbook: playbook,
