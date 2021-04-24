@@ -773,118 +773,87 @@ $("#background-card-container").click(function(event){
     }
 
     if (playbook === "Blessed") {
-        $("#drive-name-one").text("Conciliation");
-        $("#drive-description-one").text("Calm, soothe, or mollify a hostile spirit or beast.");
-        $("#drive-name-two").text("Cultivation");
-        $("#drive-description-two").text("Help an NPC learn, grow, or improve themselves.");
-        $("#drive-name-three").text("Preservation");
-        $("#drive-description-three").text("Convince others to protect something of natural beauty or of importance to Danu.");
-        $("#drive-name-four").text("Renewal");
-        $("#drive-description-four").text("Restore someone or thing to its prior, untainted state, or defeat a perversion of the natural order.");
+        $("#drive-create-one").html(allDrives.blessed.conciliation);
+        $("#drive-create-two").html(allDrives.blessed.cultivation);
+        $("#drive-create-three").html(allDrives.blessed.preservation);
+        $("#drive-create-four").html(allDrives.blessed.renewal);
+        
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "Fox") {
-        $("#drive-name-one").text("Conscience");
-        $("#drive-description-one").text("Forego comfort or advantage to do the right thing.");
-        $("#drive-name-two").text("Excitement");
-        $("#drive-description-two").text("Cause an ally trouble by taking an unnecessary risk.");
-        $("#drive-name-three").text("Glory");
-        $("#drive-description-three").text("Show off in front of NPCs who will tell your tale.");
-        $("#drive-name-four").text("Romance");
-        $("#drive-description-four").text("Get intimate with someone you’re attracted to.");
-        $("#drive-name-five").text("Trickery");
-        $("#drive-description-five").text("Get someone or thing to act on false information.");
+        $("#drive-create-one").html(allDrives.fox.conscience);
+        $("#drive-create-two").html(allDrives.fox.excitement);
+        $("#drive-create-three").html(allDrives.fox.glory);
+        $("#drive-create-four").html(allDrives.fox.romance);
+        $("#drive-create-five").html(allDrives.fox.trickery);
     }
 
     if (playbook === "Heavy") {
-        $("#drive-name-one").text("Challenge");
-        $("#drive-description-one").text("Provoke a fight with a worthy foe, just you & them.");
-        $("#drive-name-two").text("Honor");
-        $("#drive-description-two").text("Fullfill a vow or oath made to an NPC.");
-        $("#drive-name-three").text("Peace");
-        $("#drive-description-three").text("Prevent violence or end it without hurting anyone.");
-        $("#drive-name-four").text("Pride");
-        $("#drive-description-four").text("Put someone in their place.");
+        $("#drive-create-one").html(allDrives.heavy.challenge);
+        $("#drive-create-two").html(allDrives.heavy.honor);
+        $("#drive-create-three").html(allDrives.heavy.peace);
+        $("#drive-create-four").html(allDrives.heavy.pride);
+
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "Judge") {
-        $("#drive-name-one").text("Duty");
-        $("#drive-description-one").text("Cause trouble by adhering strictly to doctrine.");
-        $("#drive-name-two").text("Harmony");
-        $("#drive-description-two").text("Settle a dispute without anyone feeling wronged.");
-        $("#drive-name-three").text("Knowledge");
-        $("#drive-description-three").text("Teach another something important.");
-        $("#drive-name-four").text("Zeal");
-        $("#drive-description-four").text("Pass judgement hastily, without considering nuance or consequences.");
+        $("#drive-create-one").html(allDrives.judge.duty);
+        $("#drive-create-two").html(allDrives.judge.harmony);
+        $("#drive-create-three").html(allDrives.judge.knowledge);
+        $("#drive-create-four").html(allDrives.judge.zeal);
+
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "Lightbearer") {
-        $("#drive-name-one").text("Charity");
-        $("#drive-description-one").text("Bring relief or comfort to someone who is suffering.");
-        $("#drive-name-two").text("Faith");
-        $("#drive-description-two").text("Walk brazenly into danger, sure of Helior’s plan.");
-        $("#drive-name-three").text("Hope");
-        $("#drive-description-three").text("Lead another to act despite fear or doubt.");
-        $("#drive-name-four").text("Mercy");
-        $("#drive-description-four").text("Forgive a wrong or set a helpless enemy free.");
+        $("#drive-create-one").html(allDrives.lightbearer.charity);
+        $("#drive-create-two").html(allDrives.lightbearer.faith);
+        $("#drive-create-three").html(allDrives.lightbearer.hope);
+        $("#drive-create-four").html(allDrives.lightbearer.mercy);
+
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "Marshal") {
-        $("#drive-name-one").text("Honor");
-        $("#drive-description-one").text("Keep a promise you made to an NPC.");
-        $("#drive-name-two").text("Prestige");
-        $("#drive-description-two").text("Impress an NPC from outside your home steading.");
-        $("#drive-name-three").text("Resolve");
-        $("#drive-description-three").text("Give an order or enact a plan knowing it will bring an ally to harm.");
-        $("#drive-name-four").text("Ruthlessness");
-        $("#drive-description-four").text("Deny mercy to an enemy or betray a supposed ally.");
+        $("#drive-create-one").html(allDrives.marshal.honor);
+        $("#drive-create-two").html(allDrives.marshal.prestige);
+        $("#drive-create-three").html(allDrives.marshal.resolve);
+        $("#drive-create-four").html(allDrives.marshal.ruthlessness);
+        
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "Ranger") {
-        $("#drive-name-one").text("Mercy");
-        $("#drive-description-one").text("Release someone/thing from bondage or suffering.");
-        $("#drive-name-two").text("Stewardship");
-        $("#drive-description-two").text("Put the best interests of a place or beast over a person’s desires.");
-        $("#drive-name-three").text("Tenacity");
-        $("#drive-description-three").text("Refuse to turn back despite objection or disaster.");
-        $("#drive-name-four").text("Wonder");
-        $("#drive-description-four").text("Show someone a place or thing of beauty.");
+        $("#drive-create-one").html(allDrives.ranger.mercy);
+        $("#drive-create-two").html(allDrives.ranger.stewardship);
+        $("#drive-create-three").html(allDrives.ranger.tenacity);
+        $("#drive-create-four").html(allDrives.ranger.wonder);
+
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
 
     if (playbook === "Seeker") {
-        $("#drive-name-one").text("Cunning");
-        $("#drive-description-one").text("Set up a ploy and then take advantage of it.");
-        $("#drive-name-two").text("Curiosity");
-        $("#drive-description-two").text("Cause trouble by touching, opening, or tinkering with something.");
-        $("#drive-name-three").text("Respect");
-        $("#drive-description-three").text("Impress another with your superior knowledge.");
-        $("#drive-name-four").text("Secrecy");
-        $("#drive-description-four").text("Deflect or evade an inquiry into your doings.");
-        $("#drive-name-five").text("Victory");
-        $("#drive-description-five").text("Endanger others in order to defeat the supernatural.");
+        $("#drive-create-one").html(allDrives.seeker.cunning);
+        $("#drive-create-two").html(allDrives.seeker.curiosity);
+        $("#drive-create-three").html(allDrives.seeker.respect);
+        $("#drive-create-four").html(allDrives.seeker.secrecy);
+        $("#drive-create-five").html(allDrives.seeker.victory);
     }
 
     if (playbook === "Would-Be Hero") {
-        $("#drive-name-one").text("Bravery");
-        $("#drive-description-one").text("Face up to one of your fears.");
-        $("#drive-name-two").text("Glory");
-        $("#drive-description-two").text("Impress onlookers with your bravery.");
-        $("#drive-name-three").text("Sacrifice");
-        $("#drive-description-three").text("Suffer or endure hardship so that someone else does not need to do so.");
-        $("#drive-name-four").text("Succor");
-        $("#drive-description-four").text("Provide aid or comfort to an NPC in need.");
+        $("#drive-create-one").html(allDrives.wouldBeHero.bravery);
+        $("#drive-create-two").html(allDrives.wouldBeHero.glory);
+        $("#drive-create-three").html(allDrives.wouldBeHero.sacrifice);
+        $("#drive-create-four").html(allDrives.wouldBeHero.succor);
+
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
@@ -909,7 +878,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("-");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Arwel, Blodwen, Brynmor, Celyn, Fflur, Gwynn, Tegwen, or Winned</p><p><b>The Steplands</b> (Hillfolk):<br>Bejn, Decla, Franza, Irv, Ivet, Jak, Sibl, or Yez</p><p><b>The Wild</b> (mix and match 1-3):<br>Autumn, Badger, Big, Black, Bloody, Brave, Crow, Cub, Dark, Doe, Fang, Fierce, Flower, Gentle, Green, Grim, Hart, Leaf, Little, Lonely, Old, Owl, Pale, Pup, Quick, Quiet, Rain, Red, Sharp, Snake, Snow, Spring, Summer, Tall, Tree, Yellow, White, Wind, Winter, Wolf, Whisper");
+        $("#origin").html(allOrigins.blessed);
     }
 
     if (playbook === "Fox") {
@@ -919,7 +888,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Lygos");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Bran, Carwyn, Delyth, Elin, Fion, Geral, Mair, Rannon, Vaughn, or Wynn</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Comyna, Crevan, Fitz, Greagir, Maired, Nainsi, Naiclas, or Saraid</p><p><b>Lygos or some other point south</b>:<br>Amit, Baz, Dafna, Mahsa, Parviz, Sanaz, Tzofiya, Yaniv</p>");
+        $("#origin").html(allOrigins.fox);
     }
 
     if (playbook === "Heavy") {
@@ -929,7 +898,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("The Steplands");
         $("#option-five").text("The Manmarch");
         $("#option-six").text("Lygos");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Aerona, Arthfael, Cadmor, Esyllt, Pedr, Rhonwen, Terrwen, or Trystan</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Aengus, Bairbre, Bronach, Flann, Laughn, Muirdoc, Quinn, or Treasa</p><p><b>The Steplands</b> (Hillfolk):<br>Andr, Gabrl, Kaetl, Mael, Maela, Par, Ral, or Umbert</p><p><b>The Manmarch</b>:<br> Bathhilde, Clothar, Ganter, Hiltrude, Ludig, Luise, Modd, or Wiland</p><p><b>Lygos or some other point south</b>:<br>Arihl, Akios, Bhadur, Seble, Shahnaz, Shay, Tisi, or Zubin</p>");
+        $("#origin").html(allOrigins.heavy);
     }
 
     if (playbook === "Judge") {
@@ -939,7 +908,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Lygos");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Arianrhod, Caerwyn, Einion, Eleri, Magda, Nerys, Trahaern, or Trefor</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Briget, Comhall, Elnor, Liadain, Mirdach, Onghus, Somha, or Toal</p><p><b>Lygos or some other southern town</b>:<br>Abrim, Cassander, Despina, Hypatta, Morecai, Nomika, Sofia, or Yose</p>");
+        $("#origin").html(allOrigins.judge);
     }
 
     if (playbook === "Lightbearer") {
@@ -949,7 +918,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Lygos");
         $("#option-five").text("-");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Dai, Eirian, Eurig, Haf, Haul, Hefin, Hulwen, or Tesni</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Adfin, Callach, Conlad, Eadna, Fionntan, Niamh, Orlaith, or Sorsha</p><p><b>Lygos or some other point south</b>:<br>Arash, Azar, Hafiz, Murat, Roshan, Shideh, Zara, or Zohara</p>");
+        $("#origin").html(allOrigins.lightbearer);
     }
 
     if (playbook === "Marshal") {
@@ -959,7 +928,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("The Steplands");
         $("#option-five").text("The Manmarch");
         $("#option-six").text("Lygos");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Bethan, Cadfael, Ffraid, Gwythyr, Llewelyn, Meredith, Rhianna, or Urien</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>: Brigh, Cathal, Conn, Donal, Fionna, Laith, Talulla, or Torin</p><p><b>Steplands</b> (Hillfolk):<br>Adl, Aeln, Clotild, Judoc, Katrn, Mygl, Pirn, or Sera</p><p><b>The Manmarch</b>:<br>Berkhard, Gerhild, Hartig, Hilde, Sabrinne, Ulrike, Urrsla, or Weillem</p><p><b>Lygos or some other point south</b>:<br>Ameer, Calixta, Hadar, Kelila, Sulaim, Ursa or Xandros");
+        $("#origin").html(allOrigins.marshal);
     }
 
     if (playbook === "Ranger") {
@@ -969,7 +938,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("The Manmarch");
         $("#option-five").text("Lygos");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Aran, Bledyn, Branwen, Deryn, Ifur, Meinir, Rhys or Teagan</p><p><b>Marshedge</b>:<br>Asling, Conar, Enna, Flannan, Macha, Mave, Proinsias, or Rowen</p><p><b>The Steplands</b> (Hillfolk):<br>Bernd, Elown, Irn, Kani, Pol, Nol, Rozn, or Sterin</p><p><b>The Manmarch</b>:<br>Alfher, Bertrim, Dagmar, Elfrida, Hramn, Meike, Swanhilde, or Wulfrim</p><p><b>Lygos or some other point south</b>:<br>Ari, Boriz, Dimitra, Gorhan, Nitza, Selen, Todora, or Vasil</p>");
+        $("#origin").html(allOrigins.ranger);
     }
 
     if (playbook === "Seeker") {
@@ -979,7 +948,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Marshedge");
         $("#option-five").text("Lygos");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Alis, Dylan, Eilwen, Gerlt, Gwenda, Macsen, Mirgan, Owena, Taliesyn, or Twymor</p><p><b>The Steplands</b> (Hillfolk):<br>Anook, Anxo, Dors, Jory, Mari, Padg, Pons, or Silf</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Aiden, Barrfind, Caolan, Ciara, Deirbhile, Moirin, Tiern, or Reamann</p><p><b>Lygos or another southern town</b>:<br>Dana, Eliana, Erez, Fikri, Isra, Persefoni, Spiro, or Vahid</p>");
+        $("#origin").html(allOrigins.seeker);
     }
 
     if (playbook === "Would-Be Hero") {
@@ -989,7 +958,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Marshedge");
         $("#option-five").text("Lygos");
         $("#option-six").text("-");
-        $("#origin").html("<p><b>Stonetop</b>:<br>Anwen, Caradoc, Dafyd, Glenys, Madoc, Morwenna, Siwan, or Wynfor</p><p><b>The Steplands</b> (Hillfolk):<br>Annic, Cosette, Denl, Hugenne, Jag, Marc, Oanz, or Sandre</p><p><b>Gordin’s Delve</b>:<br>Pick a name from any list</p><p><b>Marshedge</b>:<br>Bridin, Clian, Engis, Fearghul, Lan, Neasa, Nill, or Una</p><p><b>Lygos or some other southern town</b>:<br>Chara, Davud, Korina, Omid, Parvaneh, Tamir, Takish, or Yannis</p>");
+        $("#origin").html(allOrigins.playbook);
     }
 })
 
