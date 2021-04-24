@@ -62,12 +62,8 @@ selectCharacterBtn.click(function(){
 
         if (stonetopHero.playbook === "Blessed") {
 
-            $("#playbook-moves-sheet-container").children().addClass("move-card");
-
-            $("#move-one-title").text("Spirit Tongue");
-            $("#move-one-content").html("<p>You can speak with natural beasts and spirits of the wild. You can always ask the GM “what spirits are active here?” and get an honest answer.</p>");
-            $("#move-two-title").text("Call the Spirits");
-            $("#move-two-content").html("<p>When you <b><i>perform a short ritual and invoke the spirit(s) of a place or object</i></b>, spend 1 Stock. The spirit(s) manifest before you and will hear what you have to say. What they do next is up to them.</p>");
+            $("#move-one-display").html(allPlaybookMoves.blessed.spiritTongue);
+            $("#move-two-display").html(allPlaybookMoves.blessed.callTheSpirits);
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -78,38 +74,32 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet-name").text("Conciliation");
-                $("#drive-sheet-description").text("Calm, soothe, or mollify a hostile spirit or beast.");
+                $("#drive-sheet").html(allDrives.blessed.conciliation);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet-name").text("Cultivation");
-                $("#drive-sheet-description").text("Help an NPC learn, grow, or improve themselves.");
+                $("#drive-sheet").html(allDrives.blessed.cultivation);
             } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet-name").text("Preservation");
-                $("#drive-sheet-description").text("Convince others to protect something of natural beauty or of importance to Danu.");
+                $("#drive-sheet").html(allDrives.blessed.preservation);
             } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet-name").text("Renewal");
-                $("#drive-sheet-description").text("Restore someone or thing to its prior, untainted state, or defeat a perversion of the natural order.");
+                $("#drive-sheet").html(allDrives.blessed.renewal);
             }
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.blessed.initiate);
 
-                $("#background-move-title").text("Rites of the Land");
-                $("#background-move-content").html("<p>When <b><i>Seasons Change and you oversee the sacred rites</i></b>, you can sacrifice 2 Surplus to increase the steading’s Fortunes by 1 (max +3). If you sacrifice something (or someone) much-loved and greatly valued, you can redo a roll from Seasons Change, with your choice of advantage or disdvantage.</p>");
+                $("#background-move-display").html(allPlaybookMoves.blessed.ritesOfTheLand);
+                
 
             } else if (stonetopHero.background === "two") {
 
                 $("#background-display").html(allBackgrounds.blessed.raisedByWolves);
 
-                $("#background-move-title").text("Trackless Step");
-                $("#background-move-content").html("<p>When you <b><i>move through nature with care and patience</i></b>, you make no sound, leave no trace and can ignore any hindering or treacherous terrain (briars, mire, scree, etc.). <b><i>When you spend 1 Stock and mark others</i></b>, they each gain this benefit so long as the mark remains. 1 Stock can mark a number of individuals up to your level +INT.</p>");
+                $("#background-move-display").html(allPlaybookMoves.blessed.tracklessStep);
 
             } else if (stonetopHero.background === "three") {
 
                 $("#background-display").html(allBackgrounds.blessed.vessel);
 
-                $("#background-move-title").text("Danu's Grasp");
-                $("#background-move-content").html("<p>When you <b><i>call on the world itself to bind a spirit or a perversion of nature</i></b>, spend 1 Stock and roll +WIS: <b>on a 10+</b>, choose 2 from the list below; <b>on a 7-9</b>, choose 1.</p><ul><li>You avoid or prevent their counterattack</li><li>Roots, vines, and earth restrain them</li><li>They take 2d4 damage (ignores armor)</li></ul><p>If this brings them to 0 HP, they are pulled into the earth and bound in rune-etched stone.</p>");
+                $("#background-move-display").html(allPlaybookMoves.blessed.danusGrasp);
             }
         }
 
@@ -636,6 +626,18 @@ $("#basic-moves-btn").click(function(){
     $("#stat-sheet-container").addClass("hidden");
     $("#background-sheet-container").addClass("hidden");
     $("#basic-moves-sheet-container").removeClass("hidden");
+})
+
+$("#add-move-btn").click(function(){
+    if (stonetopHero.playbook === "Blessed") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+        for (let i = 0; i < Object.keys(allPlaybookMoves.blessed).length; i++) {
+            let newDiv = document.createElement("div");
+            newDiv.addClass("move-card");
+            newDiv.html(Object.keys(allPlaybookMoves.blessed)[i]);
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
 })
 
 createCharacterBtn.click(function(){
