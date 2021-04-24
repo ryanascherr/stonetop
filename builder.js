@@ -631,10 +631,11 @@ $("#basic-moves-btn").click(function(){
 $("#add-move-btn").click(function(){
     if (stonetopHero.playbook === "Blessed") {
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
-        for (let i = 0; i < Object.keys(allPlaybookMoves.blessed).length; i++) {
+
+        for (const property in allPlaybookMoves.blessed) {
             let newDiv = document.createElement("div");
-            newDiv.addClass("move-card");
-            newDiv.html(Object.keys(allPlaybookMoves.blessed)[i]);
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.blessed[property];
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
     }
