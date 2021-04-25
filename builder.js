@@ -106,14 +106,6 @@ selectCharacterBtn.click(function(){
 
                 listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
             }
-
-            for (let i = 0; i < listOfMoves.length; i++) {
-                let newDiv = document.createElement("div");
-                newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
-                newDiv.innerHTML = listOfMoves[i];
-                $("#super-test").append(newDiv);
-            }
         }
 
         if (stonetopHero.playbook === "Fox") {
@@ -142,24 +134,27 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.fox.theNatural);
-
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.fox.aLifeOfCrime);
-
             } else if (stonetopHero.background === "three") {
-
                 $("#background-display").html(allBackgrounds.fox.theProdigalReturned);
             }
         }
 
         if (stonetopHero.playbook === "Heavy") {
-            $("#playbook-moves-sheet-container").children().addClass("move-card");
 
-            $("#move-one-title").text("Dangerous");
-            $("#move-one-content").html("<p>When you deal your damage, you have advantage.</p>");
-            $("#move-two-title").text("Hard to Kill");
-            $("#move-two-content").html("<p>When you <b><i>are at Death’s Door</i></b>, you can roll +CON or +nothing (your choice). <b>On a 7-9</b>, you can mark a debility of your choice to regain 1 HP.</p>");
+            listOfMoves.push(allPlaybookMoves.heavy.dangerous);
+            listOfMoves.push(allPlaybookMoves.heavy.hardToKill);
+
+            console.log(listOfMoves);
+
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
+            }
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -187,23 +182,10 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.heavy.sheriff);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.heavy.bloodSoakedPast);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "three") {
-
                 $("#background-display").html(allBackgrounds.heavy.stormMarked);
-                
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
             }
         }
 
@@ -616,6 +598,18 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.fox[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Heavy") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.heavy) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.heavy[property] + "<button>Add</button>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }

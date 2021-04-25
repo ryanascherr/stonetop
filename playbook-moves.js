@@ -99,5 +99,62 @@ const allPlaybookMoves = {
         slippery: "<h3>Slippery</h3><p>When you <b><i>roll to escape being caught or controlled</i></b>, treat a 6- as a 7-9. On a 12+, say how you turn the tables or use the circumstances to your advantage.",
 
         superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>"
+    },
+
+    heavy: {
+
+        armored: "<h3>Armored</h3><p>When you <b><i>wear armor or carry a shield</i></b>, mark only O for each (instead of OO), and ignore the clumsy tag (you don’t suffer disadvantage for wearing it). If you take this move at the start of play, add an O iron hauberk, O bronze cuirass, or O scale coat to your inventory (all are 2 armor, warm, clumsy).</p>",
+
+        battleJoy: "<h3>Battle Joy</h3><p>When you <b><i>spill blood—yours or another’s—and lose yourself in battle</i></b>, you ignore fear, pain, mind-control, and the effects of debilities as long as you keep fighting.</p><p>When <b><i>the action stops</i></b>, roll +CON: <b>on a 10+</b>, that was a rush, regain 1d4 HP; <b>on a 7-9</b>, you’re winded and out of it, but you’ll be fine with a few minutes’ rest; <b>on a 6-</b>, mark a debility but don’t mark XP.</p>",
+
+        berserker: "<h3>Berserker</h3><p>While <b><i>in your Battle Joy</i></b>, add the <i>area</i> tag to your melee attacks, lashing out at anyone in nearby (friend and foe alike). Roll damage seperately for each target.</p>",
+
+        carvedOutOfWood: "<h3>Carved Out of Wood</h3><p>Increase your max HP by 4.</p>",
+
+        dangerous: "<h3>Dangerous</h3><p>When you deal your damage, you have advantage.</p>",
+
+        formidable: "<h3>Formidable</h3><p>When you <b><i>wade into battle</i></b>, you can choose to roll +CHA: <b>on a 10+</b>, both; <b>on a 7-9</b>, pick 1:</p><ul><li>Lesser foes will quail, hesitate, or flee before you.</li><li>Doughty foes will focus on you, seeing you as the greatest threat.</li></ul><p><b>On a 6-</b>, pick 1 but ask the GM what you’ve missed.</p>",
+
+        frosty: "<h3>Frosty</h3><p>When you <b><i>Defy Danger by keeping calm and carrying on</i></b>, <b>on a 10+</b> you can also ask the GM a question that you could ask when Seeking Insight. You have advantage on your next move to act on the answer.</p>",
+
+        guardian: "<h3>Guardian</h3><p>When you <b><i>Defend</i></b>, hold 1 extra Readiness. Even on a 6-, hold 1 Readiness (plus whatever the GM says).</p>",
+
+        improvedStat: "<h3>Improved Stat</h3><p>Each time you take this move, increase one of your stats by 1 (to a max of +2).</p>",
+
+        intimidating: "<h3>Intimidating</h3><p>When you <b><i>Persuade using violence or threats</i></b>, you have advantage.</p>",
+
+        hardToKill: "<h3>Hard to Kill</h3><p>When you <b><i>are at Death’s Door</i></b>, you can roll +CON or +nothing (your choice). <b>On a 7-9</b>, you can mark a debility of your choice to regain 1 HP.</p>",
+
+        unstoppable: "<h3>Unstoppable</h3><p>When you <b><i>are reduced to 0 HP in battle</i></b>, you can keep fighting. Each time you take damage while at 0 HP, mark 1. If something would heal you while you keep fighting, clear one mark instead.</p><p>When you stop fighting, roll for Death’s Door with a -1 penalty for each circle marked. If you survive, clear all your circles.</p>",
+
+        musclebound: "<h3>Musclebound</h3><p>When you <b><i>make a hand-to-hand or thrown attack</i></b>, it’s forceful and messy. If it would already be forceful and/or messy, it’s even more so.</p>",
+
+        payback: "<h3>Payback</h3><p>When you <b><i>deal damage to a foe that has harmed you or one of your allies</i></b>, deal +1d4 damage.</p>",
+
+        relentless: "<h3>Relentless</h3><p>When you <b><i>Clash and your foe survives</i></b>, you gain advantage the next time you Clash with them.</p>",
+
+        seasonedWarrior: "<h3>Seasoned Warrior</h3><p>Take a move from the Fox, Marshal, Ranger, or Seeker playbooks, for which you otherwise qualify. You can pick from a different playbook each time (you can’t pick Improved Stat or Superior Stat).</p>",
+
+        situationalAwareness: "<h3>Situational Awareness</h3><p>When you <b><i>Seek Insight</i></b>, add the following to the list of questions you can ask:</p><ul><li>Who or what here is the biggest threat?</li><li>What is my enemy’s true position?</li><li>What here can I use as a weapon?</li></ul><p>When <b><i>a fight breaks out</i></b>, ask the GM 1 question that you could ask when Seeking Insight.</p>",
+
+        uncannyReflexes: "<h3>Uncanny Reflexes</h3><p>When you <b><i>are unarmored and carrying a normal or light load</i></b>, you impose disadvantage on any damage you take that you could dodge or roll with.</p>",
+
+        unfettered: "<h3>Unfettered</h3><p>When you <b><i>are subject to physical or mental restraint</i></b>, you may mark a debility to immediately break free of that restraint.</p>",
+
+        terrorOnTheField: "<h3>Terror on the Field</h3><p>When you <b><i>reduce a foe to 0 HP</i></b>, describe how you take them out. If you fell them in a particularly brutal or impressive manner, their allies are impressed, dismayed, or frightened and respond accordingly.</p>",
+
+        bringerOfRuin: "<h3>Bringer of Ruin</h3><p>When you <b><i>roll a 12+ to Clash and your foe survives</i></b>, name something they possess (like their sword, their position, a limb, their dignity, etc.), but nothing that would kill them outright. Whatever you name, it is broken shattered, lost. Tell us how.</p>",
+
+        cutFromGranite: "<h3>Cut From Granite</h3><p>Gain +1 armor (stacks with other sources) and increase your max HP by another 2 (+6 HP total).</p>",
+
+        mightyThews: "<h3>Mighty Thews</h3><p>When you <b><i>perform a feat of extraordinary strength</i></b> (bursting chains, smashing through a wall, heaving a boulder, etc.), pick 1 from the list below and do it.</p><ul><li>It takes a while</li><li>You cause unwanted damage or harm</li><li>It takes a toll (mark a debility)</li></ul>",
+
+        nemesis: "<h3>Nemesis</h3><p>When you <b><i>Clash and your foe survives</i></b>, all of your future attacks against them do +1d6 damage.</p>",
+
+        steadfastGuardian: "<h3>Steadfast Guardian</h3><p>When you <b><i>hold Readiness (from Defend)</i></b>, you can always suffer the damage/effects of an attack instead of your ward; no need to spend Readiness, you can just do it.</p>",
+
+        stoneCone: "<h3>Stone Cold</h3><p>When you <b><i>Defy Danger (or Struggle as One) by keeping calm and carrying on</i></b>, treat a 6- as a 7-9.</p>",
+
+        superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>"
     }
 }
