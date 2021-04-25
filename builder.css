@@ -7,6 +7,16 @@
     line-height: 1.5;
 }
 
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #181818;
+    color: white;
+}
+
 .hidden {
     display: none;
 }
@@ -52,6 +62,7 @@ button {
     padding: 10px;
     margin: 10px;
     text-align: center;
+    border-radius: none;
 }
 
 ul {
@@ -64,6 +75,13 @@ nav {
     display: flex;
     justify-content: space-evenly;
     margin: 15px 0;
+}
+
+#light-mode-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
 }
 
 /* class-selector-container */

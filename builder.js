@@ -20,10 +20,26 @@ let rollNormal;
 let rollAdvantage;
 let rollDisadvantage;
 let listOfMoves = [];
+let isLightMode = true;
 
 // const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allBackgrounds;
 // const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allDrives;
 // const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allMoves;
+
+// $("#light-mode-btn").click(function(){
+//     if (isLightMode) {
+//         $("#light-mode-btn").text("Dark Mode");
+//         $("body").removeClass("light-mode");
+//         $("body").addClass("dark-mode");
+//         isLightMode === false;
+//         localStorage.setItem("is-light-mode", isLightMode);
+//     }
+//     $("#light-mode-btn").text("Light Mode");
+//     $("body").removeClass("dark-mode");
+//     $("body").addClass("light-mode");
+//     isLightMode === true;
+//     localStorage.setItem("is-light-mode", isLightMode);
+// })
 
 selectCharacterBtn.click(function(){
 
@@ -60,6 +76,8 @@ selectCharacterBtn.click(function(){
         $("#move-persuade-npc").html(allBasicMoves.persuadeNPCs);
         $("#move-persuade-pc").html(allBasicMoves.persuadePCs);
         $("#move-seek-insight").html(allBasicMoves.seekInsight);
+
+        $("#add-playbook-moves-sheet-container").addClass("hidden");
 
         listOfMoves = [];
         $(".move-remove").remove();
@@ -105,6 +123,14 @@ selectCharacterBtn.click(function(){
                 $("#background-display").html(allBackgrounds.blessed.vessel);
 
                 listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
+            }
+
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
             }
         }
 
@@ -511,7 +537,7 @@ selectCharacterBtn.click(function(){
         } else {
 
             $("#create-character-btn").removeClass("hidden");
-            $("#select-character-btn").text(`${stonetopHero.characterName}`);
+            $("#select-character-btn").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
             $("header").removeClass("hidden");
             $("#character-sheet-container").addClass("hidden");
             $("#stat-btn").addClass("highlight");
@@ -585,7 +611,7 @@ $("#add-move-btn").click(function(){
         for (const property in allPlaybookMoves.blessed) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.blessed[property] + "<button>Add</button>";
+            newDiv.innerHTML = allPlaybookMoves.blessed[property] + "<div class='flex-row center'><button>Add<button</div>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
@@ -1155,10 +1181,25 @@ function initialize(){
 
     if (stonetopHero) {
 
-        $("#select-character-btn").removeClass("hidden").text(stonetopHero.characterName);
+        $("#select-character-btn").removeClass("hidden").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
     }
 
     console.log(stonetopHero);
+
+    // isLightMode = localStorage.getItem("is-light-mode");
+
+    // if (isLightMode) {
+    //     $("#light-mode-btn").text("Dark Mode");
+    //     $("body").removeClass("light-mode");
+    //     $("body").addClass("dark-mode");
+    //     isLightMode === false;
+    //     localStorage.setItem("is-light-mode", isLightMode);
+    // }
+    // $("#light-mode-btn").text("Light Mode");
+    // $("body").removeClass("dark-mode");
+    // $("body").addClass("light-mode");
+    // isLightMode === true;
+    // localStorage.setItem("is-light-mode", isLightMode);
 }
 
 initialize();
