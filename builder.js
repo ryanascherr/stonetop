@@ -262,12 +262,19 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Lightbearer") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
+            
+            listOfMoves.push(allPlaybookMoves.lightbearer.consecratedFlame);
+            listOfMoves.push(allPlaybookMoves.lightbearer.invokeTheSunGod);
 
-            $("#move-one-title").text("Consecrated Flame");
-            $("#move-one-content").html("</p>When you <b><i>whisper words of consecration to a flame</i></b>, the flame casts a holy light. Holy light is uncomfortable for creatures of darkness to look upon, but does no true harm. The holy light lasts until the flame goes out or until you consecrate another flame, whichever comes first.</p>");
-            $("#move-two-title").text("Invoke the Sun God");
-            $("#move-two-content").html("<p>When you <b><i>imbue a holy light with Helior’s power</i></b>,choose an Invocation you know and roll +WIS: <b>on a 10+</b>, it works as described but you must choose 1 consequence from the list below; <b>on a 7-9</b>, it works as described, but you and the GM each choose 1.</p>");
+            console.log(listOfMoves);
+
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
+            }
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -291,23 +298,10 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.lightbearer.auspiciousBirth);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.lightbearer.itinerantMystic);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "three") {
-
                 $("#background-display").html(allBackgrounds.lightbearer.soulOnFire);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
             }
         }
 
@@ -644,6 +638,18 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.judge[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Lightbearer") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.lightbearer) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.lightbearer[property] + "<button>Add</button>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
@@ -1041,7 +1047,7 @@ $(".stat-select-btn").click(function(){
 
     console.log(stonetopHero);
 
-    $("#select-character-btn").removeClass("hidden").text(stonetopHero.characterName);
+    $("#select-character-btn").removeClass("hidden").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
 
     onFrontPage = true;
 

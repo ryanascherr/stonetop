@@ -217,6 +217,52 @@ const allPlaybookMoves = {
     
     lightbearer: {
 
-        
+        aCandleAgainstTheDark: "<h3>A Candle Against the Dark</h3><p>When you <b><i>wield a holy light but go otherwise unarmed</i></b>, you have 2 Armor.</p>",
+
+        luminousShield: "<h3>Luminous Shield</h3><p>When you <b><i>brandish a holy light to turn aside an attack against body, mind, or soul</i></b>, roll +CHA: <b>on a 10+</b>, pick 2; <b>on a 7-9</b>, pick 1:</p><ul><li>The attack is deflected, doing no harm</li><li>The attacker, if in range of your light, is briefly blinded</li><li>Your holy light is not extinguished</li></ul>",
+
+        allIsIlluminated: "<h3>All is Illuminated</h3><p>When you <b><i>look closely on another and see their soul laid bare</i></b>, roll +WIS: <b>on a 10+</b>, ask their player 1 question from the list below, plus “And what would make them feel loved, beautiful, or worthy?”; <b>on a 7-9</b>, ask them 1 question from the list. In any case, they must answer truthfully.</p><ul><li>Of what are they most ashamed?</li><li>What do they most desire or covet?</li><li>What hope have they abandoned?</li><li>Who or what is most precious to them?</li></ul>",
+
+        andBeholdAPaleHorse: "<h3>And Behold a Pale Horse</h3><p>When you <b><i>spend the night gazing into a flame</i></b>, ask the GM to reveal an impending doom or grim portent that will come to pass unless you intervene, and how you might yet do so.</p>",
+
+        consecratedFlame: "<h3>Consecrated Flame</h3><p>When you <b><i>whisper words of consecration to a flame</i></b>, the flame casts a holy light. Holy light is uncomfortable for creatures of darkness to look upon, but does no true harm. The holy light lasts until the flame goes out or until you consecrate another flame, whichever comes first.</p>",
+
+        fireWithin: "<h3>Fire Within</h3><p>When you <b><i>are in darkness</i></b>, you are able to see by the light of your inner fire. When you <b><i>take damage from cold or fire</i></b>, reduce that damage by 2.</p>",
+
+        guidingLight: "<h3>Guiding Light</h3><p>When you <b><i>lead one or more NPCs through danger</i></b>, roll +CHA: <b>on a 10+</b>, you all make it through (Helior be praised); <b>on a 7-9</b>, the GM will tell you what’s required to get everyone through safely.</p>",
+
+        heliorsUnblinkingEye: "<h3>Helior's Unblinking Eye</h3><p>When you <b><i>stare into the sun long enough to lose your vision</i></b>, name a person or place that you know and roll +WIS: <b>on a 10+</b>, you briefly glimpse your subject as if from a great height, and choose 2 from the list below; <b>on a 7-9</b>, you briefly glimpse your subject as if from a great height, and choose 1:</p><ul><li>The glimpse lasts as long as you wish</li><li>Your point of view shifts to very close range</li><li>You recover your vision quickly</li></ul>",
+
+        improvedStat: "<h3>Improved Stat</h3><p>Each time you take this move, increase one of your stats by 1 (to a max of +2).</p>",
+
+        invokeTheSunGod: "<h3>Invoke the Sun God</h3><p>When you <b><i>imbue a holy light with Helior’s power</i></b>, choose an Invocation you know and roll +WIS: <b>on a 10+</b>, it works as described but you must choose 1 consequence from the list below; <b>on a 7-9</b>, it works as described, but you and the GM each choose 1:</p><ul><li>The Invocation has its reduced effect</li><li>The effort taxes you; mark a debility</li><li>The light is snuffed out when the Invocation is complete, its fuel consumed</li><li>You must bask in sunlight for a hour or so before using that Invocation again</li></ul><p>See the <b>Invocations</b> insert for details.</p>",
+
+        keepTheHomeFiresBurning: "<h3>Keep the Home-Fires Burning</h3><p>When you <b><i>build a camp fire and sprinkle it with ash from your own hearth</i></b>, anyone who Makes Camp with you is free from nightmares or bad dreams and recovers (extra) HP equal to your CHA.</p>",
+
+        lamplighter: "<h3>Lamplighter</h3><p>When you <b><i>whisper to a flammable object</i></b> (torch, wick, kindling, etc.), it ignites in moments.</p>",
+
+        piety: "<h3>Piety</h3><p>When you <b><i>spend at least an hour in proper worship to Helior</i></b>, hold 1 Blessing. Other faithful PCs who partake in this worship also hold 1 Blessing. At any time, you can spend 1 Blessing to add +1 to a roll you just made in pursuit of a righteous cause.</p>",
+
+        purifyingFlames: "<h3>Purifying Flames</h3><p>When you <b><i>wield a holy light against creatures of darkness</i></b>, you may roll +WIS to Clash. When you do so, your range is that of your light source, and your damage is d10 (ignores armor).</p>",
+
+        radiantCountenance: "<h3>Radiant Countenance</h3><p>When you <b><i>give your fond attention and affection to your followers</i></b>, they accept it as payment regardless of their usual Cost and you gain advantage on your next roll to Order Followers.</p>",
+
+        riseLikeTheSun: "<h3>Rise Like the Sun</h3><p>When you <b><i>draw attention to yourself by word or deed</i></b>, roll +CHA: <b>on a 10+</b>, everyone turns and looks, and you hold their gaze as long as you keep giving them reason to look; <b>on a 7-9</b>, everyone turns and looks.</p>",
+
+        springsFirstThaw: "<h3>Spring's First Thaw</h3><p>When you <b><i>spend time (an hour at least, maybe more) seeking to stir hope, kindness, or mercy in an NPC</i></b>, roll +CHA: <b>on a 10+</b>, you light a fire deep within them and affect a lasting change; <b>on a 7-9</b>, you kindle goodness in their heart for now, but they will eventually return to their old ways; <b>on a 6-</b>, their heart hardens and, whatever else the GM says, you can’t use this move on them again.</p>",
+
+        burnTwiceAsBright: "<h3>Burn Twice as Bright</h3><p>When you <b><i>Invoke the Sun God</i></b>, you may mark a debility to use 2 Invocations at once. Roll once, and apply any consequences to both Invocations.</p>",
+
+        empoweredInvocations: "<h3>Empowered Invocations</h3><p>When you <b><i>Invoke the Sun God</i></b>, you can choose an extra consequence before you roll. If you do, the invocation has its <i>empowered</i> effect.</p>",
+
+        gloriousServant: "<h3>Glorious Servant</h3><p>When you <b><i>Invoke the Sun God and roll a 10+</i></b>, you need not choose a consequence; <b>on a 7-9</b>, you choose a consequence but the GM does not.</p>",
+
+        hungryFlames: "<h3>Hungry Flames</h3><p>When you <b><i>deal damage with a holy light</i></b>, you deal +1d6 damage and your target is engulfed in holy light and flames.</p>",
+
+        lightMoreLight: "<h3>Light, More Light</h3><p>When you <b><i>consecrate a flame</i></b>, it burns brighter than normal. A rushlight or candle illuminates to <i>reach</i> range, an oil lamp, lantern, or torch out to <i>near</i> range, and a bullseye lantern out to <i>far</i> range.</p>",
+
+        superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>",
+
+        wielderOfTheWhiteFlame: "<h3>Wielder of the White Flame</h3><p>When you <b><i>channel Helior’s essence into an object you carry</i></b>, roll +WIS: <b>on a 10+</b>, it ignites with a white flame that casts a holy light (<i>reach</i>, <i>area</i>) and burns neither you nor the object, and you may Invoke the Sun God right now as if you rolled a 10+; <b>on a 7-9</b>, it ignites with a white flame that casts a holy light (<i>reach</i>, <i>area</i>) and burns neither you nor the object.</p>"
     }
 }
