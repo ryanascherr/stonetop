@@ -103,7 +103,7 @@ const allPlaybookMoves = {
 
     heavy: {
 
-        armored: "<h3>Armored</h3><p>When you <b><i>wear armor or carry a shield</i></b>, mark only O for each (instead of OO), and ignore the clumsy tag (you don’t suffer disadvantage for wearing it). If you take this move at the start of play, add an O iron hauberk, O bronze cuirass, or O scale coat to your inventory (all are 2 armor, warm, clumsy).</p>",
+        armored: "<h3>Armored</h3><p>When you <b><i>wear armor or carry a shield</i></b>, mark only O for each (instead of OO), and ignore the clumsy tag (you don’t suffer disadvantage for wearing it). If you take this move at the start of play, add an O iron hauberk, O bronze cuirass, or O scale coat to your inventory (all are 2 armor, <i>warm</i>, <i>clumsy</i>).</p>",
 
         battleJoy: "<h3>Battle Joy</h3><p>When you <b><i>spill blood—yours or another’s—and lose yourself in battle</i></b>, you ignore fear, pain, mind-control, and the effects of debilities as long as you keep fighting.</p><p>When <b><i>the action stops</i></b>, roll +CON: <b>on a 10+</b>, that was a rush, regain 1d4 HP; <b>on a 7-9</b>, you’re winded and out of it, but you’ll be fine with a few minutes’ rest; <b>on a 6-</b>, mark a debility but don’t mark XP.</p>",
 
@@ -156,5 +156,64 @@ const allPlaybookMoves = {
         stoneCone: "<h3>Stone Cold</h3><p>When you <b><i>Defy Danger (or Struggle as One) by keeping calm and carrying on</i></b>, treat a 6- as a 7-9.</p>",
 
         superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>"
-    }
+    },
+
+    judge: {
+
+        aegisOfFaith: "<h3>Aegis of Faith</h3><p>When you bear a shield, it can turn away spells, magical effects, and insubstantial attacks as if they were physical blows.</p>",
+
+        armored: "<h3>Armored</h3><p>When you <b><i>wear armor or carry a shield</i></b>, mark only O for each (instead of OO), and ignore the clumsy tag (you don’t suffer disadvantage for wearing it). If you take this move at the start of play, add an O iron hauberk, O bronze cuirass, or O scale coat to your inventory (all are 2 armor, <i>warm</i>, <i>clumsy</i>).</p>",
+        
+        bearWitness: "<h3>Bear Witness</h3><p>When you <b><i>speak the truth with conviction and candor</i></b>, none can doubt you. They might deny what you say, but in their hearts they recognize the truth.</p>",
+
+        breakBread: "<h3>Break Bread</h3><p>When you <b><i>share a proper meal with someone and each of you eats their fill</i></b>, each of you recovers 1d8 (extra) hit points.</p>",
+
+        bulwark: "<h3>Bulwark</h3><p>When you <b><i>Defend</i></b>, you can spend 1 Readiness to stand fast, holding your position despite what befalls you.</p>",
+
+        censure: "<h3>Censure</h3><p>When you <b><i>first denounce someone (or thing) as an agent of chaos or anathema to civilization</i></b>, pick 1:</p><ul><li>You/your allies deal +1 damage against them</li><li>They deal -1 damage</li><li>They recoil and might be momentarily stunned</li></ul><p>The bonus/penalty ends if you use this move again.</p>",
+
+        castigate: "<h3>Castigate</h3><p>When you <b><i>Censure someone (or thing)</i></b>, pick 2 effects instead of 1.</p>",
+
+        chroniclerOfStonetop: "<h3>Chronicler of Stonetop</h3><p>When you <b><i>write up detailed session notes and share them with the other players</i></b>, hold +1 Diligence.</p><p>You can spend 1 Diligence at any time to add +1 to a roll that you or a fellow player just made.</p>",
+
+        forTheGreaterGood: "<h3>For the Greater Good</h3><p>When you <b><i>Order Followers in defense of civilization</i></b>, treat a result of 6- as a 7-9. In addition, your followers always accept “thwarting a threat to civilization” as payment of their cost.</p>",
+
+        houndOfAratis: "<h3>Hound of Aratis</h3><p>When you Seek Insight, you can always ask “What here is tainted by chaos?” for free, even on a 6-.</p>",
+
+        likeADogWithABone: "<h3>Like a Dog With a Bone</h3><p>When you <b><i>attack something you know to be tainted by chaos</i></b>, deal +1d6 damage.</p>",
+
+        improvedStat: "<h3>Improved Stat</h3><p>Each time you take this move, increase one of your stats by 1 (to a max of +2).</p>",
+
+        knowledgeIsPower: "<h3>Knowledge is Power</h3><p>When you <b><i>roll 10+ to Know Things</i></b>, you or an ally gain advantage on the next roll to act on what you learn.</p>",
+
+        manyHandsMakeLightWork: "<h3>Many Hands Make Light Work</h3><p>When you <b><i>jump in to help another character who just rolled</i></b>, tell us how and ask the GM what else is required or what the consequences will be. If you accept, increase your ally’s roll by +1.</p>",
+
+        aBundleOfSticksUnbroken: "<h3>A Bundle of Sticks Unbroken</h3><p>When you <b><i>Struggle as One</i></b>, you and one ally of your choice have advantage.</p>",
+
+        theHammerAndTheBook: "<h3>The Hammer and the Book</h3><p>When you <b><i>strike a thing of supernatural chaos</i></b>, roll +WIS: <b>on a 10+</b>, deal your damage and choose 1 from the list below; <b>on a 7-9</b>, deal damage and choose 1, but you also expose yourself to harm or unwanted attention.</p><ul><li>Deal +1d6 damage</li><li>Ignore the thing’s armor or other defenses</li><li>Suppress one of its unnatural powers</li><li>Force it from its host</li></ul>",
+
+        truthOrConsequences: "<h3>Truth or Consequences</h3><p>When you <b><i>look into someone’s eyes and gaze upon their soul</i></b>, roll +WIS: <b>on a 10+</b>, hold 3 Insight; <b>on a 7-9</b>, hold 2; <b>on a 6-</b>, hold 1 anyway, but you can never use this move on them again.</p><p>While in their presence, spend 1 Insight to ask their player 1 of the following and get an honest answer:</p><ul><li>Are you lying?</li><li>Are you hiding something from me?</li></ul><p>If they answer “yes,” gain advantage on your next move against them.</p>",
+
+        bindingArbitration: "<h3>Binding Arbitration</h3><p>When you <b><i>bear witness to someone’s promise or oath</i></b>, henceforth you may ask their player if they have kept their word. They must answer honestly. The character need not be present. If <b><i>they have broken their word</i></b>, you gain advantage on all rolls against them until they admit their wrong and suffer an appropriate consequence (your call).</p>",
+
+        visionUnclouded: "<h3>Visions Unclouded</h3><p>When you <b><i>Seek Insight</i></b>, you can always ask “What here is hidden by illusion or magic?” for free, even on a 6-.</p>",
+
+        wellRead: "<h3>Well-Read</h3><p>When you <b><i>name the source in which you read about the matter at hand</i></b>, roll +WIS to Know Things instead of +INT.</p>",
+
+        aMightyRampart: "<h3>A Mighty Rampart</h3><p>When you <b><i>hold Readiness</i></b> (from Defend), you cannot be forced from your position. Also, you can spend 1 Readiness to completely ignore the effects/ damage of an attack that you suffer.</p>",
+
+        armistice: "<h3>Armistice</h3><p>When you <b><i>approach an enemy to negotiate in good faith</i></b>, they will at least hear you out. Even the most debased and savage foe will delay violence until you’ve had your say.</p>",
+
+        condemn: "<h3>Condemn</h3><p>When you <b><i>Censure someone</i></b>, they are marked with a mystical brand that cannot be removed or hidden until you dismiss it. Any intelligent creature who sees the mark recognizes the bearer as an agent of chaos and anathema to civilization.</p>",
+
+        proclamation: "<h3>Proclamation</h3><p>When you <b><i>Censure</i></b>, you may denounce a group or faction as long as you can clearly identify them. Apply the effects of Censure to every member of that group, regardless of distance.</p>",
+
+        mirrorshield: "<h3>Mirrorshield</h3><p>When you <b><i>Defend with a shield</i></b>, you can spend 1 Readiness to intercept a magical force and redirect it to a different target (or none).</p>",
+
+        superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>",
+
+        theTowerEternal: "<h3>The Tower Eternal</h3><p>When you <b><i>Defy Danger against magic</i></b>, treat a result of 6- as a 7-9.</p>"
+    },
+
+    
 }

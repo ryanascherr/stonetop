@@ -216,12 +216,19 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Judge") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("Censure");
-            $("#move-one-content").html("<p>When you <b><i>first denounce someone (or thing) as an agent of chaos or anathema to civilization</i></b>, pick 1:</p><ul><li>You/your allies deal +1 damage against them</li><li>They deal -1 damage</li><li>They recoil and might be momentarily stunned</li><p>The bonus/penalty ends if you use this move again.</p>");
-            $("#move-two-title").text("Chronicler of Stonetop");
-            $("#move-two-content").html("<p>When you <b><i>write up detailed session notes and share them with the other players</i></b>, hold +1 Diligence.</p><p>You can spend 1 Diligence at any time to add +1 to a roll that you or a fellow player just made.</p>");
+            listOfMoves.push(allPlaybookMoves.judge.censure);
+            listOfMoves.push(allPlaybookMoves.judge.chroniclerOfStonetop);
+
+            console.log(listOfMoves);
+
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
+            }
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -245,25 +252,11 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.judge.legacy);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.judge.missionary);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "three") {
-
                 $("#background-sheet-display").html(allBackgrounds.judge.prophet);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
             }
-        }
 
         if (stonetopHero.playbook === "Lightbearer") {
             $("#playbook-moves-sheet-container").children().removeClass("move-card");
@@ -533,6 +526,8 @@ selectCharacterBtn.click(function(){
 
         window.scrollTo(0, 0);
         onFrontPage = false;
+
+    }
     
         } else {
 
@@ -636,6 +631,18 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.heavy[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Judge") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.judge) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.judge[property] + "<button>Add</button>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
