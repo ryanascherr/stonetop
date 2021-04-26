@@ -214,6 +214,9 @@ const allPlaybookMoves = {
 
         theTowerEternal: "<h3>The Tower Eternal</h3><p>When you <b><i>Defy Danger against magic</i></b>, treat a result of 6- as a 7-9.</p>"
     },
-
     
+    lightbearer: {
+
+        
+    }
 }

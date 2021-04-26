@@ -82,6 +82,8 @@ selectCharacterBtn.click(function(){
         listOfMoves = [];
         $(".move-remove").remove();
 
+        onFrontPage = false;
+
         if (stonetopHero.playbook === "Blessed") {
 
             listOfMoves.push(allPlaybookMoves.blessed.spiritTongue);
@@ -257,6 +259,7 @@ selectCharacterBtn.click(function(){
             } else if (stonetopHero.background === "three") {
                 $("#background-sheet-display").html(allBackgrounds.judge.prophet);
             }
+        }
 
         if (stonetopHero.playbook === "Lightbearer") {
             $("#playbook-moves-sheet-container").children().removeClass("move-card");
@@ -526,8 +529,6 @@ selectCharacterBtn.click(function(){
 
         window.scrollTo(0, 0);
         onFrontPage = false;
-
-    }
     
         } else {
 
