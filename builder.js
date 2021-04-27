@@ -1,6 +1,7 @@
 const createCharacterBtn = $("#create-character-btn");
 const selectCharacterBtn = $("#select-character-btn");
 const classSelectBtn = document.querySelectorAll(".class-select-btn");
+const confirmNewMoveBtn = document.querySelectorAll(".confirm-new-move-btn");
 let playbook;
 let background;
 let drive;
@@ -607,112 +608,144 @@ $("#basic-moves-btn").click(function(){
 $("#add-move-btn").click(function(){
 
     if (stonetopHero.playbook === "Blessed") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.blessed) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.blessed[property] + "<div class='flex-row center'><button>Add<button</div>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.blessed[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Fox") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.fox) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.fox[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.fox[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Heavy") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.heavy) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.heavy[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.heavy[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Judge") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.judge) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.judge[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.judge[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Lightbearer") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.lightbearer) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.lightbearer[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.lightbearer[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Marshal") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.marshal) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.marshal[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.marshal[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Ranger") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.ranger) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.ranger[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.ranger[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Seeker") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.seeker) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.seeker[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.seeker[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
 
     if (stonetopHero.playbook === "Would-Be Hero") {
+        $(".move-remove").remove();
+
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
         for (const property in allPlaybookMoves.wouldBeHero) {
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
-            newDiv.innerHTML = allPlaybookMoves.wouldBeHero[property] + "<button>Add</button>";
+            newDiv.classList.add("move-remove");
+            newDiv.innerHTML = allPlaybookMoves.wouldBeHero[property] + "<div class='confirm-new-move-btn flex-row center'><button>Add<button</div>";
 
             $("#super-test-2").append(newDiv);
         }
     }
+})
+
+$(confirmNewMoveBtn[0]).click(function(){
+    alert("Hey!");
+    console.log("Hello!");
 })
 
 createCharacterBtn.click(function(){
