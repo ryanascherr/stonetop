@@ -456,13 +456,20 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Would-Be Hero") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("Anger is a Gift");
-            $("#move-one-content").html("<p>When you <b><i>burn with righteous anger</i></b> (see Fear & Anger on back of playbook), hold 2 Resolve. You can spend your Resolve 1-for-1 to:</p><ul><li>Set aside fear and doubt to do what must be done</li><li>Act suddenly, catching them off-guard</li><li>Inspire allies or bystanders to follow your lead</li><li>Strike hard (+1d4 damage, <i>forceful</i>)</li><li>Keep your footing, position, and/or your course despite what befalls you</li></ul>");
-            $("#move-two-title").text("Potential for Greatness");
-            $("#move-two-content").html("<p>Once per level, <b><i>when you roll a stat and get a 10+</i></b>, mark one of the following (note the level during which you marked it). You don’t have to mark them in order.</p><ul><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase your max HP by 4 (at level ___)</li><li>Increase your damage die to a d8 (at level ___)</li></ul>");
+            listOfMoves.push(allPlaybookMoves.wouldBeHero.angerIsAGift);
+            listOfMoves.push(allPlaybookMoves.wouldBeHero.potentialForGreatness);
 
+            console.log(listOfMoves);
+
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
+            }
+            
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
             } else if (stonetopHero.origin === "option-two") {
@@ -487,23 +494,10 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.wouldBeHero.impetuousYouth);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.wouldBeHero.driven);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "three") {
-
                 $("#background-sheet-name").html(allBackgrounds.wouldBeHero.destined);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
             }
         }
 
@@ -581,6 +575,7 @@ $("#basic-moves-btn").click(function(){
 })
 
 $("#add-move-btn").click(function(){
+
     if (stonetopHero.playbook === "Blessed") {
         $("#add-playbook-moves-sheet-container").removeClass("hidden");
 
@@ -672,6 +667,18 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.seeker[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Would-Be Hero") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.wouldBeHero) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.wouldBeHero[property] + "<button>Add</button>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
@@ -1008,7 +1015,7 @@ $("#drive-card-container").click(function(event){
         $("#option-four").text("Marshedge");
         $("#option-five").text("Lygos");
         $("#option-six").text("-");
-        $("#origin").html(allOrigins.playbook);
+        $("#origin").html(allOrigins.wouldBeHero);
     }
 })
 

@@ -425,5 +425,52 @@ const allPlaybookMoves = {
         overchannel: "<h3>Overchannel</h3><p>When you <b><i>would mark a Consequence from a major arcanum</i></b>, you may mark a debility instead.</p>",
 
         proofAgainstDetection: "<h3>Proof Against Detection</h3><p>When you <b><i>hold Protection</i></b>, you can’t be scried upon or sensed by magical means, and have advantage to Defy Danger by being stealthy.</p>"
+    },
+
+    wouldBeHero: {
+
+        angerIsAGift: "<h3>Anger is a Gift</h3><p>When you <b><i>burn with righteous anger</i></b> (see Fear & Anger on back of playbook), hold 2 Resolve. You can spend your Resolve 1-for-1 to:</p><ul><li>Set aside fear and doubt to do what must be done</li><li>Act suddenly, catching them off-guard</li><li>Inspire allies or bystanders to follow your lead</li><li>Strike hard (+1d4 damage, <i>forceful</i>)</li><li>Keep your footing, position, and/or your course despite what befalls you</li></ul>",
+
+        speakTruthToPower: "<h3>Speak Truth to Power</h3><p>When you <b><i>demand that someone does what is clearly good and right</i></b>, you have advantage to Persuade. If they refuse, gain +1 Resolve.</p>",
+
+        betterPartOfValor: "<h3>Better Part of Valor</h3><p>When you <b><i>are outnumbered or facing a foe bigger than you</i></b>, you have advantage to hide from, escape from, or sneak past them.</p>",
+
+        iGetKnockedDown: "<h3>I Get Knocked Down</h3><p>When you <b><i>take damage despite your best efforts to avoid it</i></b>, you can choose to halve the damage but pick 1 of the following:</p><ul><li>You lose something (footing, grip, etc.)</li><li>Something on your person breaks</li><li>You’re out of it for a moment</li></ul><p>Whatever you choose, the GM will describe the details.</p>",
+
+        butIGetUpAgain: "<h3>But I Get Up Again</h3><p>When you <b><i>use I Get Knocked Down</i></b>, you have advantage on your next roll against whatever dealt the damage and your next blow against them does +1d4 damage.</p>",
+
+        improvedStat: "<h3>Improved Stat</h3><p>Each time you take this move, increase one of your stats by 1 (to a max of +2).</p>",
+
+        inOverYourHead: "<h3>In Over Your Head</h3><p>When <b><i>another PC rescues you from danger</i></b>, mark XP.</p>",
+
+        ironWill: "<h3>Iron Will</h3><p>When you <b><i>are subject to mind control or magic that affects your feelings</i></b>, you can take 1d4 damage (ignoring armor) to disregard its influence.</p>",
+
+        inquiringMinds: "<h3>Inquiring Minds</h3><p>When you <b><i>seek out and receive honest advice</i></b>, gain advantage on your next roll to follow that advice.</p>",
+
+        neverGonnaKeepMeDown: "<h3>Never Gonna Keep Me Down</h3><p>When you <b><i>have 5 or fewer current HP</i></b>, you impose disadvantage on any damage you take.</p><p>Once per session, <b><i>when you are at Death’s Door</i></b>, don’t roll. You get a 10+.</p>",
+
+        potentialForGreatness: "<h3>Potential for Greatness</h3><p>Once per level, <b><i>when you roll a stat and get a 10+</i></b>, mark one of the following (note the level during which you marked it). You don’t have to mark them in order.</p><ul><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase the stat you rolled by 1, to a max of +2 (at level ___)</li><li>Increase your max HP by 4 (at level ___)</li><li>Increase your damage die to a d8 (at level ___)</li></ul>",
+
+        resourceful: "<h3>Resourceful</h3><p>When you <b><i>Defy Danger and roll a 6-</i></b>, ask the GM a question from Seek Insight after they describe what happens. Gain advantage on your next roll to act on the answer.</p>",
+
+        somethingToRememberMeBy: "<h3>Something to Remember Me By</h3><p>When you <b><i>spend Readiness (from Defend) to strike back at an attacker</i></b>, you deal +1d4 damage and scar, mark, or diminish them in some way (the GM will say how, or ask you to).</p>",
+
+        toughLove: "<h3>Tough Love</h3><p>When you <b><i>honestly think another PC is in the wrong and call them on it</i></b>, they have disadvantage on any rolls against you until you two work it out.</p>",
+
+        underestimated: "<h3>Underestimated</h3><p>As long as you avoid overt hostility, no enemy will consider you a threat.</p><p>When you <b><i>make your first move against an enemy who underestimates you</i></b>, you have advantage.</p>",
+
+        upWithPeople: "<h3>Up With People</h3><p>When you <b><i>converse with someone</i></b> (PC or NPC) you can hold 2 Rapport with them. If you do, they hold 1 Rapport with you. During the conversation, either of you can spend 1 Rapport to ask the other player one of the following and get an honest answer.</p><ul><li>What weighs you down or holds you back?</li><li>What drives you forward?</li><li>What lesson would you have me learn?</li><li>What do you think of me, truly?</li></ul>",
+
+        versatile: "<h3>Versatile</h3><p>Choose a move from any other playbook, as long as you meet its requirements. You can pick from a different playbook each time. You can’t take Improved Stat or Superior Stat.</p>",
+
+        aForceToBeReckonedWith: "<h3>A Force to be Reckoned With</h3><p>Any intelligent creature who looks you in the eye or hears the steel in your voice instinctively knows that you are a force to be reckoned with, and treats you appropriately.</p><p>When you <b><i>Defy Danger against something trying to harm or constrain you</i></b>, on a 12+ you turn the tables on them (the GM will say how, or ask you to).</p>",
+
+        bigDamnHero: "<h3>Big Damn Hero</h3><p>When you <b><i>first leap into danger to protect someone</i></b>, don’t roll to Defend. Instead, treat as though you rolled a 10+.</p><p>When you <b><i>Defend</i></b>, you can spend 1 Readiness to lock eyes with an attacker; they have disadvantage on damage rolls against you and your ward for the rest of the fight.</p>",
+
+        superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>",
+
+        undaunted: "<h3>Undaunted</h3><p>When you <b><i>are outnumbered or facing a foe bigger than you</i></b>, you get +1 armor and deal +1d6 damage.</p>",
+
+        voiceOfExperience: "<h3>Voice of Experience</h3><p>When <b><i>another PC comes to you for advice and you tell them what you think is best</i></b>, they have advantage on their first roll to follow your advice.</p><p>When you <b><i>Seek Insight</i></b>, you can always ask, “What is about to happen?” for free, even on a 6-.</p>"
     }
 }
