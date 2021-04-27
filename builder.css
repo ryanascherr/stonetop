@@ -202,8 +202,15 @@ nav {
 }
 
 #strength, #dexterity, #intelligence, #wisdom, #constitution, #charisma, #damage-display {
-    background-color: gray;
     color: white;
+}
+
+.blue {
+    background-color: #3498DB;
+}
+
+.red {
+    background-color: #E74C3C;
 }
 
 .stat-display {

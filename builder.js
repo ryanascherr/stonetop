@@ -41,6 +41,39 @@ let isLightMode = true;
 //     localStorage.setItem("is-light-mode", isLightMode);
 // })
 
+let checkbox = $("#weakened");
+
+$('input[name=weakened]').change(function(){
+    if($(this).is(':checked')) {
+        $("#strength").addClass("red");
+        $("#dexterity").addClass("red");
+    } else {
+        $("#strength").removeClass("red");
+        $("#dexterity").removeClass("red");
+    }
+});
+
+$('input[name=dazed]').change(function(){
+    if($(this).is(':checked')) {
+        $("#intelligence").addClass("red");
+        $("#wisdom").addClass("red");
+    } else {
+        $("#intelligence").removeClass("red");
+        $("#wisdom").removeClass("red");
+    }
+});
+
+$('input[name=miserable]').change(function(){
+    if($(this).is(':checked')) {
+        $("#constitution").addClass("red");
+        $("#charisma").addClass("red");
+    } else {
+        $("#constitution").removeClass("red");
+        $("#charisma").removeClass("red");
+    }
+});
+
+
 selectCharacterBtn.click(function(){
 
     if (onFrontPage === true) {
