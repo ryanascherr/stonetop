@@ -372,5 +372,58 @@ const allPlaybookMoves = {
         walkItOff: "<h3>Walk It Off</h3><p>When you <b><i>would mark a debility</i></b>, you can mark this move instead to no ill effect. Clear it as you would a debility.</p>",
 
         wardenOfTheWild: "<h3>Warden of the Wild</h3><p>When you <b><i>deal damage to something you know to be a perversion of the natural order</i></b>, deal +1d4 damage.</p>"
+    },
+
+    seeker: {
+
+        attuned: "<h3>Attuned</h3><p>When you <b><i>Seek Insight</i></b>, you can always ask, “What here is infused with magic?” for free, even on a 6-.</p>",
+
+        conduitOfPower: "<h3>Conduit of Power</h3><p>When you <b><i>would mark a Consequence from a major arcanum</i></b>, you can mark 1 box here instead, with no negative effect (these marks never clear).</p>",
+
+        countermeasures: "<h3>Countermeasures</h3><p>When you <b><i>witness a magical effect</i></b>, you may ask the GM, “how can this be countered or interrupted?” and get an honest answer. You or an ally gain advantage on your next roll to act on the answer.</p>",
+
+        everythingBleeds: "<h3>Everything Bleeds</h3><p>When you <b><i>exploit an unnatural foe’s specific weakness or vulnerability</i></b>, deal +1d6 damage.</p>",
+
+        everythingBurns: "<h3>Everything Burns</h3><p>When you <b><i>inspect a work of artifice or magic for a fatal flaw</i></b>, roll +INT: <b>on a 7+</b>, the GM will reveal the best way to destroy/sabotage it; <b>on a 10+</b>, you or an ally also gain advantage to act on the info.</p>",
+
+        improvedStat: "<h3>Improved Stat</h3><p>Each time you take this move, increase one of your stats by 1 (to a max of +2).</p>",
+
+        initiateOfTheSecretArts: "<h3>Initiate of the Secret Arts</h3><p>You have a “Sacred Pouch” (3 Stock, <i>magical</i>), as per the Blessed, but with no extraordinary qualities. Each time you take this move, choose a Blessed move for which you otherwise qualify (you can’t take Improved Stat or Superior Stat).</p>",
+
+        letsMakeADeal: "<h3>Let's Make a Deal</h3><p>When you <b><i>Seek Insight</i></b>, add “What do they really want or need?” to the list of questions. When you <b><i>Persuade by offering them something that you know they want or need</i></b>, treat a 7-9 as a 10+.</p>",
+
+        logbook: "<h3>Logbook</h3><p>You have a logbook (2 uses, <i>slow</i>) that doesn’t take up space in your inventory. When you (and only you) <b><i>consult your logbook and expend a use</i></b>, you can ignore a Know Things roll you just made and treat the result as a 10+. When <b><i>the Seasons Change</i></b>, reset your logbook to 2 uses.</p>",
+
+        magpie: "<h3>Magpie</h3><p>When you <b><i>Have What You Need</i></b>, you can produce something strange, specific, maybe even valuable or a little bit magical, but if you do, tell us where you got and 2 of the following:</p><ul><li>How it’s not quite right, but maybe it’ll do?</li><li>The trouble you caused back home by getting it</li><li>Why using it will draw unwanted attention</li><li>That it’s the only thing like this that you’ve got, and why it’ll only work the one time</li></ul>",
+
+        neverAtALoss: "<h3>Never at a Loss</h3><p>When you <b><i>Know Things and roll a 6-</i></b>, you may choose to not mark XP. If you don’t mark XP, the worst that happens is that the GM tells you nothing interesting or useful about the subject, but instead tells you how you could learn more.</p>",
+
+        polyglot: "<h3>Polyglot</h3><p>When you <b><i>first encounter a living language in play</i></b>, describe your proficiency with it (if any) and how you came to acquire it.</p><p>When you <b><i>Know Things about any script, text, runes or symbols that you encounter</i></b>, you have advantage.</p>",
+
+        cryptologist: "<h3>Cryptologist</h3><p>When you <b><i>study encoded, forgotten, or arcane marks or writing</i></b>, roll +INT: <b>on a 10+</b>, you can fully decipher them in just a few minutes; <b>on a 7-9</b>, you get the gist in a few minutes, but fully deciphering them will take you an hour or so.</p>",
+
+        quickStudy: "<h3>Quick Study</h3><p>When you <b><i>study something magical that should take months to understand</i></b>, it instead takes mere weeks. If it should take weeks, it takes days. If it should take days, it takes only a few hours.</p>",
+
+        safetyFirst: "<h3>Safety First</h3><p>When you <b><i>spend an hour or so preparing your mystical defenses</i></b>, hold 2 Protection. When you <b><i>are affected by harmful magic</i></b>, spend 1 Protection to halve the damage or effect.</p>",
+
+        sageAdvice: "<h3>Sage Advice</h3><p>When <b><i>someone asks you for guidance</i></b>, they get advantage on their next roll to follow your advice.</p>",
+
+        wellVersed: "<h3>Well-Versed</h3><p>Mark 1 topic, in addition to the one noted in your Background. Each additional time you take this move, mark 2 more topics.</p><ul><li>The Last Door, death, and the undead</li><li>The civilizations of humanity</li><li>The fae and their strange ways</li><li>The Makers and their arts</li><li>The primordial powers</li><li>The Things Below</li><li>The wild world and its spirits</li></ul><p>When you <b><i>Know Things about one of your topics</i></b>, you can ask the GM a follow-up question of your choice (even on a 6-).</p>",
+
+        workWithWhatYouveGot: "<h3>Work With What You've Got</h3><p>When you <b><i>wield your environment against your foe(s)</i></b>, choose 1 from the list below and roll +INT: <b>on a 7+</b>, it works! <b>On a 10+</b>, pick 1 more—you get that, too.</p><ul><li>Impede or interrupt their actions</li><li>Create an advantage that grants you or an ally advantage on the next roll to exploit it</li><li>Deal damage appropriate to the source (d4 for bruises/scrapes, d6 for bloodshed, d8 if it’d break bones, d10 if it’d kill a common person)</li></ul>",
+
+        arcaneAdept: "<h3>Arcane Adept</h3><p>When you <b><i>wish to invent a spell or magical effect</i></b>, detail its workings with the GM (using existing spells for guidance). Then, Make a Plan to invent it. If you like, pick one of the GM’s statements and ask them to provide an alternative (for example “first you must _____” could become “first you must _____, or it will take months”).</p>",
+
+        deepInsight: "<h3>Deep Insight</h3><p>When you <b><i>Seek Insight about a magical object, effect, or creature</i></b>, you may ask one additional question, not limited to the list. Even on a 6-, you get to ask this question.</p>",
+
+        improvise: "<h3>Improvise</h3><p>When you <b><i>attempt to use or trigger one of an arcanum’s mysteries without having unlocked it</i></b>, roll +INT: <b>on a 7+</b>, you pull it off, at least this once; <b>on a 10+</b>, you also unlock that mystery in the process.</p>",
+
+        superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>",
+
+        mindOverMagic: "<h3>Mind Over Magic</h3><p>When you <b><i>roll to study or use an arcanum</i></b>, you can roll +INT instead of whatever stat you would normally roll.</p>",
+
+        overchannel: "<h3>Overchannel</h3><p>When you <b><i>would mark a Consequence from a major arcanum</i></b>, you may mark a debility instead.</p>",
+
+        proofAgainstDetection: "<h3>Proof Against Detection</h3><p>When you <b><i>hold Protection</i></b>, you can’t be scried upon or sensed by magical means, and have advantage to Defy Danger by being stealthy.</p>"
     }
 }

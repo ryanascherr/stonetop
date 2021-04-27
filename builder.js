@@ -405,12 +405,11 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Seeker") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("Well Versed");
-            $("#move-one-content").html("<p>Mark 1 topic, in addition to the one noted in your Background. Each additional time you take this move, mark 2 more topics.</p><ul><li>The Last Door, death, and the undead</li><li>The civilizations of humanity</li><li>The fae and their strange ways</li><li>The Makers and their arts</li><li>The primordial powers</li><li>The Things Below</li><li>The wild world and its spirits</li></ul><p>When you <b><i>Know Things about one of your topics</i></b>, you can ask the GM a follow-up question of your choice (even on a 6-).</p>");
-            $("#move-two-title").text("Work With What You've Got");
-            $("#move-two-content").html("<p>When you <b><i>wield your environment against your foe(s)</i></b>, choose 1 from the list below and roll +INT: <b>on a 7+</b>, it works! <b>On a 10+</b>, pick 1 more—you get that, too.");
+            listOfMoves.push(allPlaybookMoves.seeker.wellVersed);
+            listOfMoves.push(allPlaybookMoves.seeker.workWithWhatYouveGot);
+
+            console.log(listOfMoves);
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -438,23 +437,21 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.seeker.patriot);
-
-                $("#background-move-title").text("Let's Make a Deal");
-                $("#background-move-content").html("<p>When you <b><i>Seek Insight</i></b>, add “What do they really want or need?” to the list of questions. When you <b><i>Persuade by offering them something that you know they want or need</i></b>, treat a 7-9 as a 10+.</p>");
-
+                listOfMoves.push(allPlaybookMoves.seeker.letsMakeADeal);
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.seeker.antiquarian);
-
-                $("#background-move-title").text("Polyglot");
-                $("#background-move-content").html("<p>When you <b><i>first encounter a living language in play</i></b>, describe your proficiency with it (if any) and how you came to acquire it.</p><p>When you <b><i>Know Things about any script, text, runes or symbols that you encounter</i></b>, you have advantage.");
-
+                listOfMoves.push(allPlaybookMoves.seeker.polyglot);
             } else if (stonetopHero.background === "three") {
-
                 $("#background-display").html(allBackgrounds.seeker.witchHunter);
+                listOfMoves.push(allPlaybookMoves.seeker.everythingBleeds);
+            }
 
-                $("#background-move-title").text("Everything Bleeds");
-                $("#background-move-content").html("<p>When you <b><i>exploit an unnatural foe’s specific weakness or vulnerability</i></b>, deal +1d6 damage.</p>");
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
             }
         }
 
@@ -663,6 +660,18 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.ranger[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Seeker") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.seeker) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.seeker[property] + "<button>Add</button>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
