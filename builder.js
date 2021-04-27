@@ -287,7 +287,7 @@ selectCharacterBtn.click(function(){
             }
 
             if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.lightbearer.characterName);
+                $("#drive-sheet").html(allDrives.lightbearer.charity);
             } else if (stonetopHero.drive === "two") {
                 $("#drive-sheet").html(allDrives.lightbearer.faith);
             } else if (stonetopHero.drive === "three") {
@@ -306,12 +306,11 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Marshal") {
-            $("#playbook-moves-sheet-container").children().addClass("move-card");
 
-            $("#move-one-title").text("Crew");
-            $("#move-one-content").html("<p>You’ve got a crew of stalwarts, six or so residents of Stonetop with some steel to them. See the Crew insert for details.</p>");
-            $("#move-two-title").text("Logistics");
-            $("#move-two-content").html("When you <b><i>have a steading Muster or Pull Together</i></b>, or when you <b><i>Requisition</i></b>, you have advantage.");
+            listOfMoves.push(allPlaybookMoves.marshal.crew);
+            listOfMoves.push(allPlaybookMoves.marshal.logistics);
+
+            console.log(listOfMoves);
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -330,7 +329,7 @@ selectCharacterBtn.click(function(){
             if (stonetopHero.drive === "one") {
                 $("#drive-sheet").html(allDrives.marshal.honor);
             } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.marshal.preservation);
+                $("#drive-sheet").html(allDrives.marshal.prestige);
             } else if (stonetopHero.drive === "three") {
                 $("#drive-sheet").html(allDrives.marshal.resolve);
             } else if (stonetopHero.drive === "four") {
@@ -339,23 +338,20 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.marshal.scion);
-
-                $("#background-move-title").text("Veteran Crew");
-                $("#background-move-content").html("<p>Each time you take this move, pick 1. You can also choose to reselect their Instinct and Cost.</p><ul><li>Select 2 new tags for your Crew</li><li>Increase their damage die from d6 to d8</li><li>Increase their max HP by 2 each</li></ul>");
-
+                listOfMoves.push(allPlaybookMoves.marshal.veteranCrew);
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.marshal.penitent);
-
-                $("#background-move-title").text("");
-                $("#background-move-content").html("");
-
             } else if (stonetopHero.background === "three") {
+                $("#background-display").html(allBackgrounds.marshal.luminary);
+                listOfMoves.push(allPlaybookMoves.marshal.weHappyFew);
+            }
 
-                $("#background-sheet-name").html(allBackgrounds.marshal.luminary);
-
-                $("#background-move-title").text("We Happy Few");
-                $("#background-move-content").html("<p>When you <b><i>give an inspiring speech to your allies before facing a dire threat</i></b>, roll +CHA: <b>on a 10+</b>, each ally holds 2 Inspiration; <b>on a 7-9</b>, each ally holds 1 Inspiration; <b>on a 6-</b>, each ally holds 1, but you have disadvantage on all rolls until you share your nagging doubts with someone else.</p><p>Once battle is joined, your allies can spend their Inspiration at any time, 1-for-1 to do the following:</p><ul><li>Act fearlessly in the face of terror or overwhelming odds</li><li>Keep 1 HP instead of being reduced to 0 HP</li><li>Add 1d6 to a damage roll they just made</li></ul>");
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
             }
         }
 
@@ -650,6 +646,18 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.lightbearer[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Marshal") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.marshal) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.marshal[property] + "<button>Add</button>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }

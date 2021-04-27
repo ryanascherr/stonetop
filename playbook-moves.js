@@ -264,5 +264,58 @@ const allPlaybookMoves = {
         superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>",
 
         wielderOfTheWhiteFlame: "<h3>Wielder of the White Flame</h3><p>When you <b><i>channel Helior’s essence into an object you carry</i></b>, roll +WIS: <b>on a 10+</b>, it ignites with a white flame that casts a holy light (<i>reach</i>, <i>area</i>) and burns neither you nor the object, and you may Invoke the Sun God right now as if you rolled a 10+; <b>on a 7-9</b>, it ignites with a white flame that casts a holy light (<i>reach</i>, <i>area</i>) and burns neither you nor the object.</p>"
+    },
+
+    marshal: {
+
+        armored: "<h3>Armored</h3><p>When you <b><i>wear armor or carry a shield</i></b>, mark only O for each (instead of OO), and ignore the clumsy tag (you don’t suffer disadvantage for wearing it). If you take this move at the start of play, add an O iron hauberk, O bronze cuirass, or O scale coat to your inventory (all are 2 armor, <i>warm</i>, <i>clumsy</i>).</p>",
+
+        artsOfWar: "<h3>Arts of War</h3><p>Take a move from the Fox, Heavy, Judge, Ranger, or Seeker playbooks, for which you otherwise qualify. You can pick from a different playbook each time. You can’t take Improved Stat or Superior Stat.</p>",
+
+        crew: "<h3>Crew</h3><p>You’ve got a crew of stalwarts, six or so residents of Stonetop with some steel to them. See the Crew insert for details.</p>",
+
+        veteranCrew: "<h3>Veteran Crew</h3><p>Each time you take this move, pick 1. You can also choose to reselect their Instinct and Cost.</p><ul><li>Select 2 new tags for your Crew</li><li>Increase their damage die from d6 to d8</li><li>Increase their max HP by 2 each</li></ul>",
+
+        frontLineLeader: "<h3>Front Line Leader</h3><p>You have advantage to Order Followers while fighting. When <b><i>at least one ally Aids your attack</i></b>, deal +1d4 damage (+1 for each extra attacker).</p>",
+
+        improvedStat: "<h3>Improved Stat</h3><p>Each time you take this move, increase one of your stats by 1 (to a max of +2).</p>",
+
+        logistics: "<h3>Logistics</h3><p>When you <b><i>have a steading Muster or Pull Together</i></b>, or when you <b><i>Requisition</i></b>, you have advantage.</p>",
+
+        readTheLand: "<h3>Read the Land</h3><p>When you <b><i>first take a moment to survey the terrain</i></b>, ask the GM one of the following; gain advantage on your next roll to act on the answer.</p><ul><li>What’s the best way in, out, through, or past?</li><li>Where’s the best spot for a trap or an ambush?</li><li>Where’s the most defensible position?</li><li>What here is out of place?</li></ul>",
+
+        prepareAWelcome: "<h3>Prepare a Welcome</h3><p>When you <b><i>have your allies fortify a position and lie in wait for battle</i></b>, hold 1 Surprise if you’re rushed or 2 Surprises if you can take your time.</p><p>Once battle is joined, spend 1 Surprise to reveal a ploy, defense, or dirty trick you prepared in advance and roll +INT: on a 10+, it works as well as can be expected, and you’ve still got a few tricks up your sleeve—regain 1 Surprise; on a 7-9, it works as well as can be expected.</p>",
+
+        setUpStrike: "<h3>Set-Up Strike</h3><p>When you <b><i>call an ally’s attention to an attack you are about to make</i></b>, that ally’s next attack against the same target does +1d4 damage.</p>",
+
+        shakeItOff: "<h3>Shake It Off</h3><p>When you <b><i>order an ally to overcome fear, pain, doubt, or delusion</i></b>, roll +CHA: <b>on a 10+</b>, they do it; <b>on a 7-9</b>, a PC gets advantage to do it; an NPC will do it, but they’ll need time, they’ll resent you, or they’ll feel humiliated (GM decides).</p>",
+
+        shieldWall: "<h3>Shield Wall</h3><p>When you <b><i>have your crew form a shield wall</i></b>, they Defend with advantage and <b>on a 7+</b> they hold +2 Readiness (instead of the usual +1 for shields). <b><i>As long as they maintain formation</i></b>, they can go on the offensive without losing Readiness.</p>",
+
+        sirPermissionToDieSir: "<h3>Sir, Permission To Die, Sir</h3><p>When <b><i>one of your followers is at Death’s Door</i></b>, pick 1:</p><ul><li>They roll +Loyalty (instead of +nothing)</li><li>You let them go; they die and you mark XP</li></ul>",
+
+        speakSoftly: "<h3>Speak Softly</h3><p>When you <b><i>offer peace but your enemy refuses</i></b>, gain advantage on your next roll against them.</p>",
+
+        stentorian: "<h3>Stentorian</h3><p>When you <b><i>raise your voice</i></b>, it carries far and cuts through even the din of battle.</p><p>When you <b><i>go into battle</i></b>, hold 2 Command. You can spend 1 Command to shout an order or warning to an ally; they gain advantage on their next roll to do as you say.</p>",
+
+        takeTheMeasure: "<h3>Take the Measure</h3><p>When you <b><i>size someone up</i></b>, ask their player one of the questions below and get an honest answer. If they <b><i>fear or respect you</i></b> (their call), you can ask another question. You can’t use this move on them again until your relationship significantly changes.</p><ul><li>Can I trust them (to ______ )?</li><li>What do they intend to do?</li><li>How are they most useful/dangerous?</li><li>What weakness of theirs can I exploit?</li></ul>",
+
+        weHappyFew: "<h3>We Happy Few</h3><p>When you <b><i>give an inspiring speech to your allies before facing a dire threat</i></b>, roll +CHA: <b>on a 10+</b>, each ally holds 2 Inspiration; <b>on a 7-9</b>, each ally holds 1 Inspiration; <b>on a 6-</b>, each ally holds 1, but you have disadvantage on all rolls until you share your nagging doubts with someone else.</p><p>Once battle is joined, your allies can spend their Inspiration at any time, 1-for-1 to do the following:</p><ul><li>Act fearlessly in the face of terror or overwhelming odds</li><li>Keep 1 HP instead of being reduced to 0 HP</li><li>Add 1d6 to a damage roll they just made</li></ul>",
+
+        battlefieldGrace: "<h3>Battlefield Grace</h3><p>When you <b><i>take damage while leading your allies in battle</i></b>, the damage roll has disadvantage.</p>",
+
+        heroesToTheLast: "<h3>Heroes to the Last</h3><p>Each time you take this move, pick 1:</p><ul><li>They are <i>exceptional</i> (and roll +2 instead of +1)</li><li>They are inured to terror & horror</li><li>Increase their max HP by 4 each</li><li>Increase their damage die one size (max d10)</li></ul>",
+
+        focusFire: "<h3>Focus Fire</h3><p>When you <b><i>call the attention of nearby allies to an attack you are about to make</i></b>, those allies deal +1d4 damage against your target until you attack another foe or the fighting stops.</p>",
+
+        likeAnOpenBook: "<h3>Like an Open Book</h3><p>When you <b><i>Take the Measure of someone who fears or respects you</i></b>, your second question can be anything you want. The GM might ask how you could possibly know this; tell them or ask something else.</p>",
+
+        nobleMien: "<h3>Noble Mien</h3><p>When you <b><i>lead an NPC through danger and return them to safety</i></b>, if they aren’t part of your crew they will either offer to join your crew or pledge their future aid and support.</p>",
+
+        peaceThroughStrength: "<h3>Peace Through Strength</h3><p>When you <b><i>stand ready to fight alongside like-minded allies</i></b>, anything capable of fear recognizes you as a serious threat and treats you accordingly.</p>",
+
+        superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>"
     }
+
+
 }
