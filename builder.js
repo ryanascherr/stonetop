@@ -41,8 +41,6 @@ let isLightMode = true;
 //     localStorage.setItem("is-light-mode", isLightMode);
 // })
 
-let checkbox = $("#weakened");
-
 $('input[name=weakened]').change(function(){
     if($(this).is(':checked')) {
         $("#strength").addClass("red");
@@ -72,7 +70,6 @@ $('input[name=miserable]').change(function(){
         $("#charisma").removeClass("red");
     }
 });
-
 
 selectCharacterBtn.click(function(){
 
