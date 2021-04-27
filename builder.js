@@ -584,7 +584,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.blessed[property] + "<div class='flex-row center'><button>Add<button</div>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -596,7 +596,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.fox[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -608,7 +608,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.heavy[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -620,7 +620,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.judge[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -632,7 +632,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.lightbearer[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -644,7 +644,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.marshal[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -656,7 +656,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.ranger[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -668,7 +668,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.seeker[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 
@@ -680,7 +680,7 @@ $("#add-move-btn").click(function(){
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.wouldBeHero[property] + "<button>Add</button>";
 
-            $("#add-playbook-moves-sheet-container").append(newDiv);
+            $("#super-test-2").append(newDiv);
         }
     }
 })

@@ -255,7 +255,7 @@ nav {
 }
 
 @media only screen and (min-width: 768px) {
-    #class-card-container, #drive-card-container, #stat-card-container, #sub-basic-moves {
+    #class-card-container, #drive-card-container, #stat-card-container, #sub-basic-moves, #super-test, #super-test-2 {
         display: flex;
         flex-direction: row;
         justify-content: center;
