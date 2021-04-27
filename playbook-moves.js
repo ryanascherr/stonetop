@@ -315,7 +315,62 @@ const allPlaybookMoves = {
         peaceThroughStrength: "<h3>Peace Through Strength</h3><p>When you <b><i>stand ready to fight alongside like-minded allies</i></b>, anything capable of fear recognizes you as a serious threat and treats you accordingly.</p>",
 
         superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>"
+    },
+
+    ranger: {
+
+        aSafePlace: "<h3>A Safe Place</h3><p>When you <b><i>select and prepare the party’s camp site</i></b>, hold 1 Precaution, or 2 Precaution if you are wellversed with this area and its dangers.</p><p>If trouble finds your camp site, you can spend 1 Precaution to reveal a simple defense, warning, or trick that you prepared in advance. If you do, tell us how you knew to make that specific preparation.</p>",
+
+        animalCompanion: "<h3>Animal Companion</h3><p>You are accompanied by a beast of uncommon loyalty and cleverness. See the Animal Companion insert for details.</p>",
+
+        magnificentSpecimen: "<h3>Magnificent Specimen</h3><p>Each time you take this move, your companion gains 2 additional options of your choice.</p>",
+
+        bigGameHunter: "<h3>Big Game Hunter</h3><p>When you <b><i>strike at the weak spot of a large or huge creature</i></b>, you deal +2 damage.</p>",
+
+        blotOutTheSun: "<h3>Blot Out the Sun</h3><p>When you <b><i>Let Fly with a bow</i></b>, you can deplete your ammunition (mark the next ammo status after your weapon) before you roll. If you do, choose 1:</p><ul><li>Gain advantage on your damage roll</li><li>Add the <i>area</i> tag to your attack; roll damage seperately for each target</li></ul>",
+
+        callTheShot: "<h3>Call the Shot</h3><p>When you <b><i>take your time and calmly line up the perfect shot</i></b>, either deal your damage or roll +DEX: <b>on a 10+</b>, deal your damage and pick 2; <b>on a 7-9</b>, deal your damage and pick 1:</p><ul><li>Ignore armor or deal +1d4 damage (your call)</li><li>Stun, hobble, or hinder them</li><li>Make them trip or drop what they’re holding</li><li>Do no harm; don’t deal your damage after all</li></ul>",
+
+        expertTracker: "<h3>Expert Tracker</h3><p>When you <b><i>Seek Insight by searching for tracks or studying the signs left by passing creatures</i></b>, you can ask “What happened here recently?” for free, even on a 6-.</p><p>When you <b><i>follow a creature’s trail</i></b>, roll +WIS: <b>on a 7+</b> you follow the trail to a significant change in direction, terrain, or mode of transport; <b>on a 10+</b>, you can also ask the GM a reasonable question about your quarry and get an honest, useful answer.</p>",
+
+        homeOnTheRange: "<h3>Home on the Range</h3><p>When <b><i>a journey requires you to Defy Danger or Struggle as One</i></b>, treat a 6- as a 7-9.</p>",
+
+        improvedStat: "<h3>Improved Stat</h3><p>Each time you take this move, increase one of your stats by 1 (to a max of +2).</p>",
+
+        mentalMap: "<h3>Mental Map</h3><p>You can always retrace your steps and can accurately gauge distances and directions. You might not know the way forward but can always find your way back.</p><p>When you <b><i>think back on a place you’ve been to or observed</i></b>, you can retroactively Seek Insight about it as if you were still there.</p>",
+
+        naturalist: "<h3>Naturalist</h3><p>When you <b><i>Know Things about beasts, natural environs, or spirits of the wild</i></b>, you have advantage.</p>",
+
+        onTheHoof: "<h3>On The Hoof</h3><p>When you <b><i>travel through the wilderness</i></b>, you can procure 1d6 uses of O provisions each day (roll with disadvantage in winter or barren terrain). Each use of provisions can substitute for 1 supplies when you Make Camp.</p>",
+
+        packHorse: "<h3>Pack Horse</h3><p>You can carry up to 4 O with a light load, 7 O with a normal load, and 10 O with a heavy load.</p>",
+
+        predator: "<h3>Predator</h3><p>When you <b><i>Seek Insight</i></b>, add the following to the list of questions you can ask:</p><ul><li>Who or what here is the easiest prey?</li><li>How is ________ weak or vulnerable?</li></ul><p>When <b><i>acting on the answer to either question</i></b>, deal an extra 1d4 damage.</p>",
+
+        senseTheUnnatural: "<h3>Sense the Unnatural</h3><p>When you <b><i>Seek Insight</i></b>, you can always ask, “What here is a perversion of the natural order?” for free, even on a 6-.</p>",
+
+        stalker: "<h3>Stalker</h3><p>When you <b><i>carry a normal or light load and move with care</i></b>, you make no noise and leave no sign of your passing. When you <b><i>hide yourself in a natural environment</i></b>, you remain unseen until you draw attention to yourself, move positions, or attack.</p>",
+
+        wildSpeech: "<h3>Wild Speech</h3><p>The grunts, barks, chirps, and calls of natural creatures are as a language to you. You can understand the intentions of and communicate basic ideas with any beast.</p>",
+
+        alpha: "<h3>Alpha</h3><p>When you <b><i>assert your dominance over a beast or spirit of the wild</i></b>, roll +WIS: <b>on a 7+</b>, it must choose 1 from the list below; <b>on a 10+</b>, you also gain advantage on your next roll against it.</p><ul><li>Fight you for dominance</li><li>Slink away or flee, then avoid you</li><li>Accept your authority, at least for now</li></ul>",
+
+        wordly: "<h3>Wordly</h3><p>Take a move from the Blessed, Fox, Heavy, or Seeker playbooks, for which you otherwise qualify. You can pick from a different playbook each time. You can’t pick Improved Stat or Superior Stat.</p>",
+
+        beastOfLegend: "<h3>Beast of Legend</h3><p>Each time you take this move, pick 1:</p><ul><li>They are <i>exceptional</i> (and roll +2 instead of +1)</li><li>They get +4 HP and +1 armor</li></ul>",
+
+        constantVigilance: "<h3>Constant Vigilance</h3><p>When <b><i>a foe would get the drop on you</i></b>, they don’t— you get to act first instead (if the GM describes an enemy taking you by surprise, even on a 6-, remind them of this move and say what you do).</p>",
+
+        giantSlayer: "<h3>Giant Slayer</h3><p>When you <b><i>strike at a weak spot of a large or huge creature</i></b>, you deal another +2 damage (+4 total).</p>",
+
+        masterTracker: "<h3>Master Tracker</h3><p>When you <b><i>even briefly scan for tracks or other signs left by passing creatures</i></b>, you can ask the GM, “What happened here recently?” and get an honest answer—no need to Seek Insight.</p>",
+
+        superiorStat: "<h3>Superior Stat</h3><p>Increase one of your stats by +1 (to a max of +3).</p>",
+
+        trailblazer: "<h3>Trailblazer</h3><p>When <b><i>a journey causes you to Defy Danger or Struggle as One</i></b>, don’t roll; you always get a 10+.</p>",
+
+        walkItOff: "<h3>Walk It Off</h3><p>When you <b><i>would mark a debility</i></b>, you can mark this move instead to no ill effect. Clear it as you would a debility.</p>",
+
+        wardenOfTheWild: "<h3>Warden of the Wild</h3><p>When you <b><i>deal damage to something you know to be a perversion of the natural order</i></b>, deal +1d4 damage.</p>"
     }
-
-
 }

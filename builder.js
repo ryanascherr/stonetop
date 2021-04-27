@@ -356,13 +356,10 @@ selectCharacterBtn.click(function(){
         }
 
         if (stonetopHero.playbook === "Ranger") {
-            $("#playbook-moves-sheet-container").children().removeClass("move-card");
 
-            $("#move-one-title").text("Home on the Range");
-            $("#move-one-content").html("<p>When <b><i>a journey requires you to Defy Danger or Struggle as One</i></b>, treat a 6- as a 7-9.");
+            listOfMoves.push(allPlaybookMoves.ranger.homeOnTheRange);
 
-            $("#move-two-title").text("");
-            $("#move-two-content").html("");
+            console.log(listOfMoves);
 
             if (stonetopHero.origin === "option-one") {
                 $("#origin-sheet").html("<h4>Stonetop</h4>");
@@ -388,26 +385,22 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.ranger.mightyHunter);
-
-                $("#move-two-title").text("Expert Tracker");
-                $("#move-two-content").html("<p>When you <b><i>Seek Insight by searching for tracks or studying the signs left by passing creatures</i></b>, you can ask “What happened here recently?” for free, even on a 6-.</p><p>When you <b><i>follow a creature’s trail</i></b>, roll +WIS: <b>on a 7+</b> you follow the trail to a significant change in direction, terrain, or mode of transport; <b>on a 10+</b>, you can also ask the GM a reasonable question about your quarry and get an honest, useful answer.</p>");
-
-                $("#background-move-title").text("Stalker");
-                $("#background-move-content").html("<p>When you <b><i>carry a normal or light load and move with care</i></b>, you make no noise and leave no sign of your passing. When you <b><i>hide yourself in a natural environment</i></b>, you remain unseen until you draw attention to yourself, move positions, or attack.</p>");
-
+                listOfMoves.push(allPlaybookMoves.ranger.expertTracker);
+                listOfMoves.push(allPlaybookMoves.ranger.stalker);
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.ranger.wideWanderer);
-
-                $("#background-move-title").text("Mental Map");
-                $("#background-move-content").html("<p>You can always retrace your steps and can accurately gauge distances and directions. You might not know the way forward but can always find your way back.</p><p>When you <b><i>think back on a place you’ve been to or observed</i></b>, you can retroactively Seek Insight about it as if you were still there.</p>");
-
+                listOfMoves.push(allPlaybookMoves.ranger.mentalMap);
             } else if (stonetopHero.background === "three") {
-
                 $("#background-display").html(allBackgrounds.ranger.beastBonded);
+                listOfMoves.push(allPlaybookMoves.ranger.animalCompanion);
+            }
 
-                $("#background-move-title").text("Animal Companion");
-                $("#background-move-content").html("<p>You are accompanied by a beast of uncommon loyalty and cleverness. See the Animal Companion insert for details.</p>");
+            for (let i = 0; i < listOfMoves.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("move-card");
+                newDiv.classList.add("move-remove");
+                newDiv.innerHTML = listOfMoves[i];
+                $("#super-test").append(newDiv);
             }
         }
 
@@ -658,6 +651,18 @@ $("#add-move-btn").click(function(){
             let newDiv = document.createElement("div");
             newDiv.classList.add("move-card");
             newDiv.innerHTML = allPlaybookMoves.marshal[property] + "<button>Add</button>";
+
+            $("#add-playbook-moves-sheet-container").append(newDiv);
+        }
+    }
+
+    if (stonetopHero.playbook === "Ranger") {
+        $("#add-playbook-moves-sheet-container").removeClass("hidden");
+
+        for (const property in allPlaybookMoves.ranger) {
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("move-card");
+            newDiv.innerHTML = allPlaybookMoves.ranger[property] + "<button>Add</button>";
 
             $("#add-playbook-moves-sheet-container").append(newDiv);
         }
