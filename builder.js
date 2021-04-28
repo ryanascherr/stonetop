@@ -111,7 +111,7 @@ selectCharacterBtn.click(function(){
         $("#add-playbook-moves-sheet-container").addClass("hidden");
 
         listOfMoves = [];
-        $(".move-remove").remove();
+        $(".base-move-remove").remove();
 
         onFrontPage = false;
 
@@ -142,26 +142,19 @@ selectCharacterBtn.click(function(){
 
             if (stonetopHero.background === "one") {
                 $("#background-display").html(allBackgrounds.blessed.initiate);
-
                 listOfMoves.push(allPlaybookMoves.blessed.ritesOfTheLand);
-                
             } else if (stonetopHero.background === "two") {
-
                 $("#background-display").html(allBackgrounds.blessed.raisedByWolves);
-
                 listOfMoves.push(allPlaybookMoves.blessed.tracklessStep);
-
             } else if (stonetopHero.background === "three") {
-
                 $("#background-display").html(allBackgrounds.blessed.vessel);
-
                 listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
             }
 
             for (let i = 0; i < listOfMoves.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
+                newDiv.classList.add("base-move-remove");
                 newDiv.innerHTML = listOfMoves[i];
                 $("#super-test").append(newDiv);
             }
@@ -210,7 +203,7 @@ selectCharacterBtn.click(function(){
             for (let i = 0; i < listOfMoves.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
+                newDiv.classList.add("base-move-remove");
                 newDiv.innerHTML = listOfMoves[i];
                 $("#super-test").append(newDiv);
             }
@@ -258,7 +251,7 @@ selectCharacterBtn.click(function(){
             for (let i = 0; i < listOfMoves.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
+                newDiv.classList.add("base-move-remove");
                 newDiv.innerHTML = listOfMoves[i];
                 $("#super-test").append(newDiv);
             }
@@ -302,7 +295,7 @@ selectCharacterBtn.click(function(){
             for (let i = 0; i < listOfMoves.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
+                newDiv.classList.add("base-move-remove");
                 newDiv.innerHTML = listOfMoves[i];
                 $("#super-test").append(newDiv);
             }
@@ -380,7 +373,7 @@ selectCharacterBtn.click(function(){
             for (let i = 0; i < listOfMoves.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
+                newDiv.classList.add("base-move-remove");
                 newDiv.innerHTML = listOfMoves[i];
                 $("#super-test").append(newDiv);
             }
@@ -429,7 +422,7 @@ selectCharacterBtn.click(function(){
             for (let i = 0; i < listOfMoves.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
+                newDiv.classList.add("base-move-remove");
                 newDiv.innerHTML = listOfMoves[i];
                 $("#super-test").append(newDiv);
             }
@@ -496,7 +489,7 @@ selectCharacterBtn.click(function(){
             for (let i = 0; i < listOfMoves.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
+                newDiv.classList.add("base-move-remove");
                 newDiv.innerHTML = listOfMoves[i];
                 $("#super-test").append(newDiv);
             }
