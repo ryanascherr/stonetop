@@ -27,21 +27,6 @@ let isLightMode = true;
 // const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allDrives;
 // const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allMoves;
 
-// $("#light-mode-btn").click(function(){
-//     if (isLightMode) {
-//         $("#light-mode-btn").text("Dark Mode");
-//         $("body").removeClass("light-mode");
-//         $("body").addClass("dark-mode");
-//         isLightMode === false;
-//         localStorage.setItem("is-light-mode", isLightMode);
-//     }
-//     $("#light-mode-btn").text("Light Mode");
-//     $("body").removeClass("dark-mode");
-//     $("body").addClass("light-mode");
-//     isLightMode === true;
-//     localStorage.setItem("is-light-mode", isLightMode);
-// })
-
 $('input[name=weakened]').change(function(){
     if($(this).is(':checked')) {
         $("#strength").addClass("red");
@@ -122,74 +107,103 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>The Steplands</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>The Wild</h4>");
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>The Steplands</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>The Wild</h4>");
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.blessed.conciliation);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.blessed.cultivation);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.blessed.preservation);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.blessed.renewal);
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.blessed.conciliation);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.blessed.cultivation);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.blessed.preservation);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.blessed.renewal);
+                    break;
             }
 
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.blessed.initiate);
-                listOfMoves.push(allPlaybookMoves.blessed.ritesOfTheLand);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.blessed.raisedByWolves);
-                listOfMoves.push(allPlaybookMoves.blessed.tracklessStep);
-            } else if (stonetopHero.background === "three") {
-                $("#background-display").html(allBackgrounds.blessed.vessel);
-                listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.blessed.initiate);
+                    listOfMoves.push(allPlaybookMoves.blessed.ritesOfTheLand);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.blessed.raisedByWolves);
+                    listOfMoves.push(allPlaybookMoves.blessed.tracklessStep);
+                    break;
+                case "three":
+                    $("#background-display").html(allBackgrounds.blessed.vessel);
+                    listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
+                    break;
             }
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
                 newDiv.classList.add("base-move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
-            }
+                console.log(item);
+            })
         }
 
         if (stonetopHero.playbook === "Fox") {
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-four":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.fox.conscience);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.fox.excitement);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.fox.glory);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.fox.romance);
-            } else if (stonetopHero.drive === "five") {
-                $("#drive-sheet").html(allDrives.fox.trickery);
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.fox.conscience);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.fox.excitement);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.fox.glory);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.fox.romance);
+                    break;
+                case "five":
+                    $("#drive-sheet").html(allDrives.fox.trickery);
+                    break;
             }
 
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.fox.theNatural);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.fox.aLifeOfCrime);
-            } else if (stonetopHero.background === "three") {
-                $("#background-display").html(allBackgrounds.fox.theProdigalReturned);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.fox.theNatural);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.fox.aLifeOfCrime);
+                    break;
+                case "three":
+                    $("#background-display").html(allBackgrounds.fox.theProdigalReturned);
+                    break;
             }
         }
 
@@ -200,44 +214,60 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
                 newDiv.classList.add("base-move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
+                console.log(item);
+            })
+
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-four":
+                    $("#origin-sheet").html("<h4>The Steplands</h4>");
+                    break;
+                case "otpion-five":
+                    $("#origin-sheet").html("<h4>The Manmarch</h4>");
+                    break;
+                case "option-six":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>The Steplands</h4>");
-            } else if (stonetopHero.origin === "option-five") {
-                $("#origin-sheet").html("<h4>The Manmarch</h4>");
-            } else if (stonetopHero.origin === "option-six") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.heavy.challenge);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.heavy.honor);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.heavy.peace);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.heavy.pride);
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.heavy.challenge);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.heavy.honor);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.heavy.peace);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.heavy.pride);
-            }
-
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.heavy.sheriff);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.heavy.bloodSoakedPast);
-            } else if (stonetopHero.background === "three") {
-                $("#background-display").html(allBackgrounds.heavy.stormMarked);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.heavy.sheriff);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.heavy.bloodSoakedPast);
+                    break;
+                case "three":
+                    $("#background-display").html(allBackgrounds.heavy.stormMarked);
             }
         }
 
@@ -248,40 +278,54 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
                 newDiv.classList.add("base-move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
+                console.log(item);
+            })
+
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-four":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.judge.duty);
+                case "two":
+                    $("#drive-sheet").html(allDrives.judge.harmony);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.judge.knowledge);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.judge.zeal);
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.judge.duty);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.judge.harmony);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.judge.knowThings);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.judge.zeal);
-            }
-
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.judge.legacy);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.judge.missionary);
-            } else if (stonetopHero.background === "three") {
-                $("#background-sheet-display").html(allBackgrounds.judge.prophet);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.judge.legacy);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.judge.missionary);
+                    break;
+                case "three":
+                    $("#background-sheet-display").html(allBackgrounds.judge.prophet);
+                    break;
             }
         }
 
@@ -292,40 +336,55 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
                 newDiv.classList.add("base-move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
+                console.log(item);
+            })
+
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-four":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.lightbearer.charity);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.lightbearer.faith);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.lightbearer.hope);
+                    break;
+                case "option-four":
+                    $("#drive-sheet").html(allDrives.lightbearer.mercy);
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.lightbearer.charity);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.lightbearer.faith);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.lightbearer.hope);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.lightbearer.mercy);
-            }
-
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.lightbearer.auspiciousBirth);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.lightbearer.itinerantMystic);
-            } else if (stonetopHero.background === "three") {
-                $("#background-display").html(allBackgrounds.lightbearer.soulOnFire);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.lightbearer.auspiciousBirth);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.lightbearer.itinerantMystic);
+                    break;
+                case "three":
+                    $("#background-display").html(allBackgrounds.lightbearer.soulOnFire);
+                    break;   
             }
         }
 
@@ -336,47 +395,64 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>The Steplands</h4>");
-            } else if (stonetopHero.origin === "option-five") {
-                $("#origin-sheet").html("<h4>The Manmarch</h4>");
-            } else if (stonetopHero.origin === "option-six") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-four":
+                    $("#origin-sheet").html("<h4>The Steplands</h4>");
+                    break;
+                case "otpion-five":
+                    $("#origin-sheet").html("<h4>The Manmarch</h4>");
+                    break;
+                case "option-six":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.marshal.honor);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.marshal.prestige);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.marshal.resolve);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.marshal.ruthlessness);
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.marshal.honor);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.marshal.prestige);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.marshal.resolve);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.marshal.ruthlessness);
+                    break;
             }
 
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.marshal.scion);
-                listOfMoves.push(allPlaybookMoves.marshal.veteranCrew);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.marshal.penitent);
-            } else if (stonetopHero.background === "three") {
-                $("#background-display").html(allBackgrounds.marshal.luminary);
-                listOfMoves.push(allPlaybookMoves.marshal.weHappyFew);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.marshal.scion);
+                    listOfMoves.push(allPlaybookMoves.marshal.veteranCrew);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.marshal.penitent);
+                    break;
+                case "three":
+                    $("#background-display").html(allBackgrounds.marshal.luminary);
+                    listOfMoves.push(allPlaybookMoves.marshal.weHappyFew);
+                    break;
             }
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
                 newDiv.classList.add("base-move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
-            }
+                console.log(item);
+            })
         }
 
         if (stonetopHero.playbook === "Ranger") {
@@ -385,47 +461,61 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>The Steplands</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>The Manmarch</h4>");
-            } else if (stonetopHero.origin === "option-five") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>The Steplands</h4>");
+                    break;
+                case "option-four":
+                    $("#origin-sheet").html("<h4>The Manmarch</h4>");
+                    break;
+                case "option-five":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.ranger.mercy);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.ranger.stewardship);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.ranger.tenacity);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.ranger.wonder);
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.ranger.mercy);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.ranger.stewardship);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.ranger.tenacity);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.ranger.wonder);
+                    break;
             }
 
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.ranger.mightyHunter);
-                listOfMoves.push(allPlaybookMoves.ranger.expertTracker);
-                listOfMoves.push(allPlaybookMoves.ranger.stalker);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.ranger.wideWanderer);
-                listOfMoves.push(allPlaybookMoves.ranger.mentalMap);
-            } else if (stonetopHero.background === "three") {
-                $("#background-display").html(allBackgrounds.ranger.beastBonded);
-                listOfMoves.push(allPlaybookMoves.ranger.animalCompanion);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.ranger.mightyHunter);
+                    listOfMoves.push(allPlaybookMoves.ranger.expertTracker);
+                    listOfMoves.push(allPlaybookMoves.ranger.stalker);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.ranger.wideWanderer);
+                    listOfMoves.push(allPlaybookMoves.ranger.mentalMap);
+                case "three":
+                    $("#background-display").html(allBackgrounds.ranger.beastBonded);
+                    listOfMoves.push(allPlaybookMoves.ranger.animalCompanion);
             }
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
                 newDiv.classList.add("base-move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
-            }
+                console.log(item);
+            })
         }
 
         if (stonetopHero.playbook === "Seeker") {
@@ -435,48 +525,65 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>The Steplands</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-five") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>The Steplands</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+                    break;
+                case "option-four":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-five":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.seeker.cunning);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.seeker.curiosity);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.seeker.respect);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.seeker.secrecy);
-            } else if (stonetopHero.drive === "five") {
-                $("#drive-sheet").html(allDrives.seeker.victory);
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.seeker.cunning);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.seeker.curiosity);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.seeker.respect);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.seeker.secrecy);
+                    break;
+                case "five":
+                    $("#drive-sheet").html(allDrives.seeker.victory);
+                    break;
             }
 
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.seeker.patriot);
-                listOfMoves.push(allPlaybookMoves.seeker.letsMakeADeal);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.seeker.antiquarian);
-                listOfMoves.push(allPlaybookMoves.seeker.polyglot);
-            } else if (stonetopHero.background === "three") {
-                $("#background-display").html(allBackgrounds.seeker.witchHunter);
-                listOfMoves.push(allPlaybookMoves.seeker.everythingBleeds);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.seeker.patriot);
+                    listOfMoves.push(allPlaybookMoves.seeker.letsMakeADeal);
+                    break;
+                case "two":
+                    $("#background-display").html(allBackgrounds.seeker.antiquarian);
+                    listOfMoves.push(allPlaybookMoves.seeker.polyglot);
+                    break;
+                case "three":
+                    $("#background-display").html(allBackgrounds.seeker.witchHunter);
+                    listOfMoves.push(allPlaybookMoves.seeker.everythingBleeds);
+                    break;
             }
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
-                newDiv.classList.add("move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.classList.add("base-move-remove");
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
-            }
+                console.log(item);
+            })
         }
 
         if (stonetopHero.playbook === "Would-Be Hero") {
@@ -486,42 +593,58 @@ selectCharacterBtn.click(function(){
 
             console.log(listOfMoves);
 
-            for (let i = 0; i < listOfMoves.length; i++) {
+            listOfMoves.forEach(item => {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("move-card");
                 newDiv.classList.add("base-move-remove");
-                newDiv.innerHTML = listOfMoves[i];
+                newDiv.innerHTML = item;
                 $("#super-test").append(newDiv);
+                console.log(item);
+            })
+
+            switch(stonetopHero.origin) {
+                case "option-one":
+                    $("#origin-sheet").html("<h4>Stonetop</h4>");
+                    break;
+                case "option-two":
+                    $("#origin-sheet").html("<h4>The Steplands</h4>");
+                    break;
+                case "option-three":
+                    $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
+                    break;
+                case "otpion-four":
+                    $("#origin-sheet").html("<h4>Marshedge</h4>");
+                    break;
+                case "option-five":
+                    $("#origin-sheet").html("<h4>Lygos</h4>");
+                    break;
             }
             
-            if (stonetopHero.origin === "option-one") {
-                $("#origin-sheet").html("<h4>Stonetop</h4>");
-            } else if (stonetopHero.origin === "option-two") {
-                $("#origin-sheet").html("<h4>The Steplands</h4>");
-            } else if (stonetopHero.origin === "option-three") {
-                $("#origin-sheet").html("<h4>Gordin's Delve</h4>");
-            } else if (stonetopHero.origin === "option-four") {
-                $("#origin-sheet").html("<h4>Marshedge</h4>");
-            } else if (stonetopHero.origin === "option-five") {
-                $("#origin-sheet").html("<h4>Lygos</h4>");
+            switch(stonetopHero.drive) {
+                case "one":
+                    $("#drive-sheet").html(allDrives.wouldBeHero.bravery);
+                    break;
+                case "two":
+                    $("#drive-sheet").html(allDrives.wouldBeHero.glory);
+                    break;
+                case "three":
+                    $("#drive-sheet").html(allDrives.wouldBeHero.sacrifice);
+                    break;
+                case "four":
+                    $("#drive-sheet").html(allDrives.wouldBeHero.succor);
+                    break;
             }
 
-            if (stonetopHero.drive === "one") {
-                $("#drive-sheet").html(allDrives.wouldBeHero.bravery);
-            } else if (stonetopHero.drive === "two") {
-                $("#drive-sheet").html(allDrives.wouldBeHero.glory);
-            } else if (stonetopHero.drive === "three") {
-                $("#drive-sheet").html(allDrives.wouldBeHero.sacrifice);
-            } else if (stonetopHero.drive === "four") {
-                $("#drive-sheet").html(allDrives.wouldBeHero.succor);
-            }
-
-            if (stonetopHero.background === "one") {
-                $("#background-display").html(allBackgrounds.wouldBeHero.impetuousYouth);
-            } else if (stonetopHero.background === "two") {
-                $("#background-display").html(allBackgrounds.wouldBeHero.driven);
-            } else if (stonetopHero.background === "three") {
-                $("#background-sheet-name").html(allBackgrounds.wouldBeHero.destined);
+            switch(stonetopHero.background) {
+                case "one":
+                    $("#background-display").html(allBackgrounds.wouldBeHero.impetuousYouth);
+                    break;
+                case "two":
+                    ("#background-display").html(allBackgrounds.wouldBeHero.driven);
+                    break;
+                case "three":
+                    $("#background-sheet-name").html(allBackgrounds.wouldBeHero.destined);
+                    break;
             }
         }
 
