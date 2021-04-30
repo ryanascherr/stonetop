@@ -20,15 +20,11 @@ let stonetopHero;
 let rollNormal;
 let rollAdvantage;
 let rollDisadvantage;
-let listOfMoves = [];
+let listOfMoves = "";
 let isLightMode = true;
 
-// const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allBackgrounds;
-// const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allDrives;
-// const {blessed, fox, heavy, judge, lightbearer, marhsal, ranger, seeker, wouldBeHero} = allMoves;
-
-$('input[name=weakened]').change(function(){
-    if($(this).is(':checked')) {
+$('input[name=weakened]').change(function () {
+    if ($(this).is(':checked')) {
         $("#strength").addClass("red");
         $("#dexterity").addClass("red");
     } else {
@@ -37,8 +33,8 @@ $('input[name=weakened]').change(function(){
     }
 });
 
-$('input[name=dazed]').change(function(){
-    if($(this).is(':checked')) {
+$('input[name=dazed]').change(function () {
+    if ($(this).is(':checked')) {
         $("#intelligence").addClass("red");
         $("#wisdom").addClass("red");
     } else {
@@ -47,8 +43,8 @@ $('input[name=dazed]').change(function(){
     }
 });
 
-$('input[name=miserable]').change(function(){
-    if($(this).is(':checked')) {
+$('input[name=miserable]').change(function () {
+    if ($(this).is(':checked')) {
         $("#constitution").addClass("red");
         $("#charisma").addClass("red");
     } else {
@@ -57,13 +53,14 @@ $('input[name=miserable]').change(function(){
     }
 });
 
-selectCharacterBtn.click(function(){
+selectCharacterBtn.click(function () {
 
     if (onFrontPage === true) {
 
         $("#select-character-btn").text("Main Page");
         $("#create-character-btn").addClass("hidden");
         $("header").addClass("hidden");
+        $("#add-playbook-moves-sheet-container").addClass("hidden");
         $("#character-sheet-container").removeClass("hidden");
 
         window.scrollTo(0, 0);
@@ -79,44 +76,28 @@ selectCharacterBtn.click(function(){
         $("#damage-display").text(`Damage (d${stonetopHero.damage})`);
         $("#hit-points-display").text(`HP (${stonetopHero.hitPoints})`);
         $("#armor-display").text("Armor (+0)");
-        $("#xp-display").text("XP (+0)");
+        $("#xp-display").text("XP (0)");
         $("#stat-btn").addClass("highlight");
 
-        $("#move-aid").html(allBasicMoves.aid);
-        $("#move-clash").html(allBasicMoves.clash);
-        $("#move-defend").html(allBasicMoves.defend);
-        $("#move-defy-danger").html(allBasicMoves.defyDanger);
-        $("#move-interfere").html(allBasicMoves.interfere);
-        $("#move-know-things").html(allBasicMoves.knowThings);
-        $("#move-let-fly").html(allBasicMoves.letFly);
-        $("#move-persuade-npc").html(allBasicMoves.persuadeNPCs);
-        $("#move-persuade-pc").html(allBasicMoves.persuadePCs);
-        $("#move-seek-insight").html(allBasicMoves.seekInsight);
-
-        $("#add-playbook-moves-sheet-container").addClass("hidden");
-
-        listOfMoves = [];
+        // listOfMoves = [];
         $(".base-move-remove").remove();
 
-        onFrontPage = false;
+        // let moveArray = localStorage.getItem("markup");
+        // console.log(moveArray);
 
-        let moveArray = localStorage.getItem("markup");
-        console.log(moveArray);
+        // if (moveArray) {
+        //     $("#super-test").html(moveArray);
+        // }
 
-        if (moveArray) {
-            $("#super-test").html(moveArray);
-        }
-
-
-
-        switch(stonetopHero.playbook) {
+        switch (stonetopHero.playbook) {
             case "Blessed":
-                listOfMoves.push(allPlaybookMoves.blessed.spiritTongue);
-                listOfMoves.push(allPlaybookMoves.blessed.callTheSpirits);
 
-                console.log(listOfMoves);
+                listOfMoves += allPlaybookMoves.blessed.spiritTongue;
+                listOfMoves += allPlaybookMoves.blessed.callTheSpirits
+                // listOfMoves.push(allPlaybookMoves.blessed.spiritTongue);
+                // listOfMoves.push(allPlaybookMoves.blessed.callTheSpirits);
 
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -128,7 +109,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.drive) {
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.blessed.conciliation);
                         break;
@@ -143,33 +124,55 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.background) {
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.blessed.initiate);
-                        listOfMoves.push(allPlaybookMoves.blessed.ritesOfTheLand);
+                        listOfMoves += allPlaybookMoves.blessed.ritesOfTheLand;
+                        // listOfMoves.push(allPlaybookMoves.blessed.ritesOfTheLand);
                         break;
                     case "two":
                         $("#background-display").html(allBackgrounds.blessed.raisedByWolves);
-                        listOfMoves.push(allPlaybookMoves.blessed.tracklessStep);
+                        listOfMoves += allPlaybookMoves.blessed.tracklessStep;
+                        // listOfMoves.push(allPlaybookMoves.blessed.tracklessStep);
                         break;
                     case "three":
                         $("#background-display").html(allBackgrounds.blessed.vessel);
-                        listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
+                        listOfMoves += allPlaybookMoves.blessed.danusGrasp;
+                        // listOfMoves.push(allPlaybookMoves.blessed.danusGrasp);
                         break;
                 }
 
-                listOfMoves.forEach(item => {
-                    let newDiv = document.createElement("div");
-                    newDiv.classList.add("move-card");
-                    newDiv.classList.add("base-move-remove");
-                    newDiv.innerHTML = item;
-                    $("#super-test").append(newDiv);
-                    console.log(item);
-                })
+                $("#super-test").html(listOfMoves);
+
+                let newListOfMoves = localStorage.getItem("list-of-moves");
+                console.log(newlistOfMoves);
+                if (listOfMoves) {
+                    listOfMoves = newListOfMoves;
+                    $("#super-test").html(listOfMoves);
+                }
+                
+
+                // let newArrayOfMoves = (localStorage.getItem("list-of-moves"));
+                // if (newArrayOfMoves) {
+                //     listOfMoves = newArrayOfMoves;
+                //     $(".base-move-remove").remove();
+                //     console.log(typeof listOfMoves);
+                //     console.log(listOfMoves);
+                //     $("#super-test").html(listOfMoves);
+                // } else {
+                //     listOfMoves.forEach(item => {
+                //         let newDiv = document.createElement("div");
+                //         newDiv.classList.add("move-card");
+                //         newDiv.classList.add("base-move-remove");
+                //         newDiv.innerHTML = item;
+                //         $("#super-test").append(newDiv);
+                //         localStorage.setItem("list-of-moves", listOfMoves);
+                //     })
+                // }
                 break;
 
             case "Fox":
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -183,8 +186,8 @@ selectCharacterBtn.click(function(){
                         $("#origin-sheet").html("<h4>Lygos</h4>");
                         break;
                 }
-    
-                switch(stonetopHero.drive) {
+
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.fox.conscience);
                         break;
@@ -201,8 +204,8 @@ selectCharacterBtn.click(function(){
                         $("#drive-sheet").html(allDrives.fox.trickery);
                         break;
                 }
-    
-                switch(stonetopHero.background) {
+
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.fox.theNatural);
                         break;
@@ -230,7 +233,7 @@ selectCharacterBtn.click(function(){
                     console.log(item);
                 })
 
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -251,7 +254,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.drive) {
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.heavy.challenge);
                         break;
@@ -266,7 +269,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.background) {
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.heavy.sheriff);
                         break;
@@ -293,7 +296,7 @@ selectCharacterBtn.click(function(){
                     console.log(item);
                 })
 
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -308,7 +311,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.drive) {
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.judge.duty);
                     case "two":
@@ -322,7 +325,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.background) {
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.judge.legacy);
                         break;
@@ -334,7 +337,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
                 break;
-            
+
             case "Lightbearer":
                 listOfMoves.push(allPlaybookMoves.lightbearer.consecratedFlame);
                 listOfMoves.push(allPlaybookMoves.lightbearer.invokeTheSunGod);
@@ -350,7 +353,7 @@ selectCharacterBtn.click(function(){
                     console.log(item);
                 })
 
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -365,7 +368,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.drive) {
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.lightbearer.charity);
                         break;
@@ -380,7 +383,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.background) {
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.lightbearer.auspiciousBirth);
                         break;
@@ -389,17 +392,17 @@ selectCharacterBtn.click(function(){
                         break;
                     case "three":
                         $("#background-display").html(allBackgrounds.lightbearer.soulOnFire);
-                        break;   
+                        break;
                 }
                 break;
-            
+
             case "Marshal":
                 listOfMoves.push(allPlaybookMoves.marshal.crew);
                 listOfMoves.push(allPlaybookMoves.marshal.logistics);
 
                 console.log(listOfMoves);
 
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -420,7 +423,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.drive) {
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.marshal.honor);
                         break;
@@ -435,7 +438,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.background) {
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.marshal.scion);
                         listOfMoves.push(allPlaybookMoves.marshal.veteranCrew);
@@ -464,7 +467,7 @@ selectCharacterBtn.click(function(){
 
                 console.log(listOfMoves);
 
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -482,7 +485,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.drive) {
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.ranger.mercy);
                         break;
@@ -497,7 +500,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.background) {
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.ranger.mightyHunter);
                         listOfMoves.push(allPlaybookMoves.ranger.expertTracker);
@@ -520,14 +523,14 @@ selectCharacterBtn.click(function(){
                     console.log(item);
                 })
                 break;
-            
+
             case "Seeker":
                 listOfMoves.push(allPlaybookMoves.seeker.wellVersed);
                 listOfMoves.push(allPlaybookMoves.seeker.workWithWhatYouveGot);
 
                 console.log(listOfMoves);
 
-                switch(stonetopHero.origin) {
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -545,7 +548,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.drive) {
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.seeker.cunning);
                         break;
@@ -563,7 +566,7 @@ selectCharacterBtn.click(function(){
                         break;
                 }
 
-                switch(stonetopHero.background) {
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.seeker.patriot);
                         listOfMoves.push(allPlaybookMoves.seeker.letsMakeADeal);
@@ -591,9 +594,9 @@ selectCharacterBtn.click(function(){
             case "Would-Be Hero":
                 listOfMoves.push(allPlaybookMoves.wouldBeHero.angerIsAGift);
                 listOfMoves.push(allPlaybookMoves.wouldBeHero.potentialForGreatness);
-    
+
                 console.log(listOfMoves);
-    
+
                 listOfMoves.forEach(item => {
                     let newDiv = document.createElement("div");
                     newDiv.classList.add("move-card");
@@ -602,8 +605,8 @@ selectCharacterBtn.click(function(){
                     $("#super-test").append(newDiv);
                     console.log(item);
                 })
-    
-                switch(stonetopHero.origin) {
+
+                switch (stonetopHero.origin) {
                     case "option-one":
                         $("#origin-sheet").html("<h4>Stonetop</h4>");
                         break;
@@ -620,8 +623,8 @@ selectCharacterBtn.click(function(){
                         $("#origin-sheet").html("<h4>Lygos</h4>");
                         break;
                 }
-                
-                switch(stonetopHero.drive) {
+
+                switch (stonetopHero.drive) {
                     case "one":
                         $("#drive-sheet").html(allDrives.wouldBeHero.bravery);
                         break;
@@ -635,8 +638,8 @@ selectCharacterBtn.click(function(){
                         $("#drive-sheet").html(allDrives.wouldBeHero.succor);
                         break;
                 }
-    
-                switch(stonetopHero.background) {
+
+                switch (stonetopHero.background) {
                     case "one":
                         $("#background-display").html(allBackgrounds.wouldBeHero.impetuousYouth);
                         break;
@@ -652,26 +655,26 @@ selectCharacterBtn.click(function(){
 
         window.scrollTo(0, 0);
         onFrontPage = false;
-    
-        } else {
 
-            $("#create-character-btn").removeClass("hidden");
-            $("#select-character-btn").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
-            $("header").removeClass("hidden");
-            $("#character-sheet-container").addClass("hidden");
-            $("#stat-btn").addClass("highlight");
-            $("#playbook-moves-btn").removeClass("highlight");
-            $("#background-btn").removeClass("highlight");
-            $("#basic-moves-btn").removeClass("highlight");
-            $("#playbook-moves-sheet-container").addClass("hidden");
-            $("#background-sheet-container").addClass("hidden");
-            $("#basic-moves-sheet-container").addClass("hidden");
-            $("#stat-sheet-container").removeClass("hidden");
-            onFrontPage = true;
-        }
+    } else {
+
+        $("#create-character-btn").removeClass("hidden");
+        $("#select-character-btn").text(`${stonetopHero.characterName}, the ${stonetopHero.playbook}`);
+        $("header").removeClass("hidden");
+        $("#character-sheet-container").addClass("hidden");
+        $("#stat-btn").addClass("highlight");
+        $("#playbook-moves-btn").removeClass("highlight");
+        $("#background-btn").removeClass("highlight");
+        $("#basic-moves-btn").removeClass("highlight");
+        $("#playbook-moves-sheet-container").addClass("hidden");
+        $("#background-sheet-container").addClass("hidden");
+        $("#basic-moves-sheet-container").addClass("hidden");
+        $("#stat-sheet-container").removeClass("hidden");
+        onFrontPage = true;
+    }
 })
 
-$("#stat-btn").click(function(){
+$("#stat-btn").click(function () {
     $("#stat-btn").addClass("highlight");
     $("#playbook-moves-btn").removeClass("highlight");
     $("#background-btn").removeClass("highlight");
@@ -684,7 +687,7 @@ $("#stat-btn").click(function(){
     $("#stat-sheet-container").removeClass("hidden");
 })
 
-$("#playbook-moves-btn").click(function(){
+$("#playbook-moves-btn").click(function () {
     $("#playbook-moves-btn").addClass("highlight");
     $("#stat-btn").removeClass("highlight");
     $("#background-btn").removeClass("highlight");
@@ -697,7 +700,7 @@ $("#playbook-moves-btn").click(function(){
     $("#playbook-moves-sheet-container").removeClass("hidden");
 })
 
-$("#background-btn").click(function(){
+$("#background-btn").click(function () {
     $("#background-btn").addClass("highlight");
     $("#stat-btn").removeClass("highlight");
     $("#playbook-moves-btn").removeClass("highlight");
@@ -710,7 +713,7 @@ $("#background-btn").click(function(){
     $("#background-sheet-container").removeClass("hidden");
 })
 
-$("#basic-moves-btn").click(function(){
+$("#basic-moves-btn").click(function () {
     $("#basic-moves-btn").addClass("highlight");
     $("#background-btn").removeClass("highlight");
     $("#stat-btn").removeClass("highlight");
@@ -723,7 +726,7 @@ $("#basic-moves-btn").click(function(){
     $("#basic-moves-sheet-container").removeClass("hidden");
 })
 
-$("#add-move-btn").click(function(){
+$("#add-move-btn").click(function () {
 
     if (stonetopHero.playbook === "Blessed") {
         $(".move-remove").remove();
@@ -861,30 +864,33 @@ $("#add-move-btn").click(function(){
     }
 })
 
-$(document).on("click", ".js-confirm-new-move-btn", function(event) {
+$(document).on("click", ".js-confirm-new-move-btn", function (event) {
     let playbook = event.currentTarget.dataset.playbook;
     let move = event.currentTarget.dataset.move;
-    let fullMove = allPlaybookMoves[playbook][move];
-    // let newTemporaryArray = [...listOfMoves];
+    listOfMoves += allPlaybookMoves[playbook][move];
+    // $(".base-move-remove").remove();
+    $("#super-test").html(listOfMoves);
+    localStorage.setItem("list-of-moves", JSON.stringify(listOfMoves));
+    
+    
 
-    // listOfMoves = [];
-    //     $(".base-move-remove").remove();
+    // let fullMove = allPlaybookMoves[playbook][move];
 
-    listOfMoves.push(fullMove);
+    // listOfMoves.push(fullMove);
 
-    let markup = listOfMoves.map(function(move){
-        return `
-            <div class="move-card base-move-remove">
-                ${move}
-            </div>
-        `
-    }).join(" ");
+    // let markup = listOfMoves.map(function(move){
+    //     return `
+    //         <div class="move-card base-move-remove">
+    //             ${move}
+    //         </div>
+    //     `
+    // }).join(" ");
 
-    console.log(markup);
+    // console.log(markup);
 
-    $("#super-test").html(markup);
+    // $("#super-test").html(markup);
 
-    localStorage.setItem("markup", markup);
+    // localStorage.setItem("markup", markup);
 
     // newTemporaryArray.forEach(item => {
     //     let newDiv = document.createElement("div");
@@ -897,24 +903,24 @@ $(document).on("click", ".js-confirm-new-move-btn", function(event) {
 
 });
 
-createCharacterBtn.click(function(){
+createCharacterBtn.click(function () {
 
     if (onFrontPage === true) {
 
-    $("#create-character-btn").text("Main Page");
-    $("header").addClass("hidden");
-    $("select-character-btn").addClass("hidden");
-    $("#background-selector-container").addClass("hidden");
-    $("#drive-selector-container").addClass("hidden");
-    $("#origin-name-selector-container").addClass("hidden");
-    $("#stats-selector-container").addClass("hidden");
-    $("#select-character-btn").addClass("hidden");
-    $("#class-selector-container").removeClass("hidden");
-    window.scrollTo(0, 0);
-    onFrontPage = false;
+        $("#create-character-btn").text("Main Page");
+        $("header").addClass("hidden");
+        $("select-character-btn").addClass("hidden");
+        $("#background-selector-container").addClass("hidden");
+        $("#drive-selector-container").addClass("hidden");
+        $("#origin-name-selector-container").addClass("hidden");
+        $("#stats-selector-container").addClass("hidden");
+        $("#select-character-btn").addClass("hidden");
+        $("#class-selector-container").removeClass("hidden");
+        window.scrollTo(0, 0);
+        onFrontPage = false;
 
     } else {
-        
+
         $("#create-character-btn").text("Create a Character");
         $("header").removeClass("hidden");
         $("#class-selector-container").addClass("hidden");
@@ -928,12 +934,9 @@ createCharacterBtn.click(function(){
             $("#select-character-btn").removeClass("hidden");
         }
     }
-
-
-
 })
 
-$("#class-card-container").click(function(event){
+$("#class-card-container").click(function (event) {
 
     let element = event.target;
 
@@ -957,7 +960,7 @@ $("#class-card-container").click(function(event){
     if (playbook === "Fox") {
         hitPoints = 16;
         damage = 8;
-        
+
         $("#background-create-one").html(allBackgrounds.fox.theNatural);
         $("#background-create-two").html(allBackgrounds.fox.aLifeOfCrime);
         $("#background-create-three").html(allBackgrounds.fox.theProdigalReturned);
@@ -966,7 +969,7 @@ $("#class-card-container").click(function(event){
     if (playbook === "Heavy") {
         hitPoints = 20;
         damage = 10;
-        
+
         $("#background-create-one").html(allBackgrounds.heavy.sheriff);
         $("#background-create-two").html(allBackgrounds.heavy.bloodSoakedPast);
         $("#background-create-three").html(allBackgrounds.heavy.stormMarked);
@@ -975,7 +978,7 @@ $("#class-card-container").click(function(event){
     if (playbook === "Judge") {
         hitPoints = 20;
         damage = 6;
-        
+
         $("#background-create-one").html(allBackgrounds.judge.legacy);
         $("#background-create-two").html(allBackgrounds.judge.missionary);
         $("#background-create-three").html(allBackgrounds.judge.prophet);
@@ -984,7 +987,7 @@ $("#class-card-container").click(function(event){
     if (playbook === "Lightbearer") {
         hitPoints = 18;
         damage = 4;
-        
+
         $("#background-create-one").html(allBackgrounds.lightbearer.auspiciousBirth);
         $("#background-create-two").html(allBackgrounds.lightbearer.itinerantMystic);
         $("#background-create-three").html(allBackgrounds.lightbearer.soulOnFire);
@@ -993,7 +996,7 @@ $("#class-card-container").click(function(event){
     if (playbook === "Marshal") {
         hitPoints = 20;
         damage = 8;
-        
+
         $("#background-create-one").html(allBackgrounds.marshal.scion);
         $("#background-create-two").html(allBackgrounds.marshal.penitent);
         $("#background-create-three").html(allBackgrounds.marshal.luminary);
@@ -1002,7 +1005,7 @@ $("#class-card-container").click(function(event){
     if (playbook === "Ranger") {
         hitPoints = 18;
         damage = 8;
-        
+
         $("#background-create-one").html(allBackgrounds.ranger.mightyHunter);
         $("#background-create-two").html(allBackgrounds.ranger.wideWanderer);
         $("#background-create-three").html(allBackgrounds.ranger.beastBonded);
@@ -1011,7 +1014,7 @@ $("#class-card-container").click(function(event){
     if (playbook === "Seeker") {
         hitPoints = 16;
         damage = 6;
-        
+
         $("#background-create-one").html(allBackgrounds.seeker.patriot);
         $("#background-create-two").html(allBackgrounds.seeker.antiquarian);
         $("#background-create-three").html(allBackgrounds.seeker.witchHunter);
@@ -1020,18 +1023,18 @@ $("#class-card-container").click(function(event){
     if (playbook === "Would-Be Hero") {
         hitPoints = 16;
         damage = 6;
-        
+
         $("#background-create-one").html(allBackgrounds.wouldBeHero.impetuousYouth);
         $("#background-create-two").html(allBackgrounds.wouldBeHero.driven);
         $("#background-create-three").html(allBackgrounds.wouldBeHero.destined);
     }
 })
 
-$("#background-card-container").click(function(event){
+$("#background-card-container").click(function (event) {
 
     $("#last-drive").removeClass("hidden");
     $("#last-drive").addClass("drive-card");
-    
+
     let element = event.target;
 
     if (element.matches(".background-select-btn")) {
@@ -1046,7 +1049,7 @@ $("#background-card-container").click(function(event){
         $("#drive-create-two").html(allDrives.blessed.cultivation);
         $("#drive-create-three").html(allDrives.blessed.preservation);
         $("#drive-create-four").html(allDrives.blessed.renewal);
-        
+
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
@@ -1094,7 +1097,7 @@ $("#background-card-container").click(function(event){
         $("#drive-create-two").html(allDrives.marshal.prestige);
         $("#drive-create-three").html(allDrives.marshal.resolve);
         $("#drive-create-four").html(allDrives.marshal.ruthlessness);
-        
+
         $("#last-drive").removeClass("drive-card");
         $("#last-drive").addClass("hidden");
     }
@@ -1128,8 +1131,8 @@ $("#background-card-container").click(function(event){
     }
 })
 
-$("#drive-card-container").click(function(event){
-    
+$("#drive-card-container").click(function (event) {
+
     let element = event.target;
 
     if (element.matches(".drive-select-btn")) {
@@ -1231,24 +1234,24 @@ $("#drive-card-container").click(function(event){
     }
 })
 
-$(".origin-name-btn").click(function(){
-    
+$(".origin-name-btn").click(function () {
+
     if (!$("#name-input").val() || !$("#option option:selected").text() || $("#option option:selected").text() === "-") {
         return;
     }
 
     window.scrollTo(0, 0);
-    
+
     $("#origin-name-selector-container").addClass("hidden");
     $("#stats-selector-container").removeClass("hidden");
     characterName = $("#name-input").val().trim();
     origin = $("#option").val();
 })
 
-$(".stat-select-btn").click(function(){
+$(".stat-select-btn").click(function () {
 
     if ($("#stat-one").val() === "-" || $("#stat-two").val() === "-" || $("#stat-three").val() === "-" || $("#stat-four").val() === "-" || $("#stat-five").val() === "-" || $("#stat-six").val() === "-") {
-    return;
+        return;
     }
 
     $("#stats-selector-container").addClass("hidden");
@@ -1280,8 +1283,8 @@ $(".stat-select-btn").click(function(){
         wis: wis,
         con: con,
         cha: cha
-    };    
-    
+    };
+
     localStorage.setItem("new-character", JSON.stringify(newCharacter));
 
     let stonetopHero = JSON.parse(localStorage.getItem("new-character"));
@@ -1295,74 +1298,74 @@ $(".stat-select-btn").click(function(){
     $("#create-character-btn").text("Create a Character");
 })
 
-$("#strength").click(function(){
+$("#strength").click(function () {
     statRollNormal(parseInt(stonetopHero.str));
     statRollAdvantage(parseInt(stonetopHero.str));
     statRollDisadvantage(parseInt(stonetopHero.str));
 
     $("#roll").html(`<b><i>Strength</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 })
 
-$("#dexterity").click(function(){
+$("#dexterity").click(function () {
     statRollNormal(parseInt(stonetopHero.dex));
     statRollAdvantage(parseInt(stonetopHero.dex));
     statRollDisadvantage(parseInt(stonetopHero.dex));
 
     $("#roll").html(`<b><i>Dexterity</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 })
 
-$("#intelligence").click(function(){
+$("#intelligence").click(function () {
     statRollNormal(parseInt(stonetopHero.int));
     statRollAdvantage(parseInt(stonetopHero.int));
     statRollDisadvantage(parseInt(stonetopHero.int));
 
     $("#roll").html(`<b><i>Intelligence</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 })
 
-$("#wisdom").click(function(){
+$("#wisdom").click(function () {
     statRollNormal(parseInt(stonetopHero.wis));
     statRollAdvantage(parseInt(stonetopHero.wis));
     statRollDisadvantage(parseInt(stonetopHero.wis));
 
     $("#roll").html(`<b><i>Wisdom</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 })
 
-$("#constitution").click(function(){
+$("#constitution").click(function () {
     statRollNormal(parseInt(stonetopHero.con));
     statRollAdvantage(parseInt(stonetopHero.con));
     statRollDisadvantage(parseInt(stonetopHero.con));
 
     $("#roll").html(`<b><i>Constitution</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 })
 
-$("#charisma").click(function(){
+$("#charisma").click(function () {
     statRollNormal(parseInt(stonetopHero.cha));
     statRollAdvantage(parseInt(stonetopHero.cha));
     statRollDisadvantage(parseInt(stonetopHero.cha));
 
     $("#roll").html(`<b><i>Charisma</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 })
 
-$("#damage-display").click(function(){
+$("#damage-display").click(function () {
     damageRollNormal(stonetopHero.damage);
     damageRollAdvantage(stonetopHero.damage);
     damageRollDisadvantage(stonetopHero.damage);
 
     $("#roll").html(`<b><i>Damage</i></b><br>Normal: <b>${rollNormal}</b><br>Advantage: <b>${rollAdvantage}</b><br>Disadvantage: <b>${rollDisadvantage}</b>`);
 
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
 })
 
 function statRollNormal(stat) {
@@ -1414,7 +1417,7 @@ function damageRollAdvantage(damage) {
         rollAdvantage = rollOne;
     } else {
         rollAdvantage = rollTwo;
-    }  
+    }
 }
 
 function damageRollDisadvantage(damage) {
@@ -1425,10 +1428,10 @@ function damageRollDisadvantage(damage) {
         rollDisadvantage = rollTwo;
     } else {
         rollDisadvantage = rollOne;
-    }  
+    }
 }
 
-function initialize(){
+function initialize() {
 
     $("#create-character-btn").text("Create a Character");
 
@@ -1440,6 +1443,17 @@ function initialize(){
     }
 
     console.log(stonetopHero);
+
+    $("#move-aid").html(allBasicMoves.aid);
+    $("#move-clash").html(allBasicMoves.clash);
+    $("#move-defend").html(allBasicMoves.defend);
+    $("#move-defy-danger").html(allBasicMoves.defyDanger);
+    $("#move-interfere").html(allBasicMoves.interfere);
+    $("#move-know-things").html(allBasicMoves.knowThings);
+    $("#move-let-fly").html(allBasicMoves.letFly);
+    $("#move-persuade-npc").html(allBasicMoves.persuadeNPCs);
+    $("#move-persuade-pc").html(allBasicMoves.persuadePCs);
+    $("#move-seek-insight").html(allBasicMoves.seekInsight);
 
     // isLightMode = localStorage.getItem("is-light-mode");
 
